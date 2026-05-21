@@ -661,7 +661,6 @@ public class GUI extends JFrame
 	
 	public int processClick(int init_i,int init_j,int fin_i,int fin_j, int flag)
 	{
-		//System.out.println(init_i+""+init_j+fin_i+fin_j);
 		boolean bool1=false;
 		boolean bool2=false;
 		if(init_j==fin_j||init_i==fin_i&&!(init_j==fin_j&&init_i==fin_i))
@@ -682,7 +681,6 @@ public class GUI extends JFrame
 
 				for(int i=fin_i-1;i>init_i;i--)
 				{
-					System.out.println(square[i][init_j].getToolTipText());
 					if(square[i][init_j].getToolTipText() != null)
 					{
 						bool1=false;
@@ -693,7 +691,6 @@ public class GUI extends JFrame
 			{
 				for(int i=init_j-1;i>fin_j;i--)
 				{
-					System.out.println(square[i][init_j].getToolTipText());
 					if(square[init_i][i].getToolTipText() != null)
 					{
 						bool1=false;
@@ -704,7 +701,6 @@ public class GUI extends JFrame
 			{
 				for(int i=fin_j-1;i>init_j;i--)
 				{			
-					System.out.println(square[i][init_j].getToolTipText());
 					if(square[init_i][i].getToolTipText() != null)
 					{
 						bool1=false;
@@ -716,14 +712,12 @@ public class GUI extends JFrame
 		if(Math.abs(init_i-fin_i) == Math.abs(init_j-fin_j))
 		{
 			bool2=true;
-			System.out.println("password");
 			if(init_i-fin_i>=2)
 			{
 				if(init_j-fin_j>=2)
 				{
 					for(int i = init_i-1,j=init_j-1;i>fin_i;i--,j--)
 					{
-						System.out.println(square[i][j].getToolTipText());
 						if(square[i][j].getToolTipText() != null)
 						{
 							bool2=false;
@@ -732,10 +726,8 @@ public class GUI extends JFrame
 				}
 				if(fin_j-init_j>=2)
 				{
-					System.out.println("qwerty");
 					for(int i = init_i-1,j=init_j+1;i>fin_i;i--,j++)
 					{
-						System.out.println(square[i][j].getToolTipText());
 						if(square[i][j].getToolTipText() != null)
 						{
 							bool2=false;
@@ -749,7 +741,6 @@ public class GUI extends JFrame
 				{
 					for(int i = init_i+1,j=init_j-1;i<fin_i;i++,j--)
 					{
-						System.out.println(square[i][j].getToolTipText());
 						if(square[i][j].getToolTipText() != null)
 						{
 							bool2=false;
@@ -760,7 +751,6 @@ public class GUI extends JFrame
 				{
 					for(int i = init_i+1,j=init_j+1;i<fin_i;i++,j++)
 					{
-						System.out.println(square[i][j].getToolTipText());
 						if(square[i][j].getToolTipText() != null)
 						{
 							bool2=false;
@@ -773,11 +763,9 @@ public class GUI extends JFrame
 		{
 			if(square[fin_i][fin_j].getToolTipText()==null||((square[fin_i][fin_j].getToolTipText().charAt(0)=='B')&&(square[fin_i][fin_j].getToolTipText().charAt(1)=='.')))
 			{
-				System.out.println(true);
 				if(square[init_i][init_j].getToolTipText().equals("Knight1"))
 				{	
 					if(k1.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[Knight1_row][Knight1_col].setIcon(null);
 						square[Knight1_row][Knight1_col].setToolTipText(null);
 						Knight1_row=fin_i;
@@ -793,7 +781,6 @@ public class GUI extends JFrame
 				{
 					
 					if(k2.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[Knight2_row][Knight2_col].setIcon(null);
 						square[Knight2_row][Knight2_col].setToolTipText(null);
 						Knight2_row=fin_i;
@@ -809,7 +796,6 @@ public class GUI extends JFrame
 				{
 					
 					if(b1.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[Bishop1_row][Bishop1_col].setIcon(null);
 						square[Bishop1_row][Bishop1_col].setToolTipText(null);
 						Bishop1_row=fin_i;
@@ -824,7 +810,6 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Bishop2")&&bool2)
 				{
 					if(b2.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[Bishop2_row][Bishop2_col].setIcon(null);
 						square[Bishop2_row][Bishop2_col].setToolTipText(null);
 						Bishop2_row=fin_i;
@@ -840,7 +825,6 @@ public class GUI extends JFrame
 				{
 					
 					if(r1.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[Rook1_row][Rook1_col].setIcon(null);
 						square[Rook1_row][Rook1_col].setToolTipText(null);
 						Rook1_row=fin_i;
@@ -856,7 +840,6 @@ public class GUI extends JFrame
 				{
 					
 					if(r2.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[Rook2_row][Rook2_col].setIcon(null);
 						square[Rook2_row][Rook2_col].setToolTipText(null);
 						Rook2_row=fin_i;
@@ -870,9 +853,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queen")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(q.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[Queen_row][Queen_col].setIcon(null);
 						square[Queen_row][Queen_col].setToolTipText(null);
 						Queen_row=fin_i;
@@ -886,9 +867,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx1")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx1.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[QueenX1_row][QueenX1_col].setIcon(null);
 						square[QueenX1_row][QueenX1_col].setToolTipText(null);
 						QueenX1_row=fin_i;
@@ -902,9 +881,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx2")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx2.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[QueenX2_row][QueenX2_col].setIcon(null);
 						square[QueenX2_row][QueenX2_col].setToolTipText(null);
 						QueenX2_row=fin_i;
@@ -918,9 +895,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx3")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx3.isValidMove(fin_i,fin_j)) {
-						//System.out.println("3");
 						square[QueenX3_row][QueenX3_col].setIcon(null);
 						square[QueenX3_row][QueenX3_col].setToolTipText(null);
 						QueenX3_row=fin_i;
@@ -934,9 +909,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx4")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx4.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[QueenX4_row][QueenX4_col].setIcon(null);
 						square[QueenX4_row][QueenX4_col].setToolTipText(null);
 						QueenX4_row=fin_i;
@@ -950,9 +923,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx5")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx5.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[QueenX5_row][QueenX5_col].setIcon(null);
 						square[QueenX5_row][QueenX5_col].setToolTipText(null);
 						QueenX5_row=fin_i;
@@ -966,9 +937,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx6")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx6.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[QueenX6_row][QueenX6_col].setIcon(null);
 						square[QueenX6_row][QueenX6_col].setToolTipText(null);
 						QueenX6_row=fin_i;
@@ -982,9 +951,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx7")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx7.isValidMove(fin_i,fin_j)) {
-						//System.out.println("7");
 						square[QueenX7_row][QueenX7_col].setIcon(null);
 						square[QueenX7_row][QueenX7_col].setToolTipText(null);
 						QueenX7_row=fin_i;
@@ -998,9 +965,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("Queenx8")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(qx8.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[QueenX8_row][QueenX8_col].setIcon(null);
 						square[QueenX8_row][QueenX8_col].setToolTipText(null);
 						QueenX8_row=fin_i;
@@ -1016,7 +981,6 @@ public class GUI extends JFrame
 				{
 					
 					if(k.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[King_row][King_col].setIcon(null);
 						square[King_row][King_col].setToolTipText(null);
 						King_row=fin_i;
@@ -1071,7 +1035,6 @@ public class GUI extends JFrame
 						if(p1.isValidMove1(fin_i,PieceColor.WHITE)&&square[fin_i][fin_j].getToolTipText()==null) {
 							if(!p1.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn1_row][Pawn1_col].setIcon(null);
 								square[Pawn1_row][Pawn1_col].setToolTipText(null);
 								Pawn1_row=fin_i;
@@ -1094,7 +1057,6 @@ public class GUI extends JFrame
 						{
 							if(!p1.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn1_row][Pawn1_col].setIcon(null);
 								square[Pawn1_row][Pawn1_col].setToolTipText(null);
 								Pawn1_row=fin_i;
@@ -1121,7 +1083,6 @@ public class GUI extends JFrame
 						{
 							if(!p2.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn2_row][Pawn2_col].setIcon(null);
 								square[Pawn2_row][Pawn2_col].setToolTipText(null);
 								Pawn2_row=fin_i;
@@ -1144,7 +1105,6 @@ public class GUI extends JFrame
 						{
 							if(!p2.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn2_row][Pawn2_col].setIcon(null);
 								square[Pawn2_row][Pawn2_col].setToolTipText(null);
 								Pawn2_row=fin_i;
@@ -1171,7 +1131,6 @@ public class GUI extends JFrame
 						{
 							if(!p3.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn3_row][Pawn3_col].setIcon(null);
 								square[Pawn3_row][Pawn3_col].setToolTipText(null);
 								Pawn3_row=fin_i;
@@ -1194,7 +1153,6 @@ public class GUI extends JFrame
 						{
 							if(!p3.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn3_row][Pawn3_col].setIcon(null);
 								square[Pawn3_row][Pawn3_col].setToolTipText(null);
 								Pawn3_row=fin_i;
@@ -1221,7 +1179,6 @@ public class GUI extends JFrame
 						{
 							if(!p4.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn4_row][Pawn4_col].setIcon(null);
 								square[Pawn4_row][Pawn4_col].setToolTipText(null);
 								Pawn4_row=fin_i;
@@ -1244,7 +1201,6 @@ public class GUI extends JFrame
 						{
 							if(!p4.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn4_row][Pawn4_col].setIcon(null);
 								square[Pawn4_row][Pawn4_col].setToolTipText(null);
 								Pawn4_row=fin_i;
@@ -1271,7 +1227,6 @@ public class GUI extends JFrame
 						{
 							if(!p5.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn5_row][Pawn5_col].setIcon(null);
 								square[Pawn5_row][Pawn5_col].setToolTipText(null);
 								Pawn5_row=fin_i;
@@ -1294,7 +1249,6 @@ public class GUI extends JFrame
 						{
 							if(!p5.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn5_row][Pawn5_col].setIcon(null);
 								square[Pawn5_row][Pawn5_col].setToolTipText(null);
 								Pawn5_row=fin_i;
@@ -1320,7 +1274,6 @@ public class GUI extends JFrame
 						if(p6.isValidMove1(fin_i,PieceColor.WHITE)&&square[fin_i][fin_j].getToolTipText()==null) {
 							if(!p6.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn6_row][Pawn6_col].setIcon(null);
 								square[Pawn6_row][Pawn6_col].setToolTipText(null);
 								Pawn6_row=fin_i;
@@ -1343,7 +1296,6 @@ public class GUI extends JFrame
 						{
 							if(!p6.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn6_row][Pawn6_col].setIcon(null);
 								square[Pawn6_row][Pawn6_col].setToolTipText(null);
 								Pawn6_row=fin_i;
@@ -1370,7 +1322,6 @@ public class GUI extends JFrame
 						{
 							if(!p7.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn7_row][Pawn7_col].setIcon(null);
 								square[Pawn7_row][Pawn7_col].setToolTipText(null);
 								Pawn7_row=fin_i;
@@ -1393,7 +1344,6 @@ public class GUI extends JFrame
 							{
 								if(!p7.isqueen())
 								{
-									System.out.println("1");
 									square[Pawn7_row][Pawn7_col].setIcon(null);
 									square[Pawn7_row][Pawn7_col].setToolTipText(null);
 									Pawn7_row=fin_i;
@@ -1420,7 +1370,6 @@ public class GUI extends JFrame
 						{
 							if(!p8.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn8_row][Pawn8_col].setIcon(null);
 								square[Pawn8_row][Pawn8_col].setToolTipText(null);
 								Pawn8_row=fin_i;
@@ -1443,7 +1392,6 @@ public class GUI extends JFrame
 						{
 							if(!p8.isqueen())
 							{
-								System.out.println("1");
 								square[Pawn8_row][Pawn8_col].setIcon(null);
 								square[Pawn8_row][Pawn8_col].setToolTipText(null);
 								Pawn8_row=fin_i;
@@ -1474,7 +1422,6 @@ public class GUI extends JFrame
 					
 					if(bk1.isValidMove(fin_i,fin_j)) 
 					{
-						System.out.println("1");
 						square[B_Knight1_row][B_Knight1_col].setIcon(null);
 						square[B_Knight1_row][B_Knight1_col].setToolTipText(null);
 						B_Knight1_row=fin_i;
@@ -1491,7 +1438,6 @@ public class GUI extends JFrame
 				{
 					
 					if(bk2.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[B_Knight2_row][B_Knight2_col].setIcon(null);
 						square[B_Knight2_row][B_Knight2_col].setToolTipText(null);
 						B_Knight2_row=fin_i;
@@ -1505,9 +1451,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Rook1")&&bool1)
 				{
-					System.out.println("br1");
 					if(br1.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[B_Rook1_row][B_Rook1_col].setIcon(null);
 						square[B_Rook1_row][B_Rook1_col].setToolTipText(null);
 						B_Rook1_row=fin_i;
@@ -1523,7 +1467,6 @@ public class GUI extends JFrame
 				{
 					
 					if(br2.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[B_Rook2_row][B_Rook2_col].setIcon(null);
 						square[B_Rook2_row][B_Rook2_col].setToolTipText(null);
 						B_Rook2_row=fin_i;
@@ -1539,7 +1482,6 @@ public class GUI extends JFrame
 				{
 					
 					if(bb1.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[B_Bishop1_row][B_Bishop1_col].setIcon(null);
 						square[B_Bishop1_row][B_Bishop1_col].setToolTipText(null);
 						B_Bishop1_row=fin_i;
@@ -1555,7 +1497,6 @@ public class GUI extends JFrame
 				{
 					
 					if(bb2.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[B_Bishop2_row][B_Bishop2_col].setIcon(null);
 						square[B_Bishop2_row][B_Bishop2_col].setToolTipText(null);
 						B_Bishop2_row=fin_i;
@@ -1571,7 +1512,6 @@ public class GUI extends JFrame
 				{
 					
 					if(bk.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[B_King_row][B_King_col].setIcon(null);
 						square[B_King_row][B_King_col].setToolTipText(null);
 						B_King_row=fin_i;
@@ -1625,7 +1565,6 @@ public class GUI extends JFrame
 				{
 					
 					if(bq.isValidMove(fin_i,fin_j)) {
-						System.out.println("1");
 						square[B_Queen_row][B_Queen_col].setIcon(null);
 						square[B_Queen_row][B_Queen_col].setToolTipText(null);
 						B_Queen_row=fin_i;
@@ -1639,9 +1578,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx1")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx1.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX1_row][B_QueenX1_col].setIcon(null);
 						square[B_QueenX1_row][B_QueenX1_col].setToolTipText(null);
 						B_QueenX1_row=fin_i;
@@ -1655,9 +1592,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx2")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx2.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX2_row][B_QueenX2_col].setIcon(null);
 						square[B_QueenX2_row][B_QueenX2_col].setToolTipText(null);
 						B_QueenX2_row=fin_i;
@@ -1671,9 +1606,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx3")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx3.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX3_row][B_QueenX3_col].setIcon(null);
 						square[B_QueenX3_row][B_QueenX3_col].setToolTipText(null);
 						B_QueenX3_row=fin_i;
@@ -1687,9 +1620,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx4")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx4.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX4_row][B_QueenX4_col].setIcon(null);
 						square[B_QueenX4_row][B_QueenX4_col].setToolTipText(null);
 						B_QueenX4_row=fin_i;
@@ -1703,9 +1634,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx5")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx5.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX5_row][B_QueenX5_col].setIcon(null);
 						square[B_QueenX5_row][B_QueenX5_col].setToolTipText(null);
 						B_QueenX5_row=fin_i;
@@ -1719,9 +1648,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx6")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx6.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX6_row][B_QueenX6_col].setIcon(null);
 						square[B_QueenX6_row][B_QueenX6_col].setToolTipText(null);
 						B_QueenX6_row=fin_i;
@@ -1735,9 +1662,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx7")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx7.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX7_row][B_QueenX7_col].setIcon(null);
 						square[B_QueenX7_row][B_QueenX7_col].setToolTipText(null);
 						B_QueenX7_row=fin_i;
@@ -1751,9 +1676,7 @@ public class GUI extends JFrame
 				}
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx8")&&(bool1||bool2))
 				{
-					//System.out.println("queen is move"+bool1+bool2);
 					if(bqx8.isValidMove(fin_i,fin_j)) {
-						//System.out.println("1");
 						square[B_QueenX8_row][B_QueenX8_col].setIcon(null);
 						square[B_QueenX8_row][B_QueenX8_col].setToolTipText(null);
 						B_QueenX8_row=fin_i;
@@ -1773,7 +1696,6 @@ public class GUI extends JFrame
 						{
 							if(!bp1.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn1_row][B_Pawn1_col].setIcon(null);
 								square[B_Pawn1_row][B_Pawn1_col].setToolTipText(null);
 								B_Pawn1_row=fin_i;
@@ -1796,7 +1718,6 @@ public class GUI extends JFrame
 						{
 							if(!bp1.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn1_row][B_Pawn1_col].setIcon(null);
 								square[B_Pawn1_row][B_Pawn1_col].setToolTipText(null);
 								B_Pawn1_row=fin_i;
@@ -1823,7 +1744,6 @@ public class GUI extends JFrame
 						{
 							if(!bp2.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn2_row][B_Pawn2_col].setIcon(null);
 								square[B_Pawn2_row][B_Pawn2_col].setToolTipText(null);
 								B_Pawn2_row=fin_i;
@@ -1846,7 +1766,6 @@ public class GUI extends JFrame
 						{
 							if(!bp2.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn2_row][B_Pawn2_col].setIcon(null);
 								square[B_Pawn2_row][B_Pawn2_col].setToolTipText(null);
 								B_Pawn2_row=fin_i;
@@ -1873,7 +1792,6 @@ public class GUI extends JFrame
 						{
 							if(!bp3.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn3_row][B_Pawn3_col].setIcon(null);
 								square[B_Pawn3_row][B_Pawn3_col].setToolTipText(null);
 								B_Pawn3_row=fin_i;
@@ -1896,7 +1814,6 @@ public class GUI extends JFrame
 						{
 							if(!bp3.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn3_row][B_Pawn3_col].setIcon(null);
 								square[B_Pawn3_row][B_Pawn3_col].setToolTipText(null);
 							B_Pawn3_row=fin_i;
@@ -1923,7 +1840,6 @@ public class GUI extends JFrame
 						{
 							if(!bp4.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn4_row][B_Pawn4_col].setIcon(null);
 								square[B_Pawn4_row][B_Pawn4_col].setToolTipText(null);
 								B_Pawn4_row=fin_i;
@@ -1946,7 +1862,6 @@ public class GUI extends JFrame
 						{
 							if(!bp4.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn4_row][B_Pawn4_col].setIcon(null);
 								square[B_Pawn4_row][B_Pawn4_col].setToolTipText(null);
 								B_Pawn4_row=fin_i;
@@ -1973,7 +1888,6 @@ public class GUI extends JFrame
 						{
 							if(!bp5.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn5_row][B_Pawn5_col].setIcon(null);
 								square[B_Pawn5_row][B_Pawn5_col].setToolTipText(null);
 								B_Pawn5_row=fin_i;
@@ -1996,7 +1910,6 @@ public class GUI extends JFrame
 						{
 							if(!bp5.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn5_row][B_Pawn5_col].setIcon(null);
 								square[B_Pawn5_row][B_Pawn5_col].setToolTipText(null);
 								B_Pawn5_row=fin_i;
@@ -2023,7 +1936,6 @@ public class GUI extends JFrame
 						{
 							if(!bp6.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn6_row][B_Pawn6_col].setIcon(null);
 								square[B_Pawn6_row][B_Pawn6_col].setToolTipText(null);
 								B_Pawn6_row=fin_i;
@@ -2045,7 +1957,6 @@ public class GUI extends JFrame
 						if(bp6.isValidMove2(fin_i,fin_j,PieceColor.BLACK)) {
 							if(!bp6.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn6_row][B_Pawn6_col].setIcon(null);
 								square[B_Pawn6_row][B_Pawn6_col].setToolTipText(null);
 								B_Pawn6_row=fin_i;
@@ -2072,7 +1983,6 @@ public class GUI extends JFrame
 						{
 							if(!bp7.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn7_row][B_Pawn7_col].setIcon(null);
 								square[B_Pawn7_row][B_Pawn7_col].setToolTipText(null);
 								B_Pawn7_row=fin_i;
@@ -2094,7 +2004,6 @@ public class GUI extends JFrame
 						{
 							if(!bp7.isqueen())
 							{
-								System.out.println("1");
 							square[B_Pawn7_row][B_Pawn7_col].setIcon(null);
 							square[B_Pawn7_row][B_Pawn7_col].setToolTipText(null);
 							B_Pawn7_row=fin_i;
@@ -2121,7 +2030,6 @@ public class GUI extends JFrame
 						{
 							if(!bp8.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn8_row][B_Pawn8_col].setIcon(null);
 								square[B_Pawn8_row][B_Pawn8_col].setToolTipText(null);
 								B_Pawn8_row=fin_i;
@@ -2144,7 +2052,6 @@ public class GUI extends JFrame
 						{
 							if(!bp8.isqueen())
 							{
-								System.out.println("1");
 								square[B_Pawn8_row][B_Pawn8_col].setIcon(null);
 								square[B_Pawn8_row][B_Pawn8_col].setToolTipText(null);
 							B_Pawn8_row=fin_i;
@@ -2216,7 +2123,6 @@ public class GUI extends JFrame
 					{
 						if(source==square[i][j])
 						{
-							System.out.println(square[i][j].getToolTipText());
 							initx=i;
 							inity=j;
 						}
@@ -2232,14 +2138,12 @@ public class GUI extends JFrame
 					{
 						if(source==square[i][j])
 						{
-							System.out.println(square[i][j].getToolTipText());
 							desx=i;
 							desy=j;
 						}
 					}
 				}
 				flag=0;
-				System.out.println(initx+" "+inity+" "+desx+" "+desy+" ");
 				flag2=processClick(initx,inity,desx,desy,flag2);
 			}
 		}
