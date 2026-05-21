@@ -11,6 +11,8 @@ public class GUI extends JFrame
 
 	private static final int Queenx1_row = 0;
 
+	private Board board = new Board();
+
 	private Container contents;
 	
 	private JButton[][] square = new JButton[8][8];
@@ -422,8 +424,39 @@ public class GUI extends JFrame
 		square[B_Pawn7_row][B_Pawn7_col].setIcon(B_Pawn7);
 		square[B_Pawn8_row][B_Pawn8_col].setIcon(B_Pawn8);
 
-
-		
+		// populate Board — authoritative position source (tooltips stay for piece identity until T10)
+		board.set(new Position(King_row, King_col), k);
+		board.set(new Position(Queen_row, Queen_col), q);
+		board.set(new Position(Knight1_row, Knight1_col), k1);
+		board.set(new Position(Knight2_row, Knight2_col), k2);
+		board.set(new Position(Bishop1_row, Bishop1_col), b1);
+		board.set(new Position(Bishop2_row, Bishop2_col), b2);
+		board.set(new Position(Rook1_row, Rook1_col), r1);
+		board.set(new Position(Rook2_row, Rook2_col), r2);
+		board.set(new Position(Pawn1_row, Pawn1_col), p1);
+		board.set(new Position(Pawn2_row, Pawn2_col), p2);
+		board.set(new Position(Pawn3_row, Pawn3_col), p3);
+		board.set(new Position(Pawn4_row, Pawn4_col), p4);
+		board.set(new Position(Pawn5_row, Pawn5_col), p5);
+		board.set(new Position(Pawn6_row, Pawn6_col), p6);
+		board.set(new Position(Pawn7_row, Pawn7_col), p7);
+		board.set(new Position(Pawn8_row, Pawn8_col), p8);
+		board.set(new Position(B_King_row, B_King_col), bk);
+		board.set(new Position(B_Queen_row, B_Queen_col), bq);
+		board.set(new Position(B_Knight1_row, B_Knight1_col), bk1);
+		board.set(new Position(B_Knight2_row, B_Knight2_col), bk2);
+		board.set(new Position(B_Bishop1_row, B_Bishop1_col), bb1);
+		board.set(new Position(B_Bishop2_row, B_Bishop2_col), bb2);
+		board.set(new Position(B_Rook1_row, B_Rook1_col), br1);
+		board.set(new Position(B_Rook2_row, B_Rook2_col), br2);
+		board.set(new Position(B_Pawn1_row, B_Pawn1_col), bp1);
+		board.set(new Position(B_Pawn2_row, B_Pawn2_col), bp2);
+		board.set(new Position(B_Pawn3_row, B_Pawn3_col), bp3);
+		board.set(new Position(B_Pawn4_row, B_Pawn4_col), bp4);
+		board.set(new Position(B_Pawn5_row, B_Pawn5_col), bp5);
+		board.set(new Position(B_Pawn6_row, B_Pawn6_col), bp6);
+		board.set(new Position(B_Pawn7_row, B_Pawn7_col), bp7);
+		board.set(new Position(B_Pawn8_row, B_Pawn8_col), bp8);
 
 		super.setSize(600,600);
 		super.setResizable(false);
