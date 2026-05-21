@@ -16,6 +16,11 @@ public class King extends AbstractPiece
 		}
 		return true;
 	}
+
+	@Override
+	public boolean canMoveTo(Board board, Position to) {
+		return isValidMove(to.row(), to.col()) && isEnemyOrEmpty(board, to);
+	}
 	@Override
 	public void setPosition(Position p)
 	{

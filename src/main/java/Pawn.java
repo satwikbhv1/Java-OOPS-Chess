@@ -65,4 +65,17 @@ public class Pawn extends AbstractPiece
 		}
 		return false;
 	}
+
+	@Override
+	public boolean canMoveTo(Board board, Position to) {
+		Position from = getPosition();
+		if (to.col() == from.col()) {
+			return !board.isOccupied(to) && isValidMove1(to.row(), color);
+		}
+		if (board.isOccupied(to) && isValidMove2(to.row(), to.col(), color)) {
+			Piece target = board.get(to);
+			return target != null && target.getColor() != getColor();
+		}
+		return false;
+	}
 }

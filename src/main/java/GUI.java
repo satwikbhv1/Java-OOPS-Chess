@@ -556,7 +556,7 @@ public class GUI extends JFrame
 			{
 				if(square[init_i][init_j].getToolTipText().equals("Knight1"))
 				{	
-					if(k1.isValidMove(fin_i,fin_j)) {
+					if(k1.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -569,7 +569,7 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Knight2"))
 				{
 					
-					if(k2.isValidMove(fin_i,fin_j)) {
+					if(k2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -579,10 +579,10 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Bishop1")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Bishop1"))
 				{
 					
-					if(b1.isValidMove(fin_i,fin_j)) {
+					if(b1.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -592,9 +592,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Bishop2")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Bishop2"))
 				{
-					if(b2.isValidMove(fin_i,fin_j)) {
+					if(b2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -604,10 +604,10 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Rook1")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Rook1"))
 				{
 					
-					if(r1.isValidMove(fin_i,fin_j)) {
+					if(r1.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -617,10 +617,10 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Rook2")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Rook2"))
 				{
 					
-					if(r2.isValidMove(fin_i,fin_j)) {
+					if(r2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -630,9 +630,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queen")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queen"))
 				{
-					if(q.isValidMove(fin_i,fin_j)) {
+					if(q.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -642,9 +642,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx1")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx1"))
 				{
-					if(qx1.isValidMove(fin_i,fin_j)) {
+					if(qx1.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -654,9 +654,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx2")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx2"))
 				{
-					if(qx2.isValidMove(fin_i,fin_j)) {
+					if(qx2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -666,9 +666,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx3")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx3"))
 				{
-					if(qx3.isValidMove(fin_i,fin_j)) {
+					if(qx3.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -678,9 +678,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx4")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx4"))
 				{
-					if(qx4.isValidMove(fin_i,fin_j)) {
+					if(qx4.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -690,9 +690,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx5")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx5"))
 				{
-					if(qx5.isValidMove(fin_i,fin_j)) {
+					if(qx5.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -702,9 +702,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx6")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx6"))
 				{
-					if(qx6.isValidMove(fin_i,fin_j)) {
+					if(qx6.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -714,9 +714,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx7")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx7"))
 				{
-					if(qx7.isValidMove(fin_i,fin_j)) {
+					if(qx7.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -726,9 +726,9 @@ public class GUI extends JFrame
 					}
 					return 0;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("Queenx8")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("Queenx8"))
 				{
-					if(qx8.isValidMove(fin_i,fin_j)) {
+					if(qx8.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -741,7 +741,7 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("King"))
 				{
 					
-					if(k.isValidMove(fin_i,fin_j)) {
+					if(k.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -787,7 +787,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p1.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to())) {
+						if(p1.canMoveTo(board, move.to())) {
 							if(!p1.isqueen())
 							{
 								square[init_i][init_j].setIcon(null);
@@ -806,7 +806,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(p1.isValidMove2(fin_i,fin_j,PieceColor.WHITE))
+						if(p1.canMoveTo(board, move.to()))
 						{
 							if(!p1.isqueen())
 							{
@@ -830,7 +830,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p2.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to())) 
+						if(p2.canMoveTo(board, move.to())) 
 						{
 							if(!p2.isqueen())
 							{
@@ -850,7 +850,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(p2.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
+						if(p2.canMoveTo(board, move.to())) 
 						{
 							if(!p2.isqueen())
 							{
@@ -874,7 +874,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p3.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to()))
+						if(p3.canMoveTo(board, move.to()))
 						{
 							if(!p3.isqueen())
 							{
@@ -894,7 +894,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(p3.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
+						if(p3.canMoveTo(board, move.to())) 
 						{
 							if(!p3.isqueen())
 							{
@@ -918,7 +918,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p4.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to()))
+						if(p4.canMoveTo(board, move.to()))
 						{
 							if(!p4.isqueen())
 							{
@@ -938,7 +938,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(p4.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
+						if(p4.canMoveTo(board, move.to())) 
 						{
 							if(!p4.isqueen())
 							{
@@ -962,7 +962,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p5.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to())) 
+						if(p5.canMoveTo(board, move.to())) 
 						{
 							if(!p5.isqueen())
 							{
@@ -982,7 +982,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(p5.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
+						if(p5.canMoveTo(board, move.to())) 
 						{
 							if(!p5.isqueen())
 							{
@@ -1006,7 +1006,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p6.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to())) {
+						if(p6.canMoveTo(board, move.to())) {
 							if(!p6.isqueen())
 							{
 								square[init_i][init_j].setIcon(null);
@@ -1025,7 +1025,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(p6.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
+						if(p6.canMoveTo(board, move.to())) 
 						{
 							if(!p6.isqueen())
 							{
@@ -1049,7 +1049,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p7.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to())) 
+						if(p7.canMoveTo(board, move.to())) 
 						{
 							if(!p7.isqueen())
 							{
@@ -1069,7 +1069,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-							if(p7.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
+							if(p7.canMoveTo(board, move.to())) 
 							{
 								if(!p7.isqueen())
 								{
@@ -1093,7 +1093,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(p8.isValidMove1(fin_i,PieceColor.WHITE)&&!board.isOccupied(move.to())) 
+						if(p8.canMoveTo(board, move.to())) 
 						{
 							if(!p8.isqueen())
 							{
@@ -1113,7 +1113,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(p8.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
+						if(p8.canMoveTo(board, move.to())) 
 						{
 							if(!p8.isqueen())
 							{
@@ -1143,7 +1143,7 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Knight1"))
 				{
 					
-					if(bk1.isValidMove(fin_i,fin_j)) 
+					if(bk1.canMoveTo(board, move.to())) 
 					{
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
@@ -1158,7 +1158,7 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Knight2"))
 				{
 					
-					if(bk2.isValidMove(fin_i,fin_j)) {
+					if(bk2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1168,9 +1168,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Rook1")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Rook1"))
 				{
-					if(br1.isValidMove(fin_i,fin_j)) {
+					if(br1.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1180,10 +1180,10 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Rook2")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Rook2"))
 				{
 					
-					if(br2.isValidMove(fin_i,fin_j)) {
+					if(br2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1193,10 +1193,10 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Bishop1")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Bishop1"))
 				{
 					
-					if(bb1.isValidMove(fin_i,fin_j)) {
+					if(bb1.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1206,10 +1206,10 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Bishop2")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Bishop2"))
 				{
 					
-					if(bb2.isValidMove(fin_i,fin_j)) {
+					if(bb2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1222,7 +1222,7 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.King"))
 				{
 					
-					if(bk.isValidMove(fin_i,fin_j)) {
+					if(bk.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1266,10 +1266,10 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queen")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queen"))
 				{
 					
-					if(bq.isValidMove(fin_i,fin_j)) {
+					if(bq.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1279,9 +1279,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx1")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx1"))
 				{
-					if(bqx1.isValidMove(fin_i,fin_j)) {
+					if(bqx1.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1291,9 +1291,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx2")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx2"))
 				{
-					if(bqx2.isValidMove(fin_i,fin_j)) {
+					if(bqx2.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1303,9 +1303,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx3")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx3"))
 				{
-					if(bqx3.isValidMove(fin_i,fin_j)) {
+					if(bqx3.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1315,9 +1315,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx4")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx4"))
 				{
-					if(bqx4.isValidMove(fin_i,fin_j)) {
+					if(bqx4.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1327,9 +1327,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx5")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx5"))
 				{
-					if(bqx5.isValidMove(fin_i,fin_j)) {
+					if(bqx5.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1339,9 +1339,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx6")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx6"))
 				{
-					if(bqx6.isValidMove(fin_i,fin_j)) {
+					if(bqx6.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1351,9 +1351,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx7")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx7"))
 				{
-					if(bqx7.isValidMove(fin_i,fin_j)) {
+					if(bqx7.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1363,9 +1363,9 @@ public class GUI extends JFrame
 					}
 					return 1;
 				}
-				if(square[init_i][init_j].getToolTipText().equals("B.Queenx8")&&board.isPathClear(move))
+				if(square[init_i][init_j].getToolTipText().equals("B.Queenx8"))
 				{
-					if(bqx8.isValidMove(fin_i,fin_j)) {
+					if(bqx8.canMoveTo(board, move.to())) {
 						square[init_i][init_j].setIcon(null);
 						square[init_i][init_j].setToolTipText(null);
 						board.move(move);
@@ -1379,7 +1379,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp1.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to()))
+						if(bp1.canMoveTo(board, move.to()))
 						{
 							if(!bp1.isqueen())
 							{
@@ -1399,7 +1399,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp1.isValidMove2(fin_i,fin_j,PieceColor.BLACK)) 
+						if(bp1.canMoveTo(board, move.to())) 
 						{
 							if(!bp1.isqueen())
 							{
@@ -1423,7 +1423,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp2.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to())) 
+						if(bp2.canMoveTo(board, move.to())) 
 						{
 							if(!bp2.isqueen())
 							{
@@ -1443,7 +1443,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp2.isValidMove2(fin_i,fin_j,PieceColor.BLACK))
+						if(bp2.canMoveTo(board, move.to()))
 						{
 							if(!bp2.isqueen())
 							{
@@ -1467,7 +1467,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp3.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to())) 
+						if(bp3.canMoveTo(board, move.to())) 
 						{
 							if(!bp3.isqueen())
 							{
@@ -1487,7 +1487,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp3.isValidMove2(fin_i,fin_j,PieceColor.BLACK)) 
+						if(bp3.canMoveTo(board, move.to())) 
 						{
 							if(!bp3.isqueen())
 							{
@@ -1511,7 +1511,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp4.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to())) 
+						if(bp4.canMoveTo(board, move.to())) 
 						{
 							if(!bp4.isqueen())
 							{
@@ -1531,7 +1531,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp4.isValidMove2(fin_i,fin_j,PieceColor.BLACK)) 
+						if(bp4.canMoveTo(board, move.to())) 
 						{
 							if(!bp4.isqueen())
 							{
@@ -1555,7 +1555,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp5.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to())) 
+						if(bp5.canMoveTo(board, move.to())) 
 						{
 							if(!bp5.isqueen())
 							{
@@ -1575,7 +1575,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp5.isValidMove2(fin_i,fin_j,PieceColor.BLACK)) 
+						if(bp5.canMoveTo(board, move.to())) 
 						{
 							if(!bp5.isqueen())
 							{
@@ -1599,7 +1599,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp6.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to())) 
+						if(bp6.canMoveTo(board, move.to())) 
 						{
 							if(!bp6.isqueen())
 							{
@@ -1619,7 +1619,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp6.isValidMove2(fin_i,fin_j,PieceColor.BLACK)) {
+						if(bp6.canMoveTo(board, move.to())) {
 							if(!bp6.isqueen())
 							{
 								square[init_i][init_j].setIcon(null);
@@ -1642,7 +1642,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp7.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to()))
+						if(bp7.canMoveTo(board, move.to()))
 						{
 							if(!bp7.isqueen())
 							{
@@ -1661,7 +1661,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp7.isValidMove2(fin_i,fin_j,PieceColor.BLACK))
+						if(bp7.canMoveTo(board, move.to()))
 						{
 							if(!bp7.isqueen())
 							{
@@ -1685,7 +1685,7 @@ public class GUI extends JFrame
 				{
 					if(init_j==fin_j)
 					{
-						if(bp8.isValidMove1(fin_i,PieceColor.BLACK)&&!board.isOccupied(move.to())) 
+						if(bp8.canMoveTo(board, move.to())) 
 						{
 							if(!bp8.isqueen())
 							{
@@ -1705,7 +1705,7 @@ public class GUI extends JFrame
 					}
 					else if(board.isOccupied(move.to()))
 					{
-						if(bp8.isValidMove2(fin_i,fin_j,PieceColor.BLACK))
+						if(bp8.canMoveTo(board, move.to()))
 						{
 							if(!bp8.isqueen())
 							{

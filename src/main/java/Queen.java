@@ -18,4 +18,11 @@ public class Queen extends AbstractPiece
 		}
 		return false;
 	}
+
+	@Override
+	public boolean canMoveTo(Board board, Position to) {
+		return isValidMove(to.row(), to.col())
+				&& board.isPathClear(getPosition(), to)
+				&& isEnemyOrEmpty(board, to);
+	}
 }
