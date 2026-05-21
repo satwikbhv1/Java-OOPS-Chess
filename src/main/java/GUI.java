@@ -9,7 +9,6 @@ public class GUI extends JFrame
 
 	private static final long serialVersionUID=-2;
 
-	private static final int Queenx1_row = 0;
 
 	private Board board = new Board();
 
@@ -115,195 +114,99 @@ public class GUI extends JFrame
 	
 	private ImageIcon B_Queenx8 = new ImageIcon(GUI.class.getResource("/images/blackqueenx8.png"));
 	
-	private int Rook1_row = 7;
-	private int Rook1_col= 0;
-	
-	private int Knight1_row = 7;
-	private int Knight1_col= 1;
-	
-	private int Bishop1_row = 7;
-	private int Bishop1_col= 2;
-	
-	private int King_row = 7;
-	private int King_col= 4;
-	
-	private int Queen_row = 7;
-	private int Queen_col= 3;
-	
-	private int Bishop2_row = 7;
-	private int Bishop2_col= 5;
-	
-	private int Knight2_row = 7;
-	private int Knight2_col= 6;
-	
-	private int Rook2_row = 7;
-	private int Rook2_col= 7;
-	
-	private int Pawn1_row = 6;
-	private int Pawn1_col= 0;
-	
-	private int Pawn2_row = 6;
-	private int Pawn2_col= 1;
-	
-	private int Pawn3_row = 6;
-	private int Pawn3_col= 2;
-	
-	private int Pawn4_row = 6;
-	private int Pawn4_col= 3;
-	
-	private int Pawn5_row = 6;
-	private int Pawn5_col= 4;
-	
-	private int Pawn6_row = 6;
-	private int Pawn6_col= 5;
-	
-	private int Pawn7_row = 6;
-	private int Pawn7_col= 6;
-	
-	private int Pawn8_row = 6;
-	private int Pawn8_col= 7;
-	
-	private int QueenX1_row ;
-	private int QueenX1_col;
-	
-	private int QueenX2_row ;
-	private int QueenX2_col;
-	
-	private int QueenX3_row ;
-	private int QueenX3_col ;
-	
-	private int QueenX4_row ;
-	private int QueenX4_col ;
-	
-	private int QueenX5_row ;
-	private int QueenX5_col ;
-	
-	private int QueenX6_row ;
-	private int QueenX6_col ;
-	
-	private int QueenX7_row ;
-	private int QueenX7_col;
-	
-	private int QueenX8_row ;
-	private int QueenX8_col ;
 	
 	
-	private int B_Pawn1_row = 1;
-	private int B_Pawn1_col= 0;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-	private int B_Pawn2_row = 1;
-	private int B_Pawn2_col= 1;
 	
-	private int B_Pawn3_row = 1;
-	private int B_Pawn3_col= 2;
 	
-	private int B_Pawn4_row = 1;
-	private int B_Pawn4_col= 3;
 	
-	private int B_Pawn5_row = 1;
-	private int B_Pawn5_col= 4;
 	
-	private int B_Pawn6_row = 1;
-	private int B_Pawn6_col= 5;
 	
-	private int B_Pawn7_row = 1;
-	private int B_Pawn7_col= 6;
 	
-	private int B_Pawn8_row = 1;
-	private int B_Pawn8_col= 7;
 	
-	private int B_QueenX1_row ;
-	private int B_QueenX1_col;
 	
-	private int B_QueenX2_row ;
-	private int B_QueenX2_col;
 	
-	private int B_QueenX3_row ;
-	private int B_QueenX3_col ;
 	
-	private int B_QueenX4_row ;
-	private int B_QueenX4_col ;
 	
-	private int B_QueenX5_row ;
-	private int B_QueenX5_col ;
 	
-	private int B_QueenX6_row ;
-	private int B_QueenX6_col ;
 	
-	private int B_QueenX7_row ;
-	private int B_QueenX7_col;
 	
-	private int B_QueenX8_row ;
-	private int B_QueenX8_col ;
 	
-	private int B_Rook1_row = 0;
-	private int B_Rook1_col= 0;
 
-	private int B_Knight1_row = 0;
-	private int B_Knight1_col= 1;
 	
-	private int B_Bishop1_row = 0;
-	private int B_Bishop1_col= 2;
 
-	private int B_King_row = 0;
-	private int B_King_col= 4;
 	
-	private int B_Queen_row = 0;
-	private int B_Queen_col= 3;
 
-	private int B_Bishop2_row = 0;
-	private int B_Bishop2_col= 5;
 	
-	private int B_Knight2_row = 0;
-	private int B_Knight2_col= 6;
 
-	private int B_Rook2_row = 0;
-	private int B_Rook2_col= 7;
 	
 	
-	Knight k1 = new Knight(Knight1_row,Knight1_col,PieceColor.WHITE);
-	Knight k2 = new Knight(Knight2_row,Knight2_col,PieceColor.WHITE);
+	Knight k1 = new Knight(7,1,PieceColor.WHITE);
+	Knight k2 = new Knight(7,6,PieceColor.WHITE);
 	
-	Bishop b1 = new Bishop(Bishop1_row,Bishop1_col,PieceColor.WHITE);
-	Bishop b2 = new Bishop(Bishop2_row,Bishop2_col,PieceColor.WHITE);
+	Bishop b1 = new Bishop(7,2,PieceColor.WHITE);
+	Bishop b2 = new Bishop(7,5,PieceColor.WHITE);
 	
-	Rook r1 = new Rook(Rook1_row,Rook1_col,PieceColor.WHITE);
-	Rook r2 = new Rook(Rook2_row,Rook2_col,PieceColor.WHITE);
+	Rook r1 = new Rook(7,0,PieceColor.WHITE);
+	Rook r2 = new Rook(7,7,PieceColor.WHITE);
 	
-	King k = new King(King_row,King_col,PieceColor.WHITE);
+	King k = new King(7,4,PieceColor.WHITE);
 	
-	Queen q = new Queen(Queen_row,Queen_col,PieceColor.WHITE);
+	Queen q = new Queen(7,3,PieceColor.WHITE);
 	
-	Pawn p1 = new Pawn(Pawn1_row,Pawn1_col,PieceColor.WHITE);
-	Pawn p2 = new Pawn(Pawn2_row,Pawn2_col,PieceColor.WHITE);
-	Pawn p3 = new Pawn(Pawn3_row,Pawn3_col,PieceColor.WHITE);
-	Pawn p4 = new Pawn(Pawn4_row,Pawn4_col,PieceColor.WHITE);
-	Pawn p5 = new Pawn(Pawn5_row,Pawn5_col,PieceColor.WHITE);
-	Pawn p6 = new Pawn(Pawn6_row,Pawn6_col,PieceColor.WHITE);
-	Pawn p7 = new Pawn(Pawn7_row,Pawn7_col,PieceColor.WHITE);
-	Pawn p8 = new Pawn(Pawn8_row,Pawn8_col,PieceColor.WHITE);
+	Pawn p1 = new Pawn(6,0,PieceColor.WHITE);
+	Pawn p2 = new Pawn(6,1,PieceColor.WHITE);
+	Pawn p3 = new Pawn(6,2,PieceColor.WHITE);
+	Pawn p4 = new Pawn(6,3,PieceColor.WHITE);
+	Pawn p5 = new Pawn(6,4,PieceColor.WHITE);
+	Pawn p6 = new Pawn(6,5,PieceColor.WHITE);
+	Pawn p7 = new Pawn(6,6,PieceColor.WHITE);
+	Pawn p8 = new Pawn(6,7,PieceColor.WHITE);
 	
-	Knight bk1 = new Knight(B_Knight1_row,B_Knight1_col,PieceColor.BLACK);
-	Knight bk2 = new Knight(B_Knight2_row,B_Knight2_col,PieceColor.BLACK);
+	Knight bk1 = new Knight(0,1,PieceColor.BLACK);
+	Knight bk2 = new Knight(0,6,PieceColor.BLACK);
 	
-	Bishop bb1 = new Bishop(B_Bishop1_row,B_Bishop1_col,PieceColor.BLACK);
-	Bishop bb2 = new Bishop(B_Bishop2_row,B_Bishop2_col,PieceColor.BLACK);
+	Bishop bb1 = new Bishop(0,2,PieceColor.BLACK);
+	Bishop bb2 = new Bishop(0,5,PieceColor.BLACK);
 	
-	Rook br1 = new Rook(B_Rook1_row,B_Rook1_col,PieceColor.BLACK);
-	Rook br2 = new Rook(B_Rook2_row,B_Rook2_col,PieceColor.BLACK);
+	Rook br1 = new Rook(0,0,PieceColor.BLACK);
+	Rook br2 = new Rook(0,7,PieceColor.BLACK);
 	
-	King bk = new King(B_King_row,B_King_col,PieceColor.BLACK);
+	King bk = new King(0,4,PieceColor.BLACK);
 	
-	Queen bq = new Queen(B_Queen_row,B_Queen_col,PieceColor.BLACK);
+	Queen bq = new Queen(0,3,PieceColor.BLACK);
 	
-	Pawn bp1 = new Pawn(B_Pawn1_row,B_Pawn1_col,PieceColor.BLACK);
-	Pawn bp2 = new Pawn(B_Pawn2_row,B_Pawn2_col,PieceColor.BLACK);
-	Pawn bp3 = new Pawn(B_Pawn3_row,B_Pawn3_col,PieceColor.BLACK);
-	Pawn bp4 = new Pawn(B_Pawn4_row,B_Pawn4_col,PieceColor.BLACK);
-	Pawn bp5 = new Pawn(B_Pawn5_row,B_Pawn5_col,PieceColor.BLACK);
-	Pawn bp6 = new Pawn(B_Pawn6_row,B_Pawn6_col,PieceColor.BLACK);
-	Pawn bp7 = new Pawn(B_Pawn7_row,B_Pawn7_col,PieceColor.BLACK);
-	Pawn bp8 = new Pawn(B_Pawn8_row,B_Pawn8_col,PieceColor.BLACK);
+	Pawn bp1 = new Pawn(1,0,PieceColor.BLACK);
+	Pawn bp2 = new Pawn(1,1,PieceColor.BLACK);
+	Pawn bp3 = new Pawn(1,2,PieceColor.BLACK);
+	Pawn bp4 = new Pawn(1,3,PieceColor.BLACK);
+	Pawn bp5 = new Pawn(1,4,PieceColor.BLACK);
+	Pawn bp6 = new Pawn(1,5,PieceColor.BLACK);
+	Pawn bp7 = new Pawn(1,6,PieceColor.BLACK);
+	Pawn bp8 = new Pawn(1,7,PieceColor.BLACK);
 	
 	/**
 	 * Launch the application.
@@ -356,107 +259,107 @@ public class GUI extends JFrame
 			}                                                                  
 		}
 		
-		square[King_row][King_col].setToolTipText("King");
-		square[Queen_row][Queen_col].setToolTipText("Queen");
-		square[Knight1_row][Knight1_col].setToolTipText("Knight1");
-		square[Knight2_row][Knight2_col].setToolTipText("Knight2");
-		square[Bishop1_row][Bishop1_col].setToolTipText("Bishop1");
-		square[Bishop2_row][Bishop2_col].setToolTipText("Bishop2");
-		square[Rook1_row][Rook1_col].setToolTipText("Rook1");
-		square[Rook2_row][Rook2_col].setToolTipText("Rook2");
-		square[Pawn1_row][Pawn1_col].setToolTipText("Pawn1");
-		square[Pawn2_row][Pawn2_col].setToolTipText("Pawn2");
-		square[Pawn3_row][Pawn3_col].setToolTipText("Pawn3");
-		square[Pawn4_row][Pawn4_col].setToolTipText("Pawn4");
-		square[Pawn5_row][Pawn5_col].setToolTipText("Pawn5");
-		square[Pawn6_row][Pawn6_col].setToolTipText("Pawn6");
-		square[Pawn7_row][Pawn7_col].setToolTipText("Pawn7");
-		square[Pawn8_row][Pawn8_col].setToolTipText("Pawn8");
+		square[7][4].setToolTipText("King");
+		square[7][3].setToolTipText("Queen");
+		square[7][1].setToolTipText("Knight1");
+		square[7][6].setToolTipText("Knight2");
+		square[7][2].setToolTipText("Bishop1");
+		square[7][5].setToolTipText("Bishop2");
+		square[7][0].setToolTipText("Rook1");
+		square[7][7].setToolTipText("Rook2");
+		square[6][0].setToolTipText("Pawn1");
+		square[6][1].setToolTipText("Pawn2");
+		square[6][2].setToolTipText("Pawn3");
+		square[6][3].setToolTipText("Pawn4");
+		square[6][4].setToolTipText("Pawn5");
+		square[6][5].setToolTipText("Pawn6");
+		square[6][6].setToolTipText("Pawn7");
+		square[6][7].setToolTipText("Pawn8");
 		
-		square[King_row][King_col].setIcon(King);
-		square[Queen_row][Queen_col].setIcon(Queen);
-		square[Knight1_row][Knight1_col].setIcon(Knight1);
-		square[Knight2_row][Knight2_col].setIcon(Knight2);
-		square[Bishop1_row][Bishop1_col].setIcon(Bishop1);
-		square[Bishop2_row][Bishop2_col].setIcon(Bishop2);
-		square[Rook1_row][Rook1_col].setIcon(Rook1);
-		square[Rook2_row][Rook2_col].setIcon(Rook2);
-		square[Pawn1_row][Pawn1_col].setIcon(Pawn1);
-		square[Pawn2_row][Pawn2_col].setIcon(Pawn2);
-		square[Pawn3_row][Pawn3_col].setIcon(Pawn3);
-		square[Pawn4_row][Pawn4_col].setIcon(Pawn4);
-		square[Pawn5_row][Pawn5_col].setIcon(Pawn5);
-		square[Pawn6_row][Pawn6_col].setIcon(Pawn6);
-		square[Pawn7_row][Pawn7_col].setIcon(Pawn7);
-		square[Pawn8_row][Pawn8_col].setIcon(Pawn8);
+		square[7][4].setIcon(King);
+		square[7][3].setIcon(Queen);
+		square[7][1].setIcon(Knight1);
+		square[7][6].setIcon(Knight2);
+		square[7][2].setIcon(Bishop1);
+		square[7][5].setIcon(Bishop2);
+		square[7][0].setIcon(Rook1);
+		square[7][7].setIcon(Rook2);
+		square[6][0].setIcon(Pawn1);
+		square[6][1].setIcon(Pawn2);
+		square[6][2].setIcon(Pawn3);
+		square[6][3].setIcon(Pawn4);
+		square[6][4].setIcon(Pawn5);
+		square[6][5].setIcon(Pawn6);
+		square[6][6].setIcon(Pawn7);
+		square[6][7].setIcon(Pawn8);
 
-		square[B_King_row][B_King_col].setToolTipText("B.King");
-		square[B_Queen_row][B_Queen_col].setToolTipText("B.Queen");
-		square[B_Knight1_row][B_Knight1_col].setToolTipText("B.Knight1");
-		square[B_Knight2_row][B_Knight2_col].setToolTipText("B.Knight2");
-		square[B_Bishop1_row][B_Bishop1_col].setToolTipText("B.Bishop1");
-		square[B_Bishop2_row][B_Bishop2_col].setToolTipText("B.Bishop2");
-		square[B_Rook1_row][B_Rook1_col].setToolTipText("B.Rook1");
-		square[B_Rook2_row][B_Rook2_col].setToolTipText("B.Rook2");
-		square[B_Pawn1_row][B_Pawn1_col].setToolTipText("B.Pawn1");
-		square[B_Pawn2_row][B_Pawn2_col].setToolTipText("B.Pawn2");
-		square[B_Pawn3_row][B_Pawn3_col].setToolTipText("B.Pawn3");
-		square[B_Pawn4_row][B_Pawn4_col].setToolTipText("B.Pawn4");
-		square[B_Pawn5_row][B_Pawn5_col].setToolTipText("B.Pawn5");
-		square[B_Pawn6_row][B_Pawn6_col].setToolTipText("B.Pawn6");
-		square[B_Pawn7_row][B_Pawn7_col].setToolTipText("B.Pawn7");
-		square[B_Pawn8_row][B_Pawn8_col].setToolTipText("B.Pawn8");
+		square[0][4].setToolTipText("B.King");
+		square[0][3].setToolTipText("B.Queen");
+		square[0][1].setToolTipText("B.Knight1");
+		square[0][6].setToolTipText("B.Knight2");
+		square[0][2].setToolTipText("B.Bishop1");
+		square[0][5].setToolTipText("B.Bishop2");
+		square[0][0].setToolTipText("B.Rook1");
+		square[0][7].setToolTipText("B.Rook2");
+		square[1][0].setToolTipText("B.Pawn1");
+		square[1][1].setToolTipText("B.Pawn2");
+		square[1][2].setToolTipText("B.Pawn3");
+		square[1][3].setToolTipText("B.Pawn4");
+		square[1][4].setToolTipText("B.Pawn5");
+		square[1][5].setToolTipText("B.Pawn6");
+		square[1][6].setToolTipText("B.Pawn7");
+		square[1][7].setToolTipText("B.Pawn8");
 		
-		square[B_King_row][B_King_col].setIcon(B_King);
-		square[B_Queen_row][B_Queen_col].setIcon(B_Queen);
-		square[B_Knight1_row][B_Knight1_col].setIcon(B_Knight1);
-		square[B_Knight2_row][B_Knight2_col].setIcon(B_Knight2);
-		square[B_Bishop1_row][B_Bishop1_col].setIcon(B_Bishop1);
-		square[B_Bishop2_row][B_Bishop2_col].setIcon(B_Bishop2);
-		square[B_Rook1_row][B_Rook1_col].setIcon(B_Rook1);
-		square[B_Rook2_row][B_Rook2_col].setIcon(B_Rook2);
-		square[B_Pawn1_row][B_Pawn1_col].setIcon(B_Pawn1);
-		square[B_Pawn2_row][B_Pawn2_col].setIcon(B_Pawn2);
-		square[B_Pawn3_row][B_Pawn3_col].setIcon(B_Pawn3);
-		square[B_Pawn4_row][B_Pawn4_col].setIcon(B_Pawn4);
-		square[B_Pawn5_row][B_Pawn5_col].setIcon(B_Pawn5);
-		square[B_Pawn6_row][B_Pawn6_col].setIcon(B_Pawn6);
-		square[B_Pawn7_row][B_Pawn7_col].setIcon(B_Pawn7);
-		square[B_Pawn8_row][B_Pawn8_col].setIcon(B_Pawn8);
+		square[0][4].setIcon(B_King);
+		square[0][3].setIcon(B_Queen);
+		square[0][1].setIcon(B_Knight1);
+		square[0][6].setIcon(B_Knight2);
+		square[0][2].setIcon(B_Bishop1);
+		square[0][5].setIcon(B_Bishop2);
+		square[0][0].setIcon(B_Rook1);
+		square[0][7].setIcon(B_Rook2);
+		square[1][0].setIcon(B_Pawn1);
+		square[1][1].setIcon(B_Pawn2);
+		square[1][2].setIcon(B_Pawn3);
+		square[1][3].setIcon(B_Pawn4);
+		square[1][4].setIcon(B_Pawn5);
+		square[1][5].setIcon(B_Pawn6);
+		square[1][6].setIcon(B_Pawn7);
+		square[1][7].setIcon(B_Pawn8);
 
 		// populate Board — authoritative position source (tooltips stay for piece identity until T10)
-		board.set(new Position(King_row, King_col), k);
-		board.set(new Position(Queen_row, Queen_col), q);
-		board.set(new Position(Knight1_row, Knight1_col), k1);
-		board.set(new Position(Knight2_row, Knight2_col), k2);
-		board.set(new Position(Bishop1_row, Bishop1_col), b1);
-		board.set(new Position(Bishop2_row, Bishop2_col), b2);
-		board.set(new Position(Rook1_row, Rook1_col), r1);
-		board.set(new Position(Rook2_row, Rook2_col), r2);
-		board.set(new Position(Pawn1_row, Pawn1_col), p1);
-		board.set(new Position(Pawn2_row, Pawn2_col), p2);
-		board.set(new Position(Pawn3_row, Pawn3_col), p3);
-		board.set(new Position(Pawn4_row, Pawn4_col), p4);
-		board.set(new Position(Pawn5_row, Pawn5_col), p5);
-		board.set(new Position(Pawn6_row, Pawn6_col), p6);
-		board.set(new Position(Pawn7_row, Pawn7_col), p7);
-		board.set(new Position(Pawn8_row, Pawn8_col), p8);
-		board.set(new Position(B_King_row, B_King_col), bk);
-		board.set(new Position(B_Queen_row, B_Queen_col), bq);
-		board.set(new Position(B_Knight1_row, B_Knight1_col), bk1);
-		board.set(new Position(B_Knight2_row, B_Knight2_col), bk2);
-		board.set(new Position(B_Bishop1_row, B_Bishop1_col), bb1);
-		board.set(new Position(B_Bishop2_row, B_Bishop2_col), bb2);
-		board.set(new Position(B_Rook1_row, B_Rook1_col), br1);
-		board.set(new Position(B_Rook2_row, B_Rook2_col), br2);
-		board.set(new Position(B_Pawn1_row, B_Pawn1_col), bp1);
-		board.set(new Position(B_Pawn2_row, B_Pawn2_col), bp2);
-		board.set(new Position(B_Pawn3_row, B_Pawn3_col), bp3);
-		board.set(new Position(B_Pawn4_row, B_Pawn4_col), bp4);
-		board.set(new Position(B_Pawn5_row, B_Pawn5_col), bp5);
-		board.set(new Position(B_Pawn6_row, B_Pawn6_col), bp6);
-		board.set(new Position(B_Pawn7_row, B_Pawn7_col), bp7);
-		board.set(new Position(B_Pawn8_row, B_Pawn8_col), bp8);
+		board.set(new Position(7, 4), k);
+		board.set(new Position(7, 3), q);
+		board.set(new Position(7, 1), k1);
+		board.set(new Position(7, 6), k2);
+		board.set(new Position(7, 2), b1);
+		board.set(new Position(7, 5), b2);
+		board.set(new Position(7, 0), r1);
+		board.set(new Position(7, 7), r2);
+		board.set(new Position(6, 0), p1);
+		board.set(new Position(6, 1), p2);
+		board.set(new Position(6, 2), p3);
+		board.set(new Position(6, 3), p4);
+		board.set(new Position(6, 4), p5);
+		board.set(new Position(6, 5), p6);
+		board.set(new Position(6, 6), p7);
+		board.set(new Position(6, 7), p8);
+		board.set(new Position(0, 4), bk);
+		board.set(new Position(0, 3), bq);
+		board.set(new Position(0, 1), bk1);
+		board.set(new Position(0, 6), bk2);
+		board.set(new Position(0, 2), bb1);
+		board.set(new Position(0, 5), bb2);
+		board.set(new Position(0, 0), br1);
+		board.set(new Position(0, 7), br2);
+		board.set(new Position(1, 0), bp1);
+		board.set(new Position(1, 1), bp2);
+		board.set(new Position(1, 2), bp3);
+		board.set(new Position(1, 3), bp4);
+		board.set(new Position(1, 4), bp5);
+		board.set(new Position(1, 5), bp6);
+		board.set(new Position(1, 6), bp7);
+		board.set(new Position(1, 7), bp8);
 
 		super.setSize(600,600);
 		super.setResizable(false);
@@ -487,10 +390,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx1");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx1=new Queen(fin_i, fin_j, p.color);
-			QueenX1_row=fin_i;
-			QueenX1_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx1);
 		}
 		if("2".equals(s))
 		{
@@ -498,10 +400,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx2");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx2=new Queen(fin_i, fin_j, p.color);
-			QueenX2_row=fin_i;
-			QueenX2_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx2);
 		}
 		if("3".equals(s))
 		{
@@ -509,10 +410,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx3");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx3=new Queen(fin_i, fin_j, p.color);
-			QueenX3_row=fin_i;
-			QueenX3_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx3);
 		}
 		if("4".equals(s))
 		{
@@ -520,10 +420,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx4");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx4=new Queen(fin_i, fin_j, p.color);
-			QueenX4_row=fin_i;
-			QueenX4_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx4);
 		}
 		if("5".equals(s))
 		{
@@ -531,10 +430,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx5");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx5=new Queen(fin_i, fin_j, p.color);
-			QueenX5_row=fin_i;
-			QueenX5_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx5);
 		}
 		if("6".equals(s))
 		{
@@ -542,10 +440,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx6");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx6=new Queen(fin_i, fin_j, p.color);
-			QueenX6_row=fin_i;
-			QueenX6_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx6);
 		}
 		if("7".equals(s))
 		{
@@ -553,10 +450,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx7");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx7=new Queen(fin_i, fin_j, p.color);
-			QueenX7_row=fin_i;
-			QueenX7_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx7);
 		}
 		if("8".equals(s))
 		{
@@ -564,10 +460,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("Queenx8");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			qx8=new Queen(fin_i, fin_j, p.color);
-			QueenX8_row=fin_i;
-			QueenX8_col=fin_j;
+			board.set(new Position(fin_i, fin_j), qx8);
 		}
 		if("b1".equals(s))
 		{
@@ -575,10 +470,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx1");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx1=new Queen(fin_i, fin_j, p.color);
-			B_QueenX1_row=fin_i;
-			B_QueenX1_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx1);
 		}
 		if("b2".equals(s))
 		{
@@ -586,10 +480,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx2");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx2=new Queen(fin_i, fin_j, p.color);
-			B_QueenX2_row=fin_i;
-			B_QueenX2_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx2);
 		}
 		if("b3".equals(s))
 		{
@@ -597,10 +490,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx3");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx3=new Queen(fin_i, fin_j, p.color);
-			B_QueenX3_row=fin_i;
-			B_QueenX3_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx3);
 		}
 		if("b4".equals(s))
 		{
@@ -608,10 +500,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx4");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx4=new Queen(fin_i, fin_j, p.color);
-			B_QueenX4_row=fin_i;
-			B_QueenX4_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx4);
 		}
 		if("b5".equals(s))
 		{
@@ -619,10 +510,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx5");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx5=new Queen(fin_i, fin_j, p.color);
-			B_QueenX5_row=fin_i;
-			B_QueenX5_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx5);
 		}
 		if("b6".equals(s))
 		{
@@ -630,10 +520,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx6");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx6=new Queen(fin_i, fin_j, p.color);
-			B_QueenX6_row=fin_i;
-			B_QueenX6_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx6);
 		}
 		if("b7".equals(s))
 		{
@@ -641,10 +530,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx7");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx7=new Queen(fin_i, fin_j, p.color);
-			B_QueenX7_row=fin_i;
-			B_QueenX7_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx7);
 		}
 		if("b8".equals(s))
 		{
@@ -652,10 +540,9 @@ public class GUI extends JFrame
 			square[fin_i][fin_j].setToolTipText("B.Queenx8");
 			square[p.getRow()][p.getCol()].setIcon(null);
 			square[p.getRow()][p.getCol()].setToolTipText(null);
-			p.setPosition(Position.OFF_BOARD);
+			board.clear(p.getPosition());
 			bqx8=new Queen(fin_i, fin_j, p.color);
-			B_QueenX8_row=fin_i;
-			B_QueenX8_col=fin_j;
+			board.set(new Position(fin_i, fin_j), bqx8);
 		}
 	}
 
@@ -671,13 +558,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Knight1"))
 				{	
 					if(k1.isValidMove(fin_i,fin_j)) {
-						square[Knight1_row][Knight1_col].setIcon(null);
-						square[Knight1_row][Knight1_col].setToolTipText(null);
-						Knight1_row=fin_i;
-						Knight1_col=fin_j;
-						k1.setPosition(new Position(fin_i, fin_j));
-						square[Knight1_row][Knight1_col].setIcon(Knight1);
-						square[Knight1_row][Knight1_col].setToolTipText("Knight1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Knight1);
+						square[fin_i][fin_j].setToolTipText("Knight1");
 						return 1;
 					}
 					return 0;
@@ -686,13 +571,11 @@ public class GUI extends JFrame
 				{
 					
 					if(k2.isValidMove(fin_i,fin_j)) {
-						square[Knight2_row][Knight2_col].setIcon(null);
-						square[Knight2_row][Knight2_col].setToolTipText(null);
-						Knight2_row=fin_i;
-						Knight2_col=fin_j;
-						k2.setPosition(new Position(fin_i, fin_j));
-						square[Knight2_row][Knight2_col].setIcon(Knight2);
-						square[Knight2_row][Knight2_col].setToolTipText("Knight2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Knight2);
+						square[fin_i][fin_j].setToolTipText("Knight2");
 						return 1;
 					}
 					return 0;
@@ -701,13 +584,11 @@ public class GUI extends JFrame
 				{
 					
 					if(b1.isValidMove(fin_i,fin_j)) {
-						square[Bishop1_row][Bishop1_col].setIcon(null);
-						square[Bishop1_row][Bishop1_col].setToolTipText(null);
-						Bishop1_row=fin_i;
-						Bishop1_col=fin_j;
-						b1.setPosition(new Position(fin_i, fin_j));
-						square[Bishop1_row][Bishop1_col].setIcon(Bishop1);
-						square[Bishop1_row][Bishop1_col].setToolTipText("Bishop1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Bishop1);
+						square[fin_i][fin_j].setToolTipText("Bishop1");
 						return 1;
 					}
 					return 0;
@@ -715,13 +596,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Bishop2")&&board.isPathClear(from, to))
 				{
 					if(b2.isValidMove(fin_i,fin_j)) {
-						square[Bishop2_row][Bishop2_col].setIcon(null);
-						square[Bishop2_row][Bishop2_col].setToolTipText(null);
-						Bishop2_row=fin_i;
-						Bishop2_col=fin_j;
-						b2.setPosition(new Position(fin_i, fin_j));
-						square[Bishop2_row][Bishop2_col].setIcon(Bishop2);
-						square[Bishop2_row][Bishop2_col].setToolTipText("Bishop2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Bishop2);
+						square[fin_i][fin_j].setToolTipText("Bishop2");
 						return 1;
 					}
 					return 0;
@@ -730,13 +609,11 @@ public class GUI extends JFrame
 				{
 					
 					if(r1.isValidMove(fin_i,fin_j)) {
-						square[Rook1_row][Rook1_col].setIcon(null);
-						square[Rook1_row][Rook1_col].setToolTipText(null);
-						Rook1_row=fin_i;
-						Rook1_col=fin_j;
-						r1.setPosition(new Position(fin_i, fin_j));
-						square[Rook1_row][Rook1_col].setIcon(Rook1);
-						square[Rook1_row][Rook1_col].setToolTipText("Rook1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Rook1);
+						square[fin_i][fin_j].setToolTipText("Rook1");
 						return 1;
 					}
 					return 0;
@@ -745,13 +622,11 @@ public class GUI extends JFrame
 				{
 					
 					if(r2.isValidMove(fin_i,fin_j)) {
-						square[Rook2_row][Rook2_col].setIcon(null);
-						square[Rook2_row][Rook2_col].setToolTipText(null);
-						Rook2_row=fin_i;
-						Rook2_col=fin_j;
-						r2.setPosition(new Position(fin_i, fin_j));
-						square[Rook2_row][Rook2_col].setIcon(Rook2);
-						square[Rook2_row][Rook2_col].setToolTipText("Rook2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Rook2);
+						square[fin_i][fin_j].setToolTipText("Rook2");
 						return 1;
 					}
 					return 0;
@@ -759,13 +634,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queen")&&board.isPathClear(from, to))
 				{
 					if(q.isValidMove(fin_i,fin_j)) {
-						square[Queen_row][Queen_col].setIcon(null);
-						square[Queen_row][Queen_col].setToolTipText(null);
-						Queen_row=fin_i;
-						Queen_col=fin_j;
-						q.setPosition(new Position(fin_i, fin_j));
-						square[Queen_row][Queen_col].setIcon(Queen);
-						square[Queen_row][Queen_col].setToolTipText("Queen");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queen);
+						square[fin_i][fin_j].setToolTipText("Queen");
 						return 1;
 					}
 					return 0;
@@ -773,13 +646,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx1")&&board.isPathClear(from, to))
 				{
 					if(qx1.isValidMove(fin_i,fin_j)) {
-						square[QueenX1_row][QueenX1_col].setIcon(null);
-						square[QueenX1_row][QueenX1_col].setToolTipText(null);
-						QueenX1_row=fin_i;
-						QueenX1_col=fin_j;
-						qx1.setPosition(new Position(fin_i, fin_j));
-						square[QueenX1_row][QueenX1_col].setIcon(Queenx1);
-						square[QueenX1_row][QueenX1_col].setToolTipText("Queenx1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx1);
+						square[fin_i][fin_j].setToolTipText("Queenx1");
 						return 1;
 					}
 					return 0;
@@ -787,13 +658,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx2")&&board.isPathClear(from, to))
 				{
 					if(qx2.isValidMove(fin_i,fin_j)) {
-						square[QueenX2_row][QueenX2_col].setIcon(null);
-						square[QueenX2_row][QueenX2_col].setToolTipText(null);
-						QueenX2_row=fin_i;
-						QueenX2_col=fin_j;
-						qx2.setPosition(new Position(fin_i, fin_j));
-						square[QueenX2_row][QueenX2_col].setIcon(Queenx2);
-						square[QueenX2_row][QueenX2_col].setToolTipText("Queenx2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx2);
+						square[fin_i][fin_j].setToolTipText("Queenx2");
 						return 1;
 					}
 					return 0;
@@ -801,13 +670,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx3")&&board.isPathClear(from, to))
 				{
 					if(qx3.isValidMove(fin_i,fin_j)) {
-						square[QueenX3_row][QueenX3_col].setIcon(null);
-						square[QueenX3_row][QueenX3_col].setToolTipText(null);
-						QueenX3_row=fin_i;
-						QueenX3_col=fin_j;
-						qx3.setPosition(new Position(fin_i, fin_j));
-						square[QueenX3_row][QueenX3_col].setIcon(Queenx3);
-						square[QueenX3_row][QueenX3_col].setToolTipText("Queenx3");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx3);
+						square[fin_i][fin_j].setToolTipText("Queenx3");
 						return 1;
 					}
 					return 0;
@@ -815,13 +682,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx4")&&board.isPathClear(from, to))
 				{
 					if(qx4.isValidMove(fin_i,fin_j)) {
-						square[QueenX4_row][QueenX4_col].setIcon(null);
-						square[QueenX4_row][QueenX4_col].setToolTipText(null);
-						QueenX4_row=fin_i;
-						QueenX4_col=fin_j;
-						qx4.setPosition(new Position(fin_i, fin_j));
-						square[QueenX4_row][QueenX4_col].setIcon(Queenx4);
-						square[QueenX4_row][QueenX4_col].setToolTipText("Queenx4");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx4);
+						square[fin_i][fin_j].setToolTipText("Queenx4");
 						return 1;
 					}
 					return 0;
@@ -829,13 +694,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx5")&&board.isPathClear(from, to))
 				{
 					if(qx5.isValidMove(fin_i,fin_j)) {
-						square[QueenX5_row][QueenX5_col].setIcon(null);
-						square[QueenX5_row][QueenX5_col].setToolTipText(null);
-						QueenX5_row=fin_i;
-						QueenX5_col=fin_j;
-						qx5.setPosition(new Position(fin_i, fin_j));
-						square[QueenX5_row][QueenX5_col].setIcon(Queenx5);
-						square[QueenX5_row][QueenX5_col].setToolTipText("Queenx5");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx5);
+						square[fin_i][fin_j].setToolTipText("Queenx5");
 						return 1;
 					}
 					return 0;
@@ -843,13 +706,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx6")&&board.isPathClear(from, to))
 				{
 					if(qx6.isValidMove(fin_i,fin_j)) {
-						square[QueenX6_row][QueenX6_col].setIcon(null);
-						square[QueenX6_row][QueenX6_col].setToolTipText(null);
-						QueenX6_row=fin_i;
-						QueenX6_col=fin_j;
-						qx6	.setPosition(new Position(fin_i, fin_j));
-						square[QueenX6_row][QueenX6_col].setIcon(Queenx6);
-						square[QueenX6_row][QueenX6_col].setToolTipText("Queenx6");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx6);
+						square[fin_i][fin_j].setToolTipText("Queenx6");
 						return 1;
 					}
 					return 0;
@@ -857,13 +718,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx7")&&board.isPathClear(from, to))
 				{
 					if(qx7.isValidMove(fin_i,fin_j)) {
-						square[QueenX7_row][QueenX7_col].setIcon(null);
-						square[QueenX7_row][QueenX7_col].setToolTipText(null);
-						QueenX7_row=fin_i;
-						QueenX7_col=fin_j;
-						qx7.setPosition(new Position(fin_i, fin_j));
-						square[QueenX7_row][QueenX7_col].setIcon(Queenx7);
-						square[QueenX7_row][QueenX7_col].setToolTipText("Queenx7");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx7);
+						square[fin_i][fin_j].setToolTipText("Queenx7");
 						return 1;
 					}
 					return 0;
@@ -871,13 +730,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("Queenx8")&&board.isPathClear(from, to))
 				{
 					if(qx8.isValidMove(fin_i,fin_j)) {
-						square[QueenX8_row][QueenX8_col].setIcon(null);
-						square[QueenX8_row][QueenX8_col].setToolTipText(null);
-						QueenX8_row=fin_i;
-						QueenX8_col=fin_j;
-						qx8.setPosition(new Position(fin_i, fin_j));
-						square[QueenX8_row][QueenX8_col].setIcon(Queenx8);
-						square[QueenX8_row][QueenX8_col].setToolTipText("Queenx8");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(Queenx8);
+						square[fin_i][fin_j].setToolTipText("Queenx8");
 						return 1;
 					}
 					return 0;
@@ -886,49 +743,43 @@ public class GUI extends JFrame
 				{
 					
 					if(k.isValidMove(fin_i,fin_j)) {
-						square[King_row][King_col].setIcon(null);
-						square[King_row][King_col].setToolTipText(null);
-						King_row=fin_i;
-						King_col=fin_j;
-						k.setPosition(new Position(fin_i, fin_j));
-						square[King_row][King_col].setIcon(King);
-						square[King_row][King_col].setToolTipText("King");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(King);
+						square[fin_i][fin_j].setToolTipText("King");
 						return 1;
 					}
-					if(fin_i==init_i&&fin_j==init_j+2&&r1.b==true&&square[King_row][King_col+1].getToolTipText()==null&&square[King_row][King_col+1].getToolTipText()==null)
+					if(fin_i==init_i&&fin_j==init_j+2&&r1.b==true&&square[init_i][init_j+1].getToolTipText()==null&&square[init_i][init_j+1].getToolTipText()==null)
 					{
-						square[King_row][King_col].setIcon(null);
-						square[King_row][King_col].setToolTipText(null);
-						King_row=fin_i;
-						King_col=fin_j;
-						k.setPosition(new Position(fin_i, fin_j));
-						square[King_row][King_col].setIcon(King);
-						square[King_row][King_col].setToolTipText("King");
-						square[Rook2_row][Rook2_col].setIcon(null);
-						square[Rook2_row][Rook2_col].setToolTipText(null);
-						Rook2_row=fin_i;
-						Rook2_col=fin_j-1;
-						r2.setPosition(new Position(fin_i, fin_j-1));
-						square[Rook2_row][Rook2_col].setIcon(Rook2);
-						square[Rook2_row][Rook2_col].setToolTipText("Rook2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(King);
+						square[fin_i][fin_j].setToolTipText("King");
+						Position r2From = r2.getPosition();
+						Position r2To = new Position(fin_i, fin_j-1);
+						square[r2From.row()][r2From.col()].setIcon(null);
+						square[r2From.row()][r2From.col()].setToolTipText(null);
+						board.move(r2From, r2To);
+						square[r2To.row()][r2To.col()].setIcon(Rook2);
+						square[r2To.row()][r2To.col()].setToolTipText("Rook2");
 						return 1;
 					}
-					if(fin_i==init_i&&fin_j==init_j-2&&r1.b==true&&square[King_row][King_col-1].getToolTipText()==null&&square[King_row][King_col-2].getToolTipText()==null&&square[King_row][King_col-3].getToolTipText()==null)
+					if(fin_i==init_i&&fin_j==init_j-2&&r1.b==true&&square[init_i][init_j-1].getToolTipText()==null&&square[init_i][init_j-2].getToolTipText()==null&&square[init_i][init_j-3].getToolTipText()==null)
 					{
-						square[King_row][King_col].setIcon(null);
-						square[King_row][King_col].setToolTipText(null);
-						King_row=fin_i;
-						King_col=fin_j;
-						k.setPosition(new Position(fin_i, fin_j));
-						square[King_row][King_col].setIcon(King);
-						square[King_row][King_col].setToolTipText("King");
-						square[Rook1_row][Rook1_col].setIcon(null);
-						square[Rook1_row][Rook1_col].setToolTipText(null);
-						Rook1_row=fin_i;
-						Rook1_col=fin_j+1;
-						r1.setPosition(new Position(fin_i, fin_j+1));
-						square[Rook1_row][Rook1_col].setIcon(Rook1);
-						square[Rook1_row][Rook1_col].setToolTipText("Rook1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(King);
+						square[fin_i][fin_j].setToolTipText("King");
+						Position r1From = r1.getPosition();
+						Position r1To = new Position(fin_i, fin_j+1);
+						square[r1From.row()][r1From.col()].setIcon(null);
+						square[r1From.row()][r1From.col()].setToolTipText(null);
+						board.move(r1From, r1To);
+						square[r1To.row()][r1To.col()].setIcon(Rook1);
+						square[r1To.row()][r1To.col()].setToolTipText("Rook1");
 						return 1;
 					}
 					return 0;
@@ -940,13 +791,11 @@ public class GUI extends JFrame
 						if(p1.isValidMove1(fin_i,PieceColor.WHITE)&&square[fin_i][fin_j].getToolTipText()==null) {
 							if(!p1.isqueen())
 							{
-								square[Pawn1_row][Pawn1_col].setIcon(null);
-								square[Pawn1_row][Pawn1_col].setToolTipText(null);
-								Pawn1_row=fin_i;
-								Pawn1_col=fin_j;
-								p1.setPosition(new Position(fin_i, fin_j));
-								square[Pawn1_row][Pawn1_col].setIcon(Pawn1);
-								square[Pawn1_row][Pawn1_col].setToolTipText("Pawn1");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn1);
+								square[fin_i][fin_j].setToolTipText("Pawn1");
 								return 1;
 							}
 							else
@@ -962,13 +811,11 @@ public class GUI extends JFrame
 						{
 							if(!p1.isqueen())
 							{
-								square[Pawn1_row][Pawn1_col].setIcon(null);
-								square[Pawn1_row][Pawn1_col].setToolTipText(null);
-								Pawn1_row=fin_i;
-								Pawn1_col=fin_j;
-								p1.setPosition(new Position(fin_i, fin_j));
-								square[Pawn1_row][Pawn1_col].setIcon(Pawn1);
-								square[Pawn1_row][Pawn1_col].setToolTipText("Pawn1");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn1);
+								square[fin_i][fin_j].setToolTipText("Pawn1");
 								return 1;
 							}
 							else
@@ -988,13 +835,11 @@ public class GUI extends JFrame
 						{
 							if(!p2.isqueen())
 							{
-								square[Pawn2_row][Pawn2_col].setIcon(null);
-								square[Pawn2_row][Pawn2_col].setToolTipText(null);
-								Pawn2_row=fin_i;
-								Pawn2_col=fin_j;
-								p2.setPosition(new Position(fin_i, fin_j));
-								square[Pawn2_row][Pawn2_col].setIcon(Pawn2);
-								square[Pawn2_row][Pawn2_col].setToolTipText("Pawn2");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn2);
+								square[fin_i][fin_j].setToolTipText("Pawn2");
 								return 1;
 							}
 							else
@@ -1010,13 +855,11 @@ public class GUI extends JFrame
 						{
 							if(!p2.isqueen())
 							{
-								square[Pawn2_row][Pawn2_col].setIcon(null);
-								square[Pawn2_row][Pawn2_col].setToolTipText(null);
-								Pawn2_row=fin_i;
-								Pawn2_col=fin_j;
-								p2.setPosition(new Position(fin_i, fin_j));
-								square[Pawn2_row][Pawn2_col].setIcon(Pawn2);
-								square[Pawn2_row][Pawn2_col].setToolTipText("Pawn2");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn2);
+								square[fin_i][fin_j].setToolTipText("Pawn2");
 								return 1;
 							}
 							else
@@ -1036,13 +879,11 @@ public class GUI extends JFrame
 						{
 							if(!p3.isqueen())
 							{
-								square[Pawn3_row][Pawn3_col].setIcon(null);
-								square[Pawn3_row][Pawn3_col].setToolTipText(null);
-								Pawn3_row=fin_i;
-								Pawn3_col=fin_j;
-								p3.setPosition(new Position(fin_i, fin_j));
-								square[Pawn3_row][Pawn3_col].setIcon(Pawn3);
-								square[Pawn3_row][Pawn3_col].setToolTipText("Pawn3");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn3);
+								square[fin_i][fin_j].setToolTipText("Pawn3");
 								return 1;
 							}
 							else
@@ -1058,13 +899,11 @@ public class GUI extends JFrame
 						{
 							if(!p3.isqueen())
 							{
-								square[Pawn3_row][Pawn3_col].setIcon(null);
-								square[Pawn3_row][Pawn3_col].setToolTipText(null);
-								Pawn3_row=fin_i;
-								Pawn3_col=fin_j;
-								p3.setPosition(new Position(fin_i, fin_j));
-								square[Pawn3_row][Pawn3_col].setIcon(Pawn3);
-								square[Pawn3_row][Pawn3_col].setToolTipText("Pawn3");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn3);
+								square[fin_i][fin_j].setToolTipText("Pawn3");
 								return 1;
 							}
 							else
@@ -1084,13 +923,11 @@ public class GUI extends JFrame
 						{
 							if(!p4.isqueen())
 							{
-								square[Pawn4_row][Pawn4_col].setIcon(null);
-								square[Pawn4_row][Pawn4_col].setToolTipText(null);
-								Pawn4_row=fin_i;
-								Pawn4_col=fin_j;
-								p4.setPosition(new Position(fin_i, fin_j));
-							square[Pawn4_row][Pawn4_col].setIcon(Pawn4);
-							square[Pawn4_row][Pawn4_col].setToolTipText("Pawn4");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn4);
+								square[fin_i][fin_j].setToolTipText("Pawn4");
 								return 1;
 							}
 							else
@@ -1106,13 +943,11 @@ public class GUI extends JFrame
 						{
 							if(!p4.isqueen())
 							{
-								square[Pawn4_row][Pawn4_col].setIcon(null);
-								square[Pawn4_row][Pawn4_col].setToolTipText(null);
-								Pawn4_row=fin_i;
-								Pawn4_col=fin_j;
-								p4.setPosition(new Position(fin_i, fin_j));
-								square[Pawn4_row][Pawn4_col].setIcon(Pawn4);
-								square[Pawn4_row][Pawn4_col].setToolTipText("Pawn4");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn4);
+								square[fin_i][fin_j].setToolTipText("Pawn4");
 								return 1;
 							}
 							else
@@ -1132,13 +967,11 @@ public class GUI extends JFrame
 						{
 							if(!p5.isqueen())
 							{
-								square[Pawn5_row][Pawn5_col].setIcon(null);
-								square[Pawn5_row][Pawn5_col].setToolTipText(null);
-								Pawn5_row=fin_i;
-								Pawn5_col=fin_j;
-								p5.setPosition(new Position(fin_i, fin_j));
-								square[Pawn5_row][Pawn5_col].setIcon(Pawn5);
-								square[Pawn5_row][Pawn5_col].setToolTipText("Pawn5");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn5);
+								square[fin_i][fin_j].setToolTipText("Pawn5");
 								return 1;
 							}
 							else
@@ -1154,13 +987,11 @@ public class GUI extends JFrame
 						{
 							if(!p5.isqueen())
 							{
-								square[Pawn5_row][Pawn5_col].setIcon(null);
-								square[Pawn5_row][Pawn5_col].setToolTipText(null);
-								Pawn5_row=fin_i;
-								Pawn5_col=fin_j;
-								p5.setPosition(new Position(fin_i, fin_j));
-								square[Pawn5_row][Pawn5_col].setIcon(Pawn5);
-								square[Pawn5_row][Pawn5_col].setToolTipText("Pawn5");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn5);
+								square[fin_i][fin_j].setToolTipText("Pawn5");
 								return 1;
 							}
 							else
@@ -1179,13 +1010,11 @@ public class GUI extends JFrame
 						if(p6.isValidMove1(fin_i,PieceColor.WHITE)&&square[fin_i][fin_j].getToolTipText()==null) {
 							if(!p6.isqueen())
 							{
-								square[Pawn6_row][Pawn6_col].setIcon(null);
-								square[Pawn6_row][Pawn6_col].setToolTipText(null);
-								Pawn6_row=fin_i;
-								Pawn6_col=fin_j;
-								p6.setPosition(new Position(fin_i, fin_j));
-								square[Pawn6_row][Pawn6_col].setIcon(Pawn6);
-								square[Pawn6_row][Pawn6_col].setToolTipText("Pawn6");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn6);
+								square[fin_i][fin_j].setToolTipText("Pawn6");
 								return 1;
 							}
 							else
@@ -1201,13 +1030,11 @@ public class GUI extends JFrame
 						{
 							if(!p6.isqueen())
 							{
-								square[Pawn6_row][Pawn6_col].setIcon(null);
-								square[Pawn6_row][Pawn6_col].setToolTipText(null);
-								Pawn6_row=fin_i;
-								Pawn6_col=fin_j;
-								p6.setPosition(new Position(fin_i, fin_j));
-								square[Pawn6_row][Pawn6_col].setIcon(Pawn6);
-								square[Pawn6_row][Pawn6_col].setToolTipText("Pawn6");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn6);
+								square[fin_i][fin_j].setToolTipText("Pawn6");
 								return 1;
 							}
 							else
@@ -1227,13 +1054,11 @@ public class GUI extends JFrame
 						{
 							if(!p7.isqueen())
 							{
-								square[Pawn7_row][Pawn7_col].setIcon(null);
-								square[Pawn7_row][Pawn7_col].setToolTipText(null);
-								Pawn7_row=fin_i;
-								Pawn7_col=fin_j;
-								p7.setPosition(new Position(fin_i, fin_j));
-								square[Pawn7_row][Pawn7_col].setIcon(Pawn7);
-								square[Pawn7_row][Pawn7_col].setToolTipText("Pawn7");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn7);
+								square[fin_i][fin_j].setToolTipText("Pawn7");
 								return 1;
 							}
 							else
@@ -1249,13 +1074,11 @@ public class GUI extends JFrame
 							{
 								if(!p7.isqueen())
 								{
-									square[Pawn7_row][Pawn7_col].setIcon(null);
-									square[Pawn7_row][Pawn7_col].setToolTipText(null);
-									Pawn7_row=fin_i;
-									Pawn7_col=fin_j;
-									p7.setPosition(new Position(fin_i, fin_j));
-									square[Pawn7_row][Pawn7_col].setIcon(Pawn7);
-									square[Pawn7_row][Pawn7_col].setToolTipText("Pawn7");
+									square[init_i][init_j].setIcon(null);
+									square[init_i][init_j].setToolTipText(null);
+									board.move(from, to);
+									square[fin_i][fin_j].setIcon(Pawn7);
+									square[fin_i][fin_j].setToolTipText("Pawn7");
 									return 1;
 								}
 								else
@@ -1275,13 +1098,11 @@ public class GUI extends JFrame
 						{
 							if(!p8.isqueen())
 							{
-								square[Pawn8_row][Pawn8_col].setIcon(null);
-								square[Pawn8_row][Pawn8_col].setToolTipText(null);
-								Pawn8_row=fin_i;
-								Pawn8_col=fin_j;
-								p8.setPosition(new Position(fin_i, fin_j));
-								square[Pawn8_row][Pawn8_col].setIcon(Pawn8);
-								square[Pawn8_row][Pawn8_col].setToolTipText("Pawn8");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn8);
+								square[fin_i][fin_j].setToolTipText("Pawn8");
 								return 1;
 							}
 							else
@@ -1297,13 +1118,11 @@ public class GUI extends JFrame
 						{
 							if(!p8.isqueen())
 							{
-								square[Pawn8_row][Pawn8_col].setIcon(null);
-								square[Pawn8_row][Pawn8_col].setToolTipText(null);
-								Pawn8_row=fin_i;
-								Pawn8_col=fin_j;
-								p8.setPosition(new Position(fin_i, fin_j));
-								square[Pawn8_row][Pawn8_col].setIcon(Pawn8);
-								square[Pawn8_row][Pawn8_col].setToolTipText("Pawn8");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(Pawn8);
+								square[fin_i][fin_j].setToolTipText("Pawn8");
 								return 1;
 							}
 							else
@@ -1327,13 +1146,11 @@ public class GUI extends JFrame
 					
 					if(bk1.isValidMove(fin_i,fin_j)) 
 					{
-						square[B_Knight1_row][B_Knight1_col].setIcon(null);
-						square[B_Knight1_row][B_Knight1_col].setToolTipText(null);
-						B_Knight1_row=fin_i;
-						B_Knight1_col=fin_j;
-						bk1.setPosition(new Position(fin_i, fin_j));
-						square[B_Knight1_row][B_Knight1_col].setIcon(B_Knight1);
-						square[B_Knight1_row][B_Knight1_col].setToolTipText("B.Knight1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Knight1);
+						square[fin_i][fin_j].setToolTipText("B.Knight1");
 						return 0;
 					}
 					return 1;
@@ -1343,13 +1160,11 @@ public class GUI extends JFrame
 				{
 					
 					if(bk2.isValidMove(fin_i,fin_j)) {
-						square[B_Knight2_row][B_Knight2_col].setIcon(null);
-						square[B_Knight2_row][B_Knight2_col].setToolTipText(null);
-						B_Knight2_row=fin_i;
-						B_Knight2_col=fin_j;
-						bk2.setPosition(new Position(fin_i, fin_j));
-						square[B_Knight2_row][B_Knight2_col].setIcon(B_Knight2);
-						square[B_Knight2_row][B_Knight2_col].setToolTipText("B.Knight2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Knight2);
+						square[fin_i][fin_j].setToolTipText("B.Knight2");
 						return 0;
 					}
 					return 1;
@@ -1357,13 +1172,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Rook1")&&board.isPathClear(from, to))
 				{
 					if(br1.isValidMove(fin_i,fin_j)) {
-						square[B_Rook1_row][B_Rook1_col].setIcon(null);
-						square[B_Rook1_row][B_Rook1_col].setToolTipText(null);
-						B_Rook1_row=fin_i;
-						B_Rook1_col=fin_j;
-						br1.setPosition(new Position(fin_i, fin_j));
-						square[B_Rook1_row][B_Rook1_col].setIcon(B_Rook1);
-						square[B_Rook1_row][B_Rook1_col].setToolTipText("B.Rook1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Rook1);
+						square[fin_i][fin_j].setToolTipText("B.Rook1");
 						return 0;
 					}
 					return 1;
@@ -1372,13 +1185,11 @@ public class GUI extends JFrame
 				{
 					
 					if(br2.isValidMove(fin_i,fin_j)) {
-						square[B_Rook2_row][B_Rook2_col].setIcon(null);
-						square[B_Rook2_row][B_Rook2_col].setToolTipText(null);
-						B_Rook2_row=fin_i;
-						B_Rook2_col=fin_j;
-						br2.setPosition(new Position(fin_i, fin_j));
-						square[B_Rook2_row][B_Rook2_col].setIcon(B_Rook2);
-						square[B_Rook2_row][B_Rook2_col].setToolTipText("B.Rook2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Rook2);
+						square[fin_i][fin_j].setToolTipText("B.Rook2");
 						return 0;
 					}
 					return 1;
@@ -1387,13 +1198,11 @@ public class GUI extends JFrame
 				{
 					
 					if(bb1.isValidMove(fin_i,fin_j)) {
-						square[B_Bishop1_row][B_Bishop1_col].setIcon(null);
-						square[B_Bishop1_row][B_Bishop1_col].setToolTipText(null);
-						B_Bishop1_row=fin_i;
-						B_Bishop1_col=fin_j;
-						bb1.setPosition(new Position(fin_i, fin_j));
-						square[B_Bishop1_row][B_Bishop1_col].setIcon(B_Bishop1);
-						square[B_Bishop1_row][B_Bishop1_col].setToolTipText("B.Bishop1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Bishop1);
+						square[fin_i][fin_j].setToolTipText("B.Bishop1");
 						return 0;
 					}
 					return 1;
@@ -1402,13 +1211,11 @@ public class GUI extends JFrame
 				{
 					
 					if(bb2.isValidMove(fin_i,fin_j)) {
-						square[B_Bishop2_row][B_Bishop2_col].setIcon(null);
-						square[B_Bishop2_row][B_Bishop2_col].setToolTipText(null);
-						B_Bishop2_row=fin_i;
-						B_Bishop2_col=fin_j;
-						bb2.setPosition(new Position(fin_i, fin_j));
-						square[B_Bishop2_row][B_Bishop2_col].setIcon(B_Bishop2);
-						square[B_Bishop2_row][B_Bishop2_col].setToolTipText("B.Bishop2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Bishop2);
+						square[fin_i][fin_j].setToolTipText("B.Bishop2");
 						return 0;
 					}
 					return 1;
@@ -1417,50 +1224,44 @@ public class GUI extends JFrame
 				{
 					
 					if(bk.isValidMove(fin_i,fin_j)) {
-						square[B_King_row][B_King_col].setIcon(null);
-						square[B_King_row][B_King_col].setToolTipText(null);
-						B_King_row=fin_i;
-						B_King_col=fin_j;
-						bk.setPosition(new Position(fin_i, fin_j));
-						square[B_King_row][B_King_col].setIcon(B_King);
-						square[B_King_row][B_King_col].setToolTipText("B.King");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_King);
+						square[fin_i][fin_j].setToolTipText("B.King");
 						return 0;
 					}
 					if(bk.b==true)
 					{
-						if(fin_i==init_i&&fin_j==init_j+2&&br1.b==true&&square[B_King_row][B_King_col+1].getToolTipText()==null&&square[B_King_row][B_King_col+1].getToolTipText()==null)
+						if(fin_i==init_i&&fin_j==init_j+2&&br1.b==true&&square[init_i][init_j+1].getToolTipText()==null&&square[init_i][init_j+1].getToolTipText()==null)
 						{
-							square[B_King_row][B_King_col].setIcon(null);
-							square[B_King_row][B_King_col].setToolTipText(null);
-							B_King_row=fin_i;
-							B_King_col=fin_j;
-							bk.setPosition(new Position(fin_i, fin_j));
-							square[B_King_row][B_King_col].setIcon(B_King);
-							square[B_King_row][B_King_col].setToolTipText("B.King");
-							square[B_Rook2_row][B_Rook2_col].setIcon(null);
-							square[B_Rook2_row][B_Rook2_col].setToolTipText(null);
-							B_Rook2_row=fin_i;
-							B_Rook2_col=fin_j-1;
-							br2.setPosition(new Position(fin_i, fin_j-1));
-							square[B_Rook2_row][B_Rook2_col].setIcon(B_Rook2);
-							square[B_Rook2_row][B_Rook2_col].setToolTipText("B.Rook2");
+							square[init_i][init_j].setIcon(null);
+							square[init_i][init_j].setToolTipText(null);
+							board.move(from, to);
+							square[fin_i][fin_j].setIcon(B_King);
+							square[fin_i][fin_j].setToolTipText("B.King");
+							Position br2From = br2.getPosition();
+							Position br2To = new Position(fin_i, fin_j-1);
+							square[br2From.row()][br2From.col()].setIcon(null);
+							square[br2From.row()][br2From.col()].setToolTipText(null);
+							board.move(br2From, br2To);
+							square[br2To.row()][br2To.col()].setIcon(B_Rook2);
+							square[br2To.row()][br2To.col()].setToolTipText("B.Rook2");
 						}
-						if(fin_i==init_i&&fin_j==init_j-2&&br1.b==true&&square[B_King_row][B_King_col-1].getToolTipText()==null&&square[B_King_row][B_King_col-2].getToolTipText()==null&&square[B_King_row][B_King_col-3].getToolTipText()==null)
+						if(fin_i==init_i&&fin_j==init_j-2&&br1.b==true&&square[init_i][init_j-1].getToolTipText()==null&&square[init_i][init_j-2].getToolTipText()==null&&square[init_i][init_j-3].getToolTipText()==null)
 						{
-							square[B_King_row][B_King_col].setIcon(null);
-							square[B_King_row][B_King_col].setToolTipText(null);
-							B_King_row=fin_i;
-							B_King_col=fin_j;
-							bk.setPosition(new Position(fin_i, fin_j));
-							square[B_King_row][B_King_col].setIcon(B_King);
-							square[B_King_row][B_King_col].setToolTipText("B.King");
-							square[B_Rook1_row][B_Rook1_col].setIcon(null);
-							square[B_Rook1_row][B_Rook1_col].setToolTipText(null);
-							B_Rook1_row=fin_i;
-							B_Rook1_col=fin_j+1;
-							br1.setPosition(new Position(fin_i, fin_j+1));
-							square[B_Rook1_row][B_Rook1_col].setIcon(B_Rook1);
-							square[B_Rook1_row][B_Rook1_col].setToolTipText("B.Rook1");
+							square[init_i][init_j].setIcon(null);
+							square[init_i][init_j].setToolTipText(null);
+							board.move(from, to);
+							square[fin_i][fin_j].setIcon(B_King);
+							square[fin_i][fin_j].setToolTipText("B.King");
+							Position br1From = br1.getPosition();
+							Position br1To = new Position(fin_i, fin_j+1);
+							square[br1From.row()][br1From.col()].setIcon(null);
+							square[br1From.row()][br1From.col()].setToolTipText(null);
+							board.move(br1From, br1To);
+							square[br1To.row()][br1To.col()].setIcon(B_Rook1);
+							square[br1To.row()][br1To.col()].setToolTipText("B.Rook1");
 						}
 						return 0;
 					}
@@ -1470,13 +1271,11 @@ public class GUI extends JFrame
 				{
 					
 					if(bq.isValidMove(fin_i,fin_j)) {
-						square[B_Queen_row][B_Queen_col].setIcon(null);
-						square[B_Queen_row][B_Queen_col].setToolTipText(null);
-						B_Queen_row=fin_i;
-						B_Queen_col=fin_j;
-						bq.setPosition(new Position(fin_i, fin_j));
-						square[B_Queen_row][B_Queen_col].setIcon(B_Queen);
-						square[B_Queen_row][B_Queen_col].setToolTipText("B.Queen");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queen);
+						square[fin_i][fin_j].setToolTipText("B.Queen");
 						return 0;
 					}
 					return 1;
@@ -1484,13 +1283,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx1")&&board.isPathClear(from, to))
 				{
 					if(bqx1.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX1_row][B_QueenX1_col].setIcon(null);
-						square[B_QueenX1_row][B_QueenX1_col].setToolTipText(null);
-						B_QueenX1_row=fin_i;
-						B_QueenX1_col=fin_j;
-						bqx1.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX1_row][B_QueenX1_col].setIcon(B_Queenx1);
-						square[B_QueenX1_row][B_QueenX1_col].setToolTipText("B.Queenx1");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx1);
+						square[fin_i][fin_j].setToolTipText("B.Queenx1");
 						return 0;
 					}
 					return 1;
@@ -1498,13 +1295,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx2")&&board.isPathClear(from, to))
 				{
 					if(bqx2.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX2_row][B_QueenX2_col].setIcon(null);
-						square[B_QueenX2_row][B_QueenX2_col].setToolTipText(null);
-						B_QueenX2_row=fin_i;
-						B_QueenX2_col=fin_j;
-						bqx2.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX2_row][B_QueenX2_col].setIcon(B_Queenx2);
-						square[B_QueenX2_row][B_QueenX2_col].setToolTipText("B.Queenx2");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx2);
+						square[fin_i][fin_j].setToolTipText("B.Queenx2");
 						return 0;
 					}
 					return 1;
@@ -1512,13 +1307,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx3")&&board.isPathClear(from, to))
 				{
 					if(bqx3.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX3_row][B_QueenX3_col].setIcon(null);
-						square[B_QueenX3_row][B_QueenX3_col].setToolTipText(null);
-						B_QueenX3_row=fin_i;
-						B_QueenX3_col=fin_j;
-						bqx3.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX3_row][B_QueenX3_col].setIcon(B_Queenx3);
-						square[B_QueenX3_row][B_QueenX3_col].setToolTipText("B.Queenx3");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx3);
+						square[fin_i][fin_j].setToolTipText("B.Queenx3");
 						return 0;
 					}
 					return 1;
@@ -1526,13 +1319,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx4")&&board.isPathClear(from, to))
 				{
 					if(bqx4.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX4_row][B_QueenX4_col].setIcon(null);
-						square[B_QueenX4_row][B_QueenX4_col].setToolTipText(null);
-						B_QueenX4_row=fin_i;
-						B_QueenX4_col=fin_j;
-						bqx4.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX4_row][B_QueenX4_col].setIcon(B_Queenx4);
-						square[B_QueenX4_row][B_QueenX4_col].setToolTipText("B.Queenx4");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx4);
+						square[fin_i][fin_j].setToolTipText("B.Queenx4");
 						return 0;
 					}
 					return 1;
@@ -1540,13 +1331,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx5")&&board.isPathClear(from, to))
 				{
 					if(bqx5.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX5_row][B_QueenX5_col].setIcon(null);
-						square[B_QueenX5_row][B_QueenX5_col].setToolTipText(null);
-						B_QueenX5_row=fin_i;
-						B_QueenX5_col=fin_j;
-						bqx5.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX5_row][B_QueenX5_col].setIcon(B_Queenx5);
-						square[B_QueenX5_row][B_QueenX5_col].setToolTipText("B.Queenx5");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx5);
+						square[fin_i][fin_j].setToolTipText("B.Queenx5");
 						return 0;
 					}
 					return 1;
@@ -1554,13 +1343,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx6")&&board.isPathClear(from, to))
 				{
 					if(bqx6.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX6_row][B_QueenX6_col].setIcon(null);
-						square[B_QueenX6_row][B_QueenX6_col].setToolTipText(null);
-						B_QueenX6_row=fin_i;
-						B_QueenX6_col=fin_j;
-						bqx6.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX6_row][B_QueenX6_col].setIcon(B_Queenx6);
-						square[B_QueenX6_row][B_QueenX6_col].setToolTipText("B.Queenx6");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx6);
+						square[fin_i][fin_j].setToolTipText("B.Queenx6");
 						return 0;
 					}
 					return 1;
@@ -1568,13 +1355,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx7")&&board.isPathClear(from, to))
 				{
 					if(bqx7.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX7_row][B_QueenX7_col].setIcon(null);
-						square[B_QueenX7_row][B_QueenX7_col].setToolTipText(null);
-						B_QueenX7_row=fin_i;
-						B_QueenX7_col=fin_j;
-						bqx7.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX7_row][B_QueenX7_col].setIcon(B_Queenx7);
-						square[B_QueenX7_row][B_QueenX7_col].setToolTipText("B.Queenx7");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx7);
+						square[fin_i][fin_j].setToolTipText("B.Queenx7");
 						return 0;
 					}
 					return 1;
@@ -1582,13 +1367,11 @@ public class GUI extends JFrame
 				if(square[init_i][init_j].getToolTipText().equals("B.Queenx8")&&board.isPathClear(from, to))
 				{
 					if(bqx8.isValidMove(fin_i,fin_j)) {
-						square[B_QueenX8_row][B_QueenX8_col].setIcon(null);
-						square[B_QueenX8_row][B_QueenX8_col].setToolTipText(null);
-						B_QueenX8_row=fin_i;
-						B_QueenX8_col=fin_j;
-						bqx8.setPosition(new Position(fin_i, fin_j));
-						square[B_QueenX8_row][B_QueenX8_col].setIcon(B_Queenx8);
-						square[B_QueenX8_row][B_QueenX8_col].setToolTipText("B.Queenx8");
+						square[init_i][init_j].setIcon(null);
+						square[init_i][init_j].setToolTipText(null);
+						board.move(from, to);
+						square[fin_i][fin_j].setIcon(B_Queenx8);
+						square[fin_i][fin_j].setToolTipText("B.Queenx8");
 						return 0;
 					}
 					return 1;
@@ -1601,13 +1384,11 @@ public class GUI extends JFrame
 						{
 							if(!bp1.isqueen())
 							{
-								square[B_Pawn1_row][B_Pawn1_col].setIcon(null);
-								square[B_Pawn1_row][B_Pawn1_col].setToolTipText(null);
-								B_Pawn1_row=fin_i;
-								B_Pawn1_col=fin_j;
-								bp1.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn1_row][B_Pawn1_col].setIcon(B_Pawn1);
-								square[B_Pawn1_row][B_Pawn1_col].setToolTipText("B.Pawn1");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn1);
+								square[fin_i][fin_j].setToolTipText("B.Pawn1");
 								return 0;
 							}
 							else
@@ -1623,13 +1404,11 @@ public class GUI extends JFrame
 						{
 							if(!bp1.isqueen())
 							{
-								square[B_Pawn1_row][B_Pawn1_col].setIcon(null);
-								square[B_Pawn1_row][B_Pawn1_col].setToolTipText(null);
-								B_Pawn1_row=fin_i;
-								B_Pawn1_col=fin_j;
-								bp1.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn1_row][B_Pawn1_col].setIcon(B_Pawn1);
-								square[B_Pawn1_row][B_Pawn1_col].setToolTipText("B.Pawn1");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn1);
+								square[fin_i][fin_j].setToolTipText("B.Pawn1");
 								return 0;
 							}
 							else
@@ -1649,13 +1428,11 @@ public class GUI extends JFrame
 						{
 							if(!bp2.isqueen())
 							{
-								square[B_Pawn2_row][B_Pawn2_col].setIcon(null);
-								square[B_Pawn2_row][B_Pawn2_col].setToolTipText(null);
-								B_Pawn2_row=fin_i;
-								B_Pawn2_col=fin_j;
-								bp2.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn2_row][B_Pawn2_col].setIcon(B_Pawn2);
-								square[B_Pawn2_row][B_Pawn2_col].setToolTipText("B.Pawn2");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn2);
+								square[fin_i][fin_j].setToolTipText("B.Pawn2");
 								return 0;
 							}
 							else
@@ -1671,13 +1448,11 @@ public class GUI extends JFrame
 						{
 							if(!bp2.isqueen())
 							{
-								square[B_Pawn2_row][B_Pawn2_col].setIcon(null);
-								square[B_Pawn2_row][B_Pawn2_col].setToolTipText(null);
-								B_Pawn2_row=fin_i;
-								B_Pawn2_col=fin_j;
-								bp2.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn2_row][B_Pawn2_col].setIcon(B_Pawn2);
-								square[B_Pawn2_row][B_Pawn2_col].setToolTipText("B.Pawn2");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn2);
+								square[fin_i][fin_j].setToolTipText("B.Pawn2");
 								return 0;
 							}
 							else
@@ -1697,13 +1472,11 @@ public class GUI extends JFrame
 						{
 							if(!bp3.isqueen())
 							{
-								square[B_Pawn3_row][B_Pawn3_col].setIcon(null);
-								square[B_Pawn3_row][B_Pawn3_col].setToolTipText(null);
-								B_Pawn3_row=fin_i;
-								B_Pawn3_col=fin_j;
-								bp3.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn3_row][B_Pawn3_col].setIcon(B_Pawn3);
-								square[B_Pawn3_row][B_Pawn3_col].setToolTipText("B.Pawn3");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn3);
+								square[fin_i][fin_j].setToolTipText("B.Pawn3");
 								return 0;
 							}
 							else
@@ -1719,13 +1492,11 @@ public class GUI extends JFrame
 						{
 							if(!bp3.isqueen())
 							{
-								square[B_Pawn3_row][B_Pawn3_col].setIcon(null);
-								square[B_Pawn3_row][B_Pawn3_col].setToolTipText(null);
-							B_Pawn3_row=fin_i;
-							B_Pawn3_col=fin_j;
-							bp3.setPosition(new Position(fin_i, fin_j));
-							square[B_Pawn3_row][B_Pawn3_col].setIcon(B_Pawn3);
-								square[B_Pawn3_row][B_Pawn3_col].setToolTipText("B.Pawn3");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn3);
+								square[fin_i][fin_j].setToolTipText("B.Pawn3");
 								return 0;
 							}
 							else
@@ -1745,13 +1516,11 @@ public class GUI extends JFrame
 						{
 							if(!bp4.isqueen())
 							{
-								square[B_Pawn4_row][B_Pawn4_col].setIcon(null);
-								square[B_Pawn4_row][B_Pawn4_col].setToolTipText(null);
-								B_Pawn4_row=fin_i;
-								B_Pawn4_col=fin_j;
-								bp4.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn4_row][B_Pawn4_col].setIcon(B_Pawn4);
-								square[B_Pawn4_row][B_Pawn4_col].setToolTipText("B.Pawn4");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn4);
+								square[fin_i][fin_j].setToolTipText("B.Pawn4");
 								return 0;
 							}
 							else
@@ -1767,13 +1536,11 @@ public class GUI extends JFrame
 						{
 							if(!bp4.isqueen())
 							{
-								square[B_Pawn4_row][B_Pawn4_col].setIcon(null);
-								square[B_Pawn4_row][B_Pawn4_col].setToolTipText(null);
-								B_Pawn4_row=fin_i;
-								B_Pawn4_col=fin_j;
-								bp4.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn4_row][B_Pawn4_col].setIcon(B_Pawn4);
-								square[B_Pawn4_row][B_Pawn4_col].setToolTipText("B.Pawn4");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn4);
+								square[fin_i][fin_j].setToolTipText("B.Pawn4");
 								return 0;
 							}
 							else
@@ -1793,13 +1560,11 @@ public class GUI extends JFrame
 						{
 							if(!bp5.isqueen())
 							{
-								square[B_Pawn5_row][B_Pawn5_col].setIcon(null);
-								square[B_Pawn5_row][B_Pawn5_col].setToolTipText(null);
-								B_Pawn5_row=fin_i;
-								B_Pawn5_col=fin_j;
-								bp5.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn5_row][B_Pawn5_col].setIcon(B_Pawn5);
-								square[B_Pawn5_row][B_Pawn5_col].setToolTipText("B.Pawn5");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn5);
+								square[fin_i][fin_j].setToolTipText("B.Pawn5");
 								return 0;
 							}
 							else
@@ -1815,13 +1580,11 @@ public class GUI extends JFrame
 						{
 							if(!bp5.isqueen())
 							{
-								square[B_Pawn5_row][B_Pawn5_col].setIcon(null);
-								square[B_Pawn5_row][B_Pawn5_col].setToolTipText(null);
-								B_Pawn5_row=fin_i;
-								B_Pawn5_col=fin_j;
-								bp5.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn5_row][B_Pawn5_col].setIcon(B_Pawn5);
-								square[B_Pawn5_row][B_Pawn5_col].setToolTipText("B.Pawn5");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn5);
+								square[fin_i][fin_j].setToolTipText("B.Pawn5");
 								return 0;
 							}
 							else
@@ -1841,13 +1604,11 @@ public class GUI extends JFrame
 						{
 							if(!bp6.isqueen())
 							{
-								square[B_Pawn6_row][B_Pawn6_col].setIcon(null);
-								square[B_Pawn6_row][B_Pawn6_col].setToolTipText(null);
-								B_Pawn6_row=fin_i;
-								B_Pawn6_col=fin_j;
-								bp6.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn6_row][B_Pawn6_col].setIcon(B_Pawn6);
-								square[B_Pawn6_row][B_Pawn6_col].setToolTipText("B.Pawn6");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn6);
+								square[fin_i][fin_j].setToolTipText("B.Pawn6");
 								return 0;
 							}
 							else
@@ -1862,13 +1623,11 @@ public class GUI extends JFrame
 						if(bp6.isValidMove2(fin_i,fin_j,PieceColor.BLACK)) {
 							if(!bp6.isqueen())
 							{
-								square[B_Pawn6_row][B_Pawn6_col].setIcon(null);
-								square[B_Pawn6_row][B_Pawn6_col].setToolTipText(null);
-								B_Pawn6_row=fin_i;
-								B_Pawn6_col=fin_j;
-								bp6.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn6_row][B_Pawn6_col].setIcon(B_Pawn6);
-								square[B_Pawn6_row][B_Pawn6_col].setToolTipText("B.Pawn6");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn6);
+								square[fin_i][fin_j].setToolTipText("B.Pawn6");
 								return 0;
 							}
 							else
@@ -1888,13 +1647,11 @@ public class GUI extends JFrame
 						{
 							if(!bp7.isqueen())
 							{
-								square[B_Pawn7_row][B_Pawn7_col].setIcon(null);
-								square[B_Pawn7_row][B_Pawn7_col].setToolTipText(null);
-								B_Pawn7_row=fin_i;
-								B_Pawn7_col=fin_j;
-								bp7.setPosition(new Position(fin_i, fin_j));
-							square[B_Pawn7_row][B_Pawn7_col].setIcon(B_Pawn7);
-							square[B_Pawn7_row][B_Pawn7_col].setToolTipText("B.Pawn7");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn7);
+								square[fin_i][fin_j].setToolTipText("B.Pawn7");
 							return 0;
 						}
 						else
@@ -1909,13 +1666,11 @@ public class GUI extends JFrame
 						{
 							if(!bp7.isqueen())
 							{
-							square[B_Pawn7_row][B_Pawn7_col].setIcon(null);
-							square[B_Pawn7_row][B_Pawn7_col].setToolTipText(null);
-							B_Pawn7_row=fin_i;
-							B_Pawn7_col=fin_j;
-							bp7.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn7_row][B_Pawn7_col].setIcon(B_Pawn7);
-								square[B_Pawn7_row][B_Pawn7_col].setToolTipText("B.Pawn7");
+							square[init_i][init_j].setIcon(null);
+							square[init_i][init_j].setToolTipText(null);
+							board.move(from, to);
+							square[fin_i][fin_j].setIcon(B_Pawn7);
+							square[fin_i][fin_j].setToolTipText("B.Pawn7");
 								return 0;
 							}
 							else
@@ -1935,13 +1690,11 @@ public class GUI extends JFrame
 						{
 							if(!bp8.isqueen())
 							{
-								square[B_Pawn8_row][B_Pawn8_col].setIcon(null);
-								square[B_Pawn8_row][B_Pawn8_col].setToolTipText(null);
-								B_Pawn8_row=fin_i;
-								B_Pawn8_col=fin_j;
-								bp8.setPosition(new Position(fin_i, fin_j));
-								square[B_Pawn8_row][B_Pawn8_col].setIcon(B_Pawn8);
-								square[B_Pawn8_row][B_Pawn8_col].setToolTipText("B.Pawn8");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn8);
+								square[fin_i][fin_j].setToolTipText("B.Pawn8");
 								return 0;
 							}
 							else
@@ -1957,13 +1710,11 @@ public class GUI extends JFrame
 						{
 							if(!bp8.isqueen())
 							{
-								square[B_Pawn8_row][B_Pawn8_col].setIcon(null);
-								square[B_Pawn8_row][B_Pawn8_col].setToolTipText(null);
-							B_Pawn8_row=fin_i;
-							B_Pawn8_col=fin_j;
-							bp8.setPosition(new Position(fin_i, fin_j));
-							square[B_Pawn8_row][B_Pawn8_col].setIcon(B_Pawn8);
-							square[B_Pawn8_row][B_Pawn8_col].setToolTipText("B.Pawn8");
+								square[init_i][init_j].setIcon(null);
+								square[init_i][init_j].setToolTipText(null);
+								board.move(from, to);
+								square[fin_i][fin_j].setIcon(B_Pawn8);
+								square[fin_i][fin_j].setToolTipText("B.Pawn8");
 								return 0;
 							}
 							else

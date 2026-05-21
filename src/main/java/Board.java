@@ -6,6 +6,10 @@ public class Board {
     }
 
     public void set(Position pos, Piece piece) {
+        Piece existing = grid[pos.row()][pos.col()];
+        if (existing != null && existing != piece) {
+            existing.setPosition(Position.OFF_BOARD);
+        }
         grid[pos.row()][pos.col()] = piece;
         if (piece != null) {
             piece.setPosition(pos);
@@ -25,6 +29,10 @@ public class Board {
     }
 
     public void move(Position from, Position to) {
+        Piece captured = grid[to.row()][to.col()];
+        if (captured != null) {
+            captured.setPosition(Position.OFF_BOARD);
+        }
         Piece piece = grid[from.row()][from.col()];
         grid[to.row()][to.col()] = piece;
         grid[from.row()][from.col()] = null;
