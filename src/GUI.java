@@ -15,103 +15,103 @@ public class GUI extends JFrame
 	
 	private JButton[][] square = new JButton[8][8];
 	
-	private ImageIcon King = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/king.png");
+	private ImageIcon King = new ImageIcon(GUI.class.getResource("/images/king.png"));
 	
-	private ImageIcon Queen = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queen.png");
+	private ImageIcon Queen = new ImageIcon(GUI.class.getResource("/images/queen.png"));
 	
-	private ImageIcon Rook1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/Rook.png");
+	private ImageIcon Rook1 = new ImageIcon(GUI.class.getResource("/images/Rook.png"));
 	
-	private ImageIcon Rook2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/Rook2.png");
+	private ImageIcon Rook2 = new ImageIcon(GUI.class.getResource("/images/Rook2.png"));
  
-	private ImageIcon Bishop1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/bishop.png");
+	private ImageIcon Bishop1 = new ImageIcon(GUI.class.getResource("/images/bishop.png"));
 	
-	private ImageIcon Bishop2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/bishop2.png");
+	private ImageIcon Bishop2 = new ImageIcon(GUI.class.getResource("/images/bishop2.png"));
 	
-	private ImageIcon Knight1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/knight.png");
+	private ImageIcon Knight1 = new ImageIcon(GUI.class.getResource("/images/knight.png"));
 
-	private ImageIcon Knight2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/knight2.png");
+	private ImageIcon Knight2 = new ImageIcon(GUI.class.getResource("/images/knight2.png"));
 
-	private ImageIcon Pawn1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn.png");
+	private ImageIcon Pawn1 = new ImageIcon(GUI.class.getResource("/images/pawn.png"));
 	
-	private ImageIcon Pawn2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn2.png");
+	private ImageIcon Pawn2 = new ImageIcon(GUI.class.getResource("/images/pawn2.png"));
 	
-	private ImageIcon Pawn3 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn3.png");
+	private ImageIcon Pawn3 = new ImageIcon(GUI.class.getResource("/images/pawn3.png"));
 	
-	private ImageIcon Pawn4 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn4.png");
+	private ImageIcon Pawn4 = new ImageIcon(GUI.class.getResource("/images/pawn4.png"));
 	
-	private ImageIcon Pawn5 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn5.png");
+	private ImageIcon Pawn5 = new ImageIcon(GUI.class.getResource("/images/pawn5.png"));
 	
-	private ImageIcon Pawn6 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn6.png");
+	private ImageIcon Pawn6 = new ImageIcon(GUI.class.getResource("/images/pawn6.png"));
 	
-	private ImageIcon Pawn7 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn7.png");
+	private ImageIcon Pawn7 = new ImageIcon(GUI.class.getResource("/images/pawn7.png"));
 	
-	private ImageIcon Pawn8 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/pawn8.png");
+	private ImageIcon Pawn8 = new ImageIcon(GUI.class.getResource("/images/pawn8.png"));
 	
-	private ImageIcon Queenx1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx1.png");
+	private ImageIcon Queenx1 = new ImageIcon(GUI.class.getResource("/images/queenx1.png"));
 	
-	private ImageIcon Queenx2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx2.png");
+	private ImageIcon Queenx2 = new ImageIcon(GUI.class.getResource("/images/queenx2.png"));
 	
-	private ImageIcon Queenx3 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx3.png");
+	private ImageIcon Queenx3 = new ImageIcon(GUI.class.getResource("/images/queenx3.png"));
 	
-	private ImageIcon Queenx4 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx4.png");
+	private ImageIcon Queenx4 = new ImageIcon(GUI.class.getResource("/images/queenx4.png"));
 	
-	private ImageIcon Queenx5 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx5.png");
+	private ImageIcon Queenx5 = new ImageIcon(GUI.class.getResource("/images/queenx5.png"));
 	
-	private ImageIcon Queenx6 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx6.png");
+	private ImageIcon Queenx6 = new ImageIcon(GUI.class.getResource("/images/queenx6.png"));
 	
-	private ImageIcon Queenx7 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx7.png");
+	private ImageIcon Queenx7 = new ImageIcon(GUI.class.getResource("/images/queenx7.png"));
 	
-	private ImageIcon Queenx8 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/queenx8.png");
+	private ImageIcon Queenx8 = new ImageIcon(GUI.class.getResource("/images/queenx8.png"));
 	
 	
 	
-	private ImageIcon B_King = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackking.png");
+	private ImageIcon B_King = new ImageIcon(GUI.class.getResource("/images/blackking.png"));
 	
-	private ImageIcon B_Queen = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueen.png");
+	private ImageIcon B_Queen = new ImageIcon(GUI.class.getResource("/images/blackqueen.png"));
 
-	private ImageIcon B_Rook1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackrook1.png");
+	private ImageIcon B_Rook1 = new ImageIcon(GUI.class.getResource("/images/blackrook1.png"));
 	
-	private ImageIcon B_Rook2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackrook2.png");
+	private ImageIcon B_Rook2 = new ImageIcon(GUI.class.getResource("/images/blackrook2.png"));
 
-	private ImageIcon B_Bishop1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackbishop.png");
+	private ImageIcon B_Bishop1 = new ImageIcon(GUI.class.getResource("/images/blackbishop.png"));
 	
-	private ImageIcon B_Bishop2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackbishop2.png");
+	private ImageIcon B_Bishop2 = new ImageIcon(GUI.class.getResource("/images/blackbishop2.png"));
 
-	private ImageIcon B_Knight1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackknight1.jpg");
+	private ImageIcon B_Knight1 = new ImageIcon(GUI.class.getResource("/images/blackknight1.jpg"));
 	
-	private ImageIcon B_Knight2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackknight2.jpg");
+	private ImageIcon B_Knight2 = new ImageIcon(GUI.class.getResource("/images/blackknight2.jpg"));
 	
-	private ImageIcon B_Pawn1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn1.jpg");
+	private ImageIcon B_Pawn1 = new ImageIcon(GUI.class.getResource("/images/blackpawn1.jpg"));
 	
-	private ImageIcon B_Pawn2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn2.jpg");
+	private ImageIcon B_Pawn2 = new ImageIcon(GUI.class.getResource("/images/blackpawn2.jpg"));
 
-	private ImageIcon B_Pawn3 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn3.jpg");
+	private ImageIcon B_Pawn3 = new ImageIcon(GUI.class.getResource("/images/blackpawn3.jpg"));
 
-	private ImageIcon B_Pawn4 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn4.jpg");
+	private ImageIcon B_Pawn4 = new ImageIcon(GUI.class.getResource("/images/blackpawn4.jpg"));
 
-	private ImageIcon B_Pawn5 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn5.jpg");
+	private ImageIcon B_Pawn5 = new ImageIcon(GUI.class.getResource("/images/blackpawn5.jpg"));
 
-	private ImageIcon B_Pawn6 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn6.jpg");
+	private ImageIcon B_Pawn6 = new ImageIcon(GUI.class.getResource("/images/blackpawn6.jpg"));
 
-	private ImageIcon B_Pawn7 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn7.jpg");
+	private ImageIcon B_Pawn7 = new ImageIcon(GUI.class.getResource("/images/blackpawn7.jpg"));
 
-	private ImageIcon B_Pawn8 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackpawn8.jpg");
+	private ImageIcon B_Pawn8 = new ImageIcon(GUI.class.getResource("/images/blackpawn8.jpg"));
 
-    private ImageIcon B_Queenx1 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx1.png");
+    private ImageIcon B_Queenx1 = new ImageIcon(GUI.class.getResource("/images/blackqueenx1.png"));
 	
-	private ImageIcon B_Queenx2 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx2.png");
+	private ImageIcon B_Queenx2 = new ImageIcon(GUI.class.getResource("/images/blackqueenx2.png"));
 	
-	private ImageIcon B_Queenx3 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx3.png");
+	private ImageIcon B_Queenx3 = new ImageIcon(GUI.class.getResource("/images/blackqueenx3.png"));
 	
-	private ImageIcon B_Queenx4 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx4.png");
+	private ImageIcon B_Queenx4 = new ImageIcon(GUI.class.getResource("/images/blackqueenx4.png"));
 	
-	private ImageIcon B_Queenx5 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx5.png");
+	private ImageIcon B_Queenx5 = new ImageIcon(GUI.class.getResource("/images/blackqueenx5.png"));
 	
-	private ImageIcon B_Queenx6 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx6.png");
+	private ImageIcon B_Queenx6 = new ImageIcon(GUI.class.getResource("/images/blackqueenx6.png"));
 	
-	private ImageIcon B_Queenx7 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx7.png");
+	private ImageIcon B_Queenx7 = new ImageIcon(GUI.class.getResource("/images/blackqueenx7.png"));
 	
-	private ImageIcon B_Queenx8 = new ImageIcon("/home/satwik/eclipse-workspace/Chess/src/blackqueenx8.png");
+	private ImageIcon B_Queenx8 = new ImageIcon(GUI.class.getResource("/images/blackqueenx8.png"));
 	
 	private int Rook1_row = 7;
 	private int Rook1_col= 0;
@@ -339,9 +339,15 @@ public class GUI extends JFrame
 			for(int j =0;j<8;j++)
 			{
 				square[i][j]= new JButton();
+				square[i][j].setOpaque(true);
+				square[i][j].setBorderPainted(false);
 				if((i+j)%2==0)
 				{
-					square[i][j].setBackground(Color.blue);
+					square[i][j].setBackground(Color.WHITE);
+				}
+				else
+				{
+					square[i][j].setBackground(new Color(0x81b64c));
 				}
 				contents.add(square[i][j]);
 				square[i][j].addMouseListener(b);
