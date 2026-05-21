@@ -1,25 +1,25 @@
-public class Rook extends Coins 
+public class Rook extends AbstractPiece
 {
 	Boolean b;
-	public Rook(int x,int y,PieceColor s)
+	public Rook(int x, int y, PieceColor s)
 	{
 		super(x, y, s, PieceType.ROOK);
-		b= true;
+		b = true;
 	}
-	public boolean isValidMove(int desx,int desy)
+	public boolean isValidMove(int desx, int desy)
 	{
-		int X = Math.abs(desx-x);
-		int Y = Math.abs(desy-y);
-		if(((X*Y)==0)&&((X+Y)!=0))
+		int X = Math.abs(desx - x);
+		int Y = Math.abs(desy - y);
+		if(((X * Y) == 0) && ((X + Y) != 0))
 		{
 			return true;
 		}
 		return false;
 	}
-	public void setXY(int x,int y)
+	@Override
+	public void setPosition(int row, int col)
 	{
-		super.x=x;
-		super.y=y;
+		super.setPosition(row, col);
 		b = false;
 	}
 }

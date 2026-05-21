@@ -1,25 +1,25 @@
-public class King extends Coins 
+public class King extends AbstractPiece
 {
 	Boolean b;
-	public King(int x,int y,PieceColor s)
+	public King(int x, int y, PieceColor s)
 	{
-		super(x, y, s, PieceType.KING);	
+		super(x, y, s, PieceType.KING);
 		b = true;
 	}
-	public boolean isValidMove(int desx,int desy)
+	public boolean isValidMove(int desx, int desy)
 	{
-		int X = Math.abs(desx-x);
-		int Y = Math.abs(desy-y);
-		if(X>1 || Y>1)
+		int X = Math.abs(desx - x);
+		int Y = Math.abs(desy - y);
+		if(X > 1 || Y > 1)
 		{
 			return false;
 		}
 		return true;
 	}
-	public void setXY(int x,int y)
+	@Override
+	public void setPosition(int row, int col)
 	{
-		super.x=x;
-		super.y=y;
+		super.setPosition(row, col);
 		b = false;
 	}
 	public boolean check()

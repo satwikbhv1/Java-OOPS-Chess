@@ -1,21 +1,15 @@
-public class Pawn extends Coins
+public class Pawn extends AbstractPiece
 {
-	
-	public Pawn(int x, int y, PieceColor s) 
+	public Pawn(int x, int y, PieceColor s)
 	{
 		super(x, y, s, PieceType.PAWN);
-	}
-	public void setXY(int x, int y)
-	{
-		super.x = x;
-		super.y = y;
 	}
 	public boolean isValidMove1(int desx, PieceColor s)
 	{
 		int X = desx - x;
 		if(s == PieceColor.WHITE)
 		{
-			if(x == 6 && X == -2) 
+			if(x == 6 && X == -2)
 			{
 				return true;
 			}
@@ -23,7 +17,7 @@ public class Pawn extends Coins
 		if(s == PieceColor.BLACK)
 		{
 			X = X * -1;
-			if(x == 1 && X == -2) 
+			if(x == 1 && X == -2)
 			{
 				return true;
 			}
@@ -40,7 +34,7 @@ public class Pawn extends Coins
 		int Y = desy - y;
 		if(s == PieceColor.WHITE)
 		{
-			if(x == 6 && X == -2 && (Y == 1 || Y == -1)) 
+			if(x == 6 && X == -2 && (Y == 1 || Y == -1))
 			{
 				return true;
 			}
@@ -48,7 +42,7 @@ public class Pawn extends Coins
 		if(s == PieceColor.BLACK && (Y == 1 || Y == -1))
 		{
 			X = X * -1;
-			if(x == 1 && X == -2) 
+			if(x == 1 && X == -2)
 			{
 				return true;
 			}

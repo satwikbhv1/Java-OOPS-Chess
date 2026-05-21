@@ -1,26 +1,21 @@
-public class Queen extends Coins
+public class Queen extends AbstractPiece
 {
-	public Queen(int x,int y,PieceColor s)
+	public Queen(int x, int y, PieceColor s)
 	{
-		super(x, y, s, PieceType.QUEEN);	
+		super(x, y, s, PieceType.QUEEN);
 	}
-	public void setXY(int x,int y)
+	public boolean isValidMove(int desx, int desy)
 	{
-		super.x=x;
-		super.y=y;
-	}
-	public boolean isValidMove(int desx,int desy)
-	{
-		int X = Math.abs(desx-x);
-		int Y = Math.abs(desy-y);
+		int X = Math.abs(desx - x);
+		int Y = Math.abs(desy - y);
 		if(X == Y)
 		{
 			return true;
 		}
-		if(((X*Y)==0)&&((X+Y)!=0))
+		if(((X * Y) == 0) && ((X + Y) != 0))
 		{
 			return true;
 		}
-		return false;       
+		return false;
 	}
 }
