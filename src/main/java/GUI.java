@@ -456,7 +456,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx1=new Queen(fin_j, fin_j, p.color);
+			qx1=new Queen(fin_i, fin_j, p.color);
 			qx1.x=fin_i;
 			qx1.y=fin_j;
 			QueenX1_row=fin_i;
@@ -470,7 +470,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx2=new Queen(fin_j, fin_j, p.color);
+			qx2=new Queen(fin_i, fin_j, p.color);
 			qx2.x=fin_i;
 			qx2.y=fin_j;
 			QueenX2_row=fin_i;
@@ -484,7 +484,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx3=new Queen(fin_j, fin_j, p.color);
+			qx3=new Queen(fin_i, fin_j, p.color);
 			qx3.x=fin_i;
 			qx3.y=fin_j;
 			QueenX3_row=fin_i;
@@ -498,7 +498,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx4=new Queen(fin_j, fin_j, p.color);
+			qx4=new Queen(fin_i, fin_j, p.color);
 			qx4.x=fin_i;
 			qx4.y=fin_j;
 			QueenX4_row=fin_i;
@@ -512,7 +512,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx5=new Queen(fin_j, fin_j, p.color);
+			qx5=new Queen(fin_i, fin_j, p.color);
 			qx5.x=fin_i;
 			qx5.y=fin_j;
 			QueenX5_row=fin_i;
@@ -526,7 +526,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx6=new Queen(fin_j, fin_j, p.color);
+			qx6=new Queen(fin_i, fin_j, p.color);
 			qx6.x=fin_i;
 			qx6.y=fin_j;
 			QueenX6_row=fin_i;
@@ -540,7 +540,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx7=new Queen(fin_j, fin_j, p.color);
+			qx7=new Queen(fin_i, fin_j, p.color);
 			qx7.x=fin_i;
 			qx7.y=fin_j;
 			QueenX7_row=fin_i;
@@ -554,7 +554,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			qx8=new Queen(fin_j, fin_j, p.color);
+			qx8=new Queen(fin_i, fin_j, p.color);
 			qx8.x=fin_i;
 			qx8.y=fin_j;
 			QueenX8_row=fin_i;
@@ -568,7 +568,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx1=new Queen(fin_j, fin_j, p.color);
+			bqx1=new Queen(fin_i, fin_j, p.color);
 			B_QueenX1_row=fin_i;
 			B_QueenX1_col=fin_j;
 		}
@@ -580,7 +580,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx2=new Queen(fin_j, fin_j, p.color);
+			bqx2=new Queen(fin_i, fin_j, p.color);
 			B_QueenX2_row=fin_i;
 			B_QueenX2_col=fin_j;
 		}
@@ -592,7 +592,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx3=new Queen(fin_j, fin_j, p.color);
+			bqx3=new Queen(fin_i, fin_j, p.color);
 			B_QueenX3_row=fin_i;
 			B_QueenX3_col=fin_j;
 		}
@@ -604,7 +604,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx4=new Queen(fin_j, fin_j, p.color);
+			bqx4=new Queen(fin_i, fin_j, p.color);
 			B_QueenX4_row=fin_i;
 			B_QueenX4_col=fin_j;
 		}
@@ -616,7 +616,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx5=new Queen(fin_j, fin_j, p.color);
+			bqx5=new Queen(fin_i, fin_j, p.color);
 			B_QueenX5_row=fin_i;
 			B_QueenX5_col=fin_j;
 		}
@@ -628,7 +628,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx6=new Queen(fin_j, fin_j, p.color);
+			bqx6=new Queen(fin_i, fin_j, p.color);
 			B_QueenX6_row=fin_i;
 			B_QueenX6_col=fin_j;
 		}
@@ -640,7 +640,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx7=new Queen(fin_j, fin_j, p.color);
+			bqx7=new Queen(fin_i, fin_j, p.color);
 			B_QueenX7_row=fin_i;
 			B_QueenX7_col=fin_j;
 		}
@@ -652,7 +652,7 @@ public class GUI extends JFrame
 			square[p.x][p.y].setToolTipText(null);
 			p.x=-1;
 			p.y=-1;
-			bqx8=new Queen(fin_j, fin_j, p.color);
+			bqx8=new Queen(fin_i, fin_j, p.color);
 			B_QueenX8_row=fin_i;
 			B_QueenX8_col=fin_j;
 		}
@@ -1227,8 +1227,8 @@ public class GUI extends JFrame
 								Pawn4_row=fin_i;
 								Pawn4_col=fin_j;
 								p4.setXY(fin_i, fin_j);
-								square[Pawn4_row][Pawn4_col].setIcon(Pawn1);
-								square[Pawn4_row][Pawn4_col].setToolTipText("Pawn4");
+							square[Pawn4_row][Pawn4_col].setIcon(Pawn4);
+							square[Pawn4_row][Pawn4_col].setToolTipText("Pawn4");
 								return 1;
 							}
 							else
@@ -1292,7 +1292,7 @@ public class GUI extends JFrame
 					{
 						if(p5.isValidMove2(fin_i,fin_j,PieceColor.WHITE)) 
 						{
-							if(!p1.isqueen())
+							if(!p5.isqueen())
 							{
 								System.out.println("1");
 								square[Pawn5_row][Pawn5_col].setIcon(null);
@@ -1899,10 +1899,10 @@ public class GUI extends JFrame
 								System.out.println("1");
 								square[B_Pawn3_row][B_Pawn3_col].setIcon(null);
 								square[B_Pawn3_row][B_Pawn3_col].setToolTipText(null);
-								B_Pawn3_row=fin_i;
-								B_Pawn3_col=fin_j;
-								bp1.setXY(fin_i, fin_j);
-								square[B_Pawn3_row][B_Pawn3_col].setIcon(B_Pawn3);
+							B_Pawn3_row=fin_i;
+							B_Pawn3_col=fin_j;
+							bp3.setXY(fin_i, fin_j);
+							square[B_Pawn3_row][B_Pawn3_col].setIcon(B_Pawn3);
 								square[B_Pawn3_row][B_Pawn3_col].setToolTipText("B.Pawn3");
 								return 0;
 							}
@@ -2078,13 +2078,13 @@ public class GUI extends JFrame
 								B_Pawn7_row=fin_i;
 								B_Pawn7_col=fin_j;
 								bp7.setXY(fin_i, fin_j);
-								square[B_Pawn7_row][B_Pawn7_col].setIcon(B_Pawn1);
-								square[B_Pawn7_row][B_Pawn7_col].setToolTipText("B.Pawn1");
-								return 0;
-							}
-							else
-							{
-								makequeen(fin_i,fin_j,bp7,"b7");
+							square[B_Pawn7_row][B_Pawn7_col].setIcon(B_Pawn7);
+							square[B_Pawn7_row][B_Pawn7_col].setToolTipText("B.Pawn7");
+							return 0;
+						}
+						else
+						{
+							makequeen(fin_i,fin_j,bp7,"b7");
 								return 0;
 							}
 					}
@@ -2095,11 +2095,11 @@ public class GUI extends JFrame
 							if(!bp7.isqueen())
 							{
 								System.out.println("1");
-								square[B_Pawn1_row][B_Pawn1_col].setIcon(null);
-								square[B_Pawn1_row][B_Pawn1_col].setToolTipText(null);
-								B_Pawn7_row=fin_i;
-								B_Pawn7_col=fin_j;
-								bp7.setXY(fin_i, fin_j);
+							square[B_Pawn7_row][B_Pawn7_col].setIcon(null);
+							square[B_Pawn7_row][B_Pawn7_col].setToolTipText(null);
+							B_Pawn7_row=fin_i;
+							B_Pawn7_col=fin_j;
+							bp7.setXY(fin_i, fin_j);
 								square[B_Pawn7_row][B_Pawn7_col].setIcon(B_Pawn7);
 								square[B_Pawn7_row][B_Pawn7_col].setToolTipText("B.Pawn7");
 								return 0;
@@ -2147,11 +2147,11 @@ public class GUI extends JFrame
 								System.out.println("1");
 								square[B_Pawn8_row][B_Pawn8_col].setIcon(null);
 								square[B_Pawn8_row][B_Pawn8_col].setToolTipText(null);
-								B_Pawn8_row=fin_i;
-								B_Pawn8_col=fin_j;
-								bp1.setXY(fin_i, fin_j);
-								square[B_Pawn8_row][B_Pawn8_col].setIcon(B_Pawn1);
-								square[B_Pawn8_row][B_Pawn8_col].setToolTipText("B.Pawn1");
+							B_Pawn8_row=fin_i;
+							B_Pawn8_col=fin_j;
+							bp8.setXY(fin_i, fin_j);
+							square[B_Pawn8_row][B_Pawn8_col].setIcon(B_Pawn8);
+							square[B_Pawn8_row][B_Pawn8_col].setToolTipText("B.Pawn8");
 								return 0;
 							}
 							else
