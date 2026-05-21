@@ -1,7 +1,7 @@
 public class Rook extends Coins 
 {
 	Boolean b;
-	public Rook(int x,int y,String s)
+	public Rook(int x,int y,PieceColor s)
 	{
 		super(x,y,s);
 		b= true;

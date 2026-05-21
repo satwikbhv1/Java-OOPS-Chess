@@ -1,7 +1,7 @@
 public class King extends Coins 
 {
 	Boolean b;
-	public King(int x,int y,String s)
+	public King(int x,int y,PieceColor s)
 	{
 		super(x,y,s);	
 		b = true;

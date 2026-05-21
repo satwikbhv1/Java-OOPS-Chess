@@ -1,6 +1,6 @@
 public class Knight extends Coins
 {
-	public Knight(int x,int y,String s)
+	public Knight(int x,int y,PieceColor s)
 	{
 		super(x,y,s);	
 	}

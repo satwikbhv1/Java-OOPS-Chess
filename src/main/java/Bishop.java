@@ -1,6 +1,6 @@
 public class Bishop extends Coins
 {
-	public Bishop(int x,int y,String s)
+	public Bishop(int x,int y,PieceColor s)
 	{
 		super(x,y,s);	
 	}

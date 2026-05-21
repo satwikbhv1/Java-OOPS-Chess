@@ -2,12 +2,12 @@ public class Coins
 { 
 	public int x;
 	public int y;
-	public String color;
+	public PieceColor color;
 	
-	public Coins (int xcoord,int ycoord,String c)
+	public Coins (int xcoord, int ycoord, PieceColor c)
 	{
-		this.x=xcoord;
-		this.y=ycoord;
-		this.color=c;
+		this.x = xcoord;
+		this.y = ycoord;
+		this.color = c;
 	}
 }

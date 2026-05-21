@@ -1,6 +1,6 @@
 public class Queen extends Coins
 {
-	public Queen(int x,int y,String s)
+	public Queen(int x,int y,PieceColor s)
 	{
 		super(x,y,s);	
 	}
