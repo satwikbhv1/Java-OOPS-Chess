@@ -2,6 +2,9 @@
 .DS_Store
 **/.DS_Store
 
+# Maven build output
+target/
+
 # Compiled class file
 *.class
 
