@@ -2,7 +2,7 @@ public class Knight extends Coins
 {
 	public Knight(int x,int y,PieceColor s)
 	{
-		super(x,y,s);	
+		super(x, y, s, PieceType.KNIGHT);	
 	}
 	public boolean isValidMove(int desx,int desy)
 	{

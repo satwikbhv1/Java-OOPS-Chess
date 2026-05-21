@@ -2,7 +2,7 @@ public class Queen extends Coins
 {
 	public Queen(int x,int y,PieceColor s)
 	{
-		super(x,y,s);	
+		super(x, y, s, PieceType.QUEEN);	
 	}
 	public void setXY(int x,int y)
 	{

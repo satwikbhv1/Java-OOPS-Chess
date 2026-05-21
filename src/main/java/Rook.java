@@ -3,7 +3,7 @@ public class Rook extends Coins
 	Boolean b;
 	public Rook(int x,int y,PieceColor s)
 	{
-		super(x,y,s);
+		super(x, y, s, PieceType.ROOK);
 		b= true;
 	}
 	public boolean isValidMove(int desx,int desy)

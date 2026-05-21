@@ -3,7 +3,7 @@ public class King extends Coins
 	Boolean b;
 	public King(int x,int y,PieceColor s)
 	{
-		super(x,y,s);	
+		super(x, y, s, PieceType.KING);	
 		b = true;
 	}
 	public boolean isValidMove(int desx,int desy)

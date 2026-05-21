@@ -3,7 +3,7 @@ public class Pawn extends Coins
 	
 	public Pawn(int x, int y, PieceColor s) 
 	{
-		super(x, y, s);
+		super(x, y, s, PieceType.PAWN);
 	}
 	public void setXY(int x, int y)
 	{

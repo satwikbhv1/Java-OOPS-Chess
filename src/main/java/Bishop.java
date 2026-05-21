@@ -2,7 +2,7 @@ public class Bishop extends Coins
 {
 	public Bishop(int x,int y,PieceColor s)
 	{
-		super(x,y,s);	
+		super(x, y, s, PieceType.BISHOP);	
 	}
 	public boolean isValidMove(int desx,int desy)
 	{
