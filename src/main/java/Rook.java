@@ -8,8 +8,8 @@ public class Rook extends AbstractPiece
 	}
 	public boolean isValidMove(int desx, int desy)
 	{
-		int X = Math.abs(desx - x);
-		int Y = Math.abs(desy - y);
+		int X = Math.abs(desx - getRow());
+		int Y = Math.abs(desy - getCol());
 		if(((X * Y) == 0) && ((X + Y) != 0))
 		{
 			return true;
@@ -17,9 +17,9 @@ public class Rook extends AbstractPiece
 		return false;
 	}
 	@Override
-	public void setPosition(int row, int col)
+	public void setPosition(Position p)
 	{
-		super.setPosition(row, col);
+		super.setPosition(p);
 		b = false;
 	}
 }

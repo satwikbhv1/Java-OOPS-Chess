@@ -6,10 +6,10 @@ public class Pawn extends AbstractPiece
 	}
 	public boolean isValidMove1(int desx, PieceColor s)
 	{
-		int X = desx - x;
+		int X = desx - getRow();
 		if(s == PieceColor.WHITE)
 		{
-			if(x == 6 && X == -2)
+			if(getRow() == 6 && X == -2)
 			{
 				return true;
 			}
@@ -17,7 +17,7 @@ public class Pawn extends AbstractPiece
 		if(s == PieceColor.BLACK)
 		{
 			X = X * -1;
-			if(x == 1 && X == -2)
+			if(getRow() == 1 && X == -2)
 			{
 				return true;
 			}
@@ -30,11 +30,11 @@ public class Pawn extends AbstractPiece
 	}
 	public boolean isValidMove2(int desx, int desy, PieceColor s)
 	{
-		int X = desx - x;
-		int Y = desy - y;
+		int X = desx - getRow();
+		int Y = desy - getCol();
 		if(s == PieceColor.WHITE)
 		{
-			if(x == 6 && X == -2 && (Y == 1 || Y == -1))
+			if(getRow() == 6 && X == -2 && (Y == 1 || Y == -1))
 			{
 				return true;
 			}
@@ -42,7 +42,7 @@ public class Pawn extends AbstractPiece
 		if(s == PieceColor.BLACK && (Y == 1 || Y == -1))
 		{
 			X = X * -1;
-			if(x == 1 && X == -2)
+			if(getRow() == 1 && X == -2)
 			{
 				return true;
 			}
@@ -55,11 +55,11 @@ public class Pawn extends AbstractPiece
 	}
 	public boolean isqueen()
 	{
-		if(this.x == 1 && this.color == PieceColor.WHITE)
+		if(getRow() == 1 && this.color == PieceColor.WHITE)
 		{
 			return true;
 		}
-		if(this.x == 6 && this.color == PieceColor.BLACK)
+		if(getRow() == 6 && this.color == PieceColor.BLACK)
 		{
 			return true;
 		}

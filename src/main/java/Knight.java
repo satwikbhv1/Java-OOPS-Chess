@@ -6,9 +6,9 @@ public class Knight extends AbstractPiece
 	}
 	public boolean isValidMove(int desx, int desy)
 	{
-		int X = Math.abs(desx - x);
-		int Y = Math.abs(desy - y);
-		if(desx == x || desy == y)
+		int X = Math.abs(desx - getRow());
+		int Y = Math.abs(desy - getCol());
+		if(desx == getRow() || desy == getCol())
 		{
 			return false;
 		}

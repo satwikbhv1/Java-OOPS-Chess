@@ -1,24 +1,20 @@
 public abstract class AbstractPiece implements Piece {
-    public int x;
-    public int y;
+    private Position position;
     public PieceColor color;
     public PieceType type;
 
-    public AbstractPiece(int x, int y, PieceColor color, PieceType type) {
-        this.x = x;
-        this.y = y;
+    public AbstractPiece(int row, int col, PieceColor color, PieceType type) {
+        this.position = new Position(row, col);
         this.color = color;
         this.type = type;
     }
 
     @Override public PieceColor getColor() { return color; }
     @Override public PieceType getType() { return type; }
-    @Override public int getRow() { return x; }
-    @Override public int getCol() { return y; }
+    @Override public Position getPosition() { return position; }
 
     @Override
-    public void setPosition(int row, int col) {
-        this.x = row;
-        this.y = col;
+    public void setPosition(Position p) {
+        this.position = p;
     }
 }

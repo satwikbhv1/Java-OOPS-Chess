@@ -8,8 +8,8 @@ public class King extends AbstractPiece
 	}
 	public boolean isValidMove(int desx, int desy)
 	{
-		int X = Math.abs(desx - x);
-		int Y = Math.abs(desy - y);
+		int X = Math.abs(desx - getRow());
+		int Y = Math.abs(desy - getCol());
 		if(X > 1 || Y > 1)
 		{
 			return false;
@@ -17,9 +17,9 @@ public class King extends AbstractPiece
 		return true;
 	}
 	@Override
-	public void setPosition(int row, int col)
+	public void setPosition(Position p)
 	{
-		super.setPosition(row, col);
+		super.setPosition(p);
 		b = false;
 	}
 	public boolean check()
