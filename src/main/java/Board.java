@@ -1,3 +1,5 @@
+import java.util.IdentityHashMap;
+
 public class Board {
     private final Piece[][] grid = new Piece[8][8];
 
@@ -93,5 +95,27 @@ public class Board {
             }
         }
         return copy;
+    }
+
+    public BoardSnapshot snapshot() {
+        IdentityHashMap<Piece, Position> positions = new IdentityHashMap<>();
+        for (int r = 0; r < 8; r++) {
+            for (int c = 0; c < 8; c++) {
+                Piece piece = grid[r][c];
+                if (piece != null) {
+                    positions.put(piece, piece.getPosition());
+                }
+            }
+        }
+        return new BoardSnapshot(grid, positions);
+    }
+
+    public void restore(BoardSnapshot snapshot) {
+        for (int r = 0; r < 8; r++) {
+            System.arraycopy(snapshot.grid()[r], 0, grid[r], 0, 8);
+        }
+        for (var entry : snapshot.positions().entrySet()) {
+            entry.getKey().setPosition(entry.getValue());
+        }
     }
 }

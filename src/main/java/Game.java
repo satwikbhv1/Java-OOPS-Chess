@@ -7,6 +7,7 @@ public class Game {
     private PieceColor sideToMove = PieceColor.WHITE;
     private final List<Piece> captured = new ArrayList<>();
     private final CastlingRights castling = new CastlingRights();
+    private final MoveValidator moveValidator = new MoveValidator();
 
     public Board getBoard() {
         return board;
@@ -28,8 +29,34 @@ public class Game {
         return castling;
     }
 
+    public MoveValidator getMoveValidator() {
+        return moveValidator;
+    }
+
     public List<Piece> getCaptured() {
         return Collections.unmodifiableList(captured);
+    }
+
+    public boolean isInCheck(PieceColor side) {
+        return moveValidator.isInCheck(board, side);
+    }
+
+    public boolean isInCheck() {
+        return isInCheck(sideToMove);
+    }
+
+    public List<Move> getLegalMoves() {
+        List<Move> legal = new ArrayList<>();
+        for (int r = 0; r < 8; r++) {
+            for (int c = 0; c < 8; c++) {
+                Piece piece = board.get(new Position(r, c));
+                if (piece != null && piece.getColor() == sideToMove) {
+                    legal.addAll(moveValidator.filterLegal(
+                            board, piece.getMoves(board), sideToMove, castling));
+                }
+            }
+        }
+        return legal;
     }
 
     public void applyMove(Move move) {
@@ -76,24 +103,16 @@ public class Game {
     }
 
     public boolean tryPlayMove(Move move, PromotionHandler promotionHandler) {
-        if (!isValidDestination(move)) {
+        if (!moveValidator.isLegal(board, move, sideToMove, castling)) {
             return false;
         }
 
         Piece piece = board.get(move.from());
-        if (piece == null || piece.getColor() != sideToMove) {
-            return false;
-        }
 
-        if (piece instanceof King king) {
-            if (tryCastling(king, move)) {
-                completeTurn();
-                return true;
-            }
-        }
-
-        if (!piece.canMoveTo(board, move.to())) {
-            return false;
+        if (piece instanceof King && isCastlingMove(move)) {
+            applyCastling(move);
+            completeTurn();
+            return true;
         }
 
         if (piece instanceof Pawn pawn && pawn.isqueen()) {
@@ -110,73 +129,23 @@ public class Game {
         return true;
     }
 
-    private boolean isValidDestination(Move move) {
-        if (!board.isOccupied(move.to())) {
-            return true;
-        }
-        Piece target = board.get(move.to());
-        return target != null && target.getColor() != sideToMove;
-    }
-
-    private boolean tryCastling(King king, Move move) {
+    private boolean isCastlingMove(Move move) {
         Position from = move.from();
         Position to = move.to();
-        if (from.row() != to.row()) {
-            return false;
-        }
-
-        int dc = to.col() - from.col();
-        if (Math.abs(dc) != 2) {
-            return false;
-        }
-
-        PieceColor color = king.getColor();
-        int row = from.row();
-
-        if (dc == 2) {
-            if (color == PieceColor.WHITE && !castling.canWhiteCastleKingside()) {
-                return false;
-            }
-            if (color == PieceColor.BLACK && !castling.canBlackCastleKingside()) {
-                return false;
-            }
-            if (board.isOccupied(new Position(row, from.col() + 1))) {
-                return false;
-            }
-            Rook rook = rookAt(row, 7, color);
-            if (rook == null) {
-                return false;
-            }
-            applyMove(move);
-            applyMove(new Move(new Position(row, 7), new Position(row, to.col() - 1)));
-            return true;
-        }
-
-        if (color == PieceColor.WHITE && !castling.canWhiteCastleQueenside()) {
-            return false;
-        }
-        if (color == PieceColor.BLACK && !castling.canBlackCastleQueenside()) {
-            return false;
-        }
-        if (board.isOccupied(new Position(row, from.col() - 1))
-                || board.isOccupied(new Position(row, from.col() - 2))
-                || board.isOccupied(new Position(row, from.col() - 3))) {
-            return false;
-        }
-        Rook rook = rookAt(row, 0, color);
-        if (rook == null) {
-            return false;
-        }
-        applyMove(move);
-        applyMove(new Move(new Position(row, 0), new Position(row, to.col() + 1)));
-        return true;
+        return from.row() == to.row() && Math.abs(to.col() - from.col()) == 2;
     }
 
-    private Rook rookAt(int row, int col, PieceColor color) {
-        Piece piece = board.get(new Position(row, col));
-        if (piece instanceof Rook rook && rook.getColor() == color) {
-            return rook;
+    private void applyCastling(Move move) {
+        Position from = move.from();
+        Position to = move.to();
+        int row = from.row();
+        int dc = to.col() - from.col();
+
+        applyMove(move);
+        if (dc == 2) {
+            applyMove(new Move(new Position(row, 7), new Position(row, to.col() - 1)));
+        } else {
+            applyMove(new Move(new Position(row, 0), new Position(row, to.col() + 1)));
         }
-        return null;
     }
 }

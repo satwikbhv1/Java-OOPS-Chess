@@ -19,14 +19,4 @@ public class King extends AbstractPiece
 	public boolean canMoveTo(Board board, Position to) {
 		return isValidMove(to.row(), to.col()) && isEnemyOrEmpty(board, to);
 	}
-	public boolean check()
-	{
-		//yet to be completed
-		return false;
-	}
-	public boolean checkmate()
-	{
-		//yet to be completed
-		return false;
-	}
 }
