@@ -21,7 +21,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.0</version>
         <configuration>
-          <mainClass>GUI</mainClass>
+          <mainClass>ChessFrame</mainClass>
         </configuration>
       </plugin>
     </plugins>
