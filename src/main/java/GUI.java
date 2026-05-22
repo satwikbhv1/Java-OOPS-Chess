@@ -17,120 +17,7 @@ public class GUI extends JFrame
 	private Container contents;
 	
 	private JButton[][] square = new JButton[8][8];
-	
-	private ImageIcon King = new ImageIcon(GUI.class.getResource("/images/king.png"));
-	
-	private ImageIcon Queen = new ImageIcon(GUI.class.getResource("/images/queen.png"));
-	
-	private ImageIcon Rook1 = new ImageIcon(GUI.class.getResource("/images/Rook.png"));
-	
-	private ImageIcon Rook2 = new ImageIcon(GUI.class.getResource("/images/Rook2.png"));
- 
-	private ImageIcon Bishop1 = new ImageIcon(GUI.class.getResource("/images/bishop.png"));
-	
-	private ImageIcon Bishop2 = new ImageIcon(GUI.class.getResource("/images/bishop2.png"));
-	
-	private ImageIcon Knight1 = new ImageIcon(GUI.class.getResource("/images/knight.png"));
 
-	private ImageIcon Knight2 = new ImageIcon(GUI.class.getResource("/images/knight2.png"));
-
-	private ImageIcon Pawn1 = new ImageIcon(GUI.class.getResource("/images/pawn.png"));
-	
-	private ImageIcon Pawn2 = new ImageIcon(GUI.class.getResource("/images/pawn2.png"));
-	
-	private ImageIcon Pawn3 = new ImageIcon(GUI.class.getResource("/images/pawn3.png"));
-	
-	private ImageIcon Pawn4 = new ImageIcon(GUI.class.getResource("/images/pawn4.png"));
-	
-	private ImageIcon Pawn5 = new ImageIcon(GUI.class.getResource("/images/pawn5.png"));
-	
-	private ImageIcon Pawn6 = new ImageIcon(GUI.class.getResource("/images/pawn6.png"));
-	
-	private ImageIcon Pawn7 = new ImageIcon(GUI.class.getResource("/images/pawn7.png"));
-	
-	private ImageIcon Pawn8 = new ImageIcon(GUI.class.getResource("/images/pawn8.png"));
-	
-	private ImageIcon B_King = new ImageIcon(GUI.class.getResource("/images/blackking.png"));
-	
-	private ImageIcon B_Queen = new ImageIcon(GUI.class.getResource("/images/blackqueen.png"));
-
-	private ImageIcon B_Rook1 = new ImageIcon(GUI.class.getResource("/images/blackrook1.png"));
-	
-	private ImageIcon B_Rook2 = new ImageIcon(GUI.class.getResource("/images/blackrook2.png"));
-
-	private ImageIcon B_Bishop1 = new ImageIcon(GUI.class.getResource("/images/blackbishop.png"));
-	
-	private ImageIcon B_Bishop2 = new ImageIcon(GUI.class.getResource("/images/blackbishop2.png"));
-
-	private ImageIcon B_Knight1 = new ImageIcon(GUI.class.getResource("/images/blackknight1.jpg"));
-	
-	private ImageIcon B_Knight2 = new ImageIcon(GUI.class.getResource("/images/blackknight2.jpg"));
-	
-	private ImageIcon B_Pawn1 = new ImageIcon(GUI.class.getResource("/images/blackpawn1.jpg"));
-	
-	private ImageIcon B_Pawn2 = new ImageIcon(GUI.class.getResource("/images/blackpawn2.jpg"));
-
-	private ImageIcon B_Pawn3 = new ImageIcon(GUI.class.getResource("/images/blackpawn3.jpg"));
-
-	private ImageIcon B_Pawn4 = new ImageIcon(GUI.class.getResource("/images/blackpawn4.jpg"));
-
-	private ImageIcon B_Pawn5 = new ImageIcon(GUI.class.getResource("/images/blackpawn5.jpg"));
-
-	private ImageIcon B_Pawn6 = new ImageIcon(GUI.class.getResource("/images/blackpawn6.jpg"));
-
-	private ImageIcon B_Pawn7 = new ImageIcon(GUI.class.getResource("/images/blackpawn7.jpg"));
-
-	private ImageIcon B_Pawn8 = new ImageIcon(GUI.class.getResource("/images/blackpawn8.jpg"));
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-
-	
-
-	
-	
 	Knight k1 = new Knight(7,1,PieceColor.WHITE);
 	Knight k2 = new Knight(7,6,PieceColor.WHITE);
 	
@@ -270,50 +157,45 @@ public class GUI extends JFrame
 	}
 
 	private void registerPieces() {
-		pieceRegistry.register(k, King, "King");
-		pieceRegistry.register(q, Queen, "Queen");
-		pieceRegistry.register(k1, Knight1, "Knight1");
-		pieceRegistry.register(k2, Knight2, "Knight2");
-		pieceRegistry.register(b1, Bishop1, "Bishop1");
-		pieceRegistry.register(b2, Bishop2, "Bishop2");
-		pieceRegistry.register(r1, Rook1, "Rook1");
-		pieceRegistry.register(r2, Rook2, "Rook2");
-		pieceRegistry.register(p1, Pawn1, "Pawn1");
-		pieceRegistry.register(p2, Pawn2, "Pawn2");
-		pieceRegistry.register(p3, Pawn3, "Pawn3");
-		pieceRegistry.register(p4, Pawn4, "Pawn4");
-		pieceRegistry.register(p5, Pawn5, "Pawn5");
-		pieceRegistry.register(p6, Pawn6, "Pawn6");
-		pieceRegistry.register(p7, Pawn7, "Pawn7");
-		pieceRegistry.register(p8, Pawn8, "Pawn8");
-		pieceRegistry.register(bk, B_King, "B.King");
-		pieceRegistry.register(bq, B_Queen, "B.Queen");
-		pieceRegistry.register(bk1, B_Knight1, "B.Knight1");
-		pieceRegistry.register(bk2, B_Knight2, "B.Knight2");
-		pieceRegistry.register(bb1, B_Bishop1, "B.Bishop1");
-		pieceRegistry.register(bb2, B_Bishop2, "B.Bishop2");
-		pieceRegistry.register(br1, B_Rook1, "B.Rook1");
-		pieceRegistry.register(br2, B_Rook2, "B.Rook2");
-		pieceRegistry.register(bp1, B_Pawn1, "B.Pawn1");
-		pieceRegistry.register(bp2, B_Pawn2, "B.Pawn2");
-		pieceRegistry.register(bp3, B_Pawn3, "B.Pawn3");
-		pieceRegistry.register(bp4, B_Pawn4, "B.Pawn4");
-		pieceRegistry.register(bp5, B_Pawn5, "B.Pawn5");
-		pieceRegistry.register(bp6, B_Pawn6, "B.Pawn6");
-		pieceRegistry.register(bp7, B_Pawn7, "B.Pawn7");
-		pieceRegistry.register(bp8, B_Pawn8, "B.Pawn8");
-		pieceRegistry.registerPromotionQueens(
-				loadPromotionQueenIcons("queenx", ".png"),
-				loadPromotionQueenIcons("blackqueenx", ".png"));
+		registerPiece(k, "King");
+		registerPiece(q, "Queen");
+		registerPiece(k1, "Knight1");
+		registerPiece(k2, "Knight2");
+		registerPiece(b1, "Bishop1");
+		registerPiece(b2, "Bishop2");
+		registerPiece(r1, "Rook1");
+		registerPiece(r2, "Rook2");
+		registerPiece(p1, "Pawn1");
+		registerPiece(p2, "Pawn2");
+		registerPiece(p3, "Pawn3");
+		registerPiece(p4, "Pawn4");
+		registerPiece(p5, "Pawn5");
+		registerPiece(p6, "Pawn6");
+		registerPiece(p7, "Pawn7");
+		registerPiece(p8, "Pawn8");
+		registerPiece(bk, "B.King");
+		registerPiece(bq, "B.Queen");
+		registerPiece(bk1, "B.Knight1");
+		registerPiece(bk2, "B.Knight2");
+		registerPiece(bb1, "B.Bishop1");
+		registerPiece(bb2, "B.Bishop2");
+		registerPiece(br1, "B.Rook1");
+		registerPiece(br2, "B.Rook2");
+		registerPiece(bp1, "B.Pawn1");
+		registerPiece(bp2, "B.Pawn2");
+		registerPiece(bp3, "B.Pawn3");
+		registerPiece(bp4, "B.Pawn4");
+		registerPiece(bp5, "B.Pawn5");
+		registerPiece(bp6, "B.Pawn6");
+		registerPiece(bp7, "B.Pawn7");
+		registerPiece(bp8, "B.Pawn8");
 	}
 
-	private static ImageIcon[] loadPromotionQueenIcons(String basename, String extension) {
-		ImageIcon[] icons = new ImageIcon[8];
-		for (int file = 1; file <= 8; file++) {
-			icons[file - 1] = new ImageIcon(
-					GUI.class.getResource("/images/" + basename + file + extension));
-		}
-		return icons;
+	private void registerPiece(Piece piece, String tooltip) {
+		pieceRegistry.register(
+				piece,
+				PieceIconFactory.get(piece.getType(), piece.getColor()),
+				tooltip);
 	}
 
 	private void syncUiFromBoard() {
