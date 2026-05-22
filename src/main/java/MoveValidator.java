@@ -14,25 +14,32 @@ public class MoveValidator {
     public boolean hasLegalMove(Board board, PieceColor side, CastlingRights castling) {
         for (int r = 0; r < 8; r++) {
             for (int c = 0; c < 8; c++) {
-                Position from = new Position(r, c);
-                Piece piece = board.get(from);
+                Piece piece = board.get(new Position(r, c));
                 if (piece == null || piece.getColor() != side) {
                     continue;
                 }
-                for (int tr = 0; tr < 8; tr++) {
-                    for (int tc = 0; tc < 8; tc++) {
-                        Position to = new Position(tr, tc);
-                        if (!piece.canMoveTo(board, to)) {
-                            continue;
-                        }
-                        if (isLegal(board, new Move(from, to), side, castling)) {
-                            return true;
-                        }
+                for (Move move : collectCandidateMoves(board, piece)) {
+                    if (isLegal(board, move, side, castling)) {
+                        return true;
                     }
                 }
             }
         }
         return false;
+    }
+
+    public List<Move> collectCandidateMoves(Board board, Piece piece) {
+        List<Move> moves = new ArrayList<>(piece.getMoves(board));
+        if (piece instanceof King) {
+            Position from = board.findPosition(piece);
+            if (from != null) {
+                int row = from.row();
+                int col = from.col();
+                moves.add(new Move(from, new Position(row, col + 2)));
+                moves.add(new Move(from, new Position(row, col - 2)));
+            }
+        }
+        return moves;
     }
 
     public boolean isSquareAttacked(Board board, Position square, PieceColor attackerColor) {

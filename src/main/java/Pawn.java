@@ -26,8 +26,10 @@ public class Pawn extends AbstractPiece
 		if (dc != 1) {
 			return false;
 		}
-		// both colors capture one rank toward the opponent (decreasing row index)
-		return dr == -1;
+		if (s == PieceColor.WHITE) {
+			return dr == -1;
+		}
+		return dr == 1;
 	}
 	public boolean isqueen()
 	{
@@ -46,7 +48,14 @@ public class Pawn extends AbstractPiece
 	public boolean canMoveTo(Board board, Position to) {
 		Position from = getPosition();
 		if (to.col() == from.col()) {
-			return !board.isOccupied(to) && isValidMove1(to.row(), color);
+			if (board.isOccupied(to) || !isValidMove1(to.row(), color)) {
+				return false;
+			}
+			int dr = to.row() - from.row();
+			if (Math.abs(dr) == 2 && board.isOccupied(new Position(from.row() + dr / 2, from.col()))) {
+				return false;
+			}
+			return true;
 		}
 		if (board.isOccupied(to) && isValidMove2(to.row(), to.col(), color)) {
 			Piece target = board.get(to);

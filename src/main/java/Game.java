@@ -59,11 +59,21 @@ public class Game {
                 Piece piece = board.get(new Position(r, c));
                 if (piece != null && piece.getColor() == sideToMove) {
                     legal.addAll(moveValidator.filterLegal(
-                            board, piece.getMoves(board), sideToMove, castling));
+                            board, moveValidator.collectCandidateMoves(board, piece),
+                            sideToMove, castling));
                 }
             }
         }
         return legal;
+    }
+
+    public List<Move> getLegalMovesFrom(Position from) {
+        Piece piece = board.get(from);
+        if (piece == null || piece.getColor() != sideToMove) {
+            return List.of();
+        }
+        return moveValidator.filterLegal(
+                board, moveValidator.collectCandidateMoves(board, piece), sideToMove, castling);
     }
 
     public boolean isCheckmate() {

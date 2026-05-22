@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Set;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -15,16 +16,27 @@ public class BoardPanel extends JPanel {
     private static final long serialVersionUID = 1L;
     private static final Color LABEL_COLOR = new Color(0x5c5c5c);
     private static final Color CHECK_HIGHLIGHT = new Color(0xf4a6a6);
+    private static final Color SELECTED_HIGHLIGHT = new Color(0xf6f669);
+    private static final Color LEGAL_HIGHLIGHT = new Color(0xbaca44);
 
     private final JButton[][] square = new JButton[8][8];
+    private final boolean[][] legalHighlight = new boolean[8][8];
     private MoveListener moveListener;
+    private SelectListener selectListener;
     private boolean inputEnabled = true;
     private int fromRow = -1;
     private int fromCol = -1;
+    private int selectedRow = -1;
+    private int selectedCol = -1;
     private boolean awaitingDestination;
+    private Game lastGame;
 
     public interface MoveListener {
-        void onMove(int fromRow, int fromCol, int toRow, int toCol);
+        boolean onMove(int fromRow, int fromCol, int toRow, int toCol);
+    }
+
+    public interface SelectListener {
+        boolean onSelect(int row, int col);
     }
 
     public BoardPanel() {
@@ -132,10 +144,15 @@ public class BoardPanel extends JPanel {
         this.moveListener = listener;
     }
 
+    public void setSelectListener(SelectListener listener) {
+        this.selectListener = listener;
+    }
+
     public void setInputEnabled(boolean enabled) {
         this.inputEnabled = enabled;
         if (!enabled) {
             awaitingDestination = false;
+            clearSelection();
         }
     }
 
@@ -143,15 +160,44 @@ public class BoardPanel extends JPanel {
         awaitingDestination = false;
         fromRow = -1;
         fromCol = -1;
+        clearSelection();
+    }
+
+    public void setSelection(int fromRow, int fromCol, Set<Position> legalDestinations) {
+        clearLegalHighlights();
+        this.selectedRow = fromRow;
+        this.selectedCol = fromCol;
+        if (legalDestinations != null) {
+            for (Position pos : legalDestinations) {
+                legalHighlight[pos.row()][pos.col()] = true;
+            }
+        }
+        repaintSquareBackgrounds();
+    }
+
+    public void clearSelection() {
+        selectedRow = -1;
+        selectedCol = -1;
+        clearLegalHighlights();
+        repaintSquareBackgrounds();
+    }
+
+    private void clearLegalHighlights() {
+        for (int row = 0; row < 8; row++) {
+            for (int col = 0; col < 8; col++) {
+                legalHighlight[row][col] = false;
+            }
+        }
     }
 
     public void syncFromBoard(Board board, PieceRegistry registry, Game game) {
+        lastGame = game;
         Position kingInCheck = game.isInCheck() ? game.getKingPosition(game.getSideToMove()) : null;
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
                 Position pos = new Position(row, col);
                 square[row][col].setBackground(
-                        pos.equals(kingInCheck) ? CHECK_HIGHLIGHT : squareColor(row, col));
+                        backgroundColor(row, col, pos, kingInCheck));
 
                 Piece piece = board.get(pos);
                 if (piece == null) {
@@ -168,6 +214,39 @@ public class BoardPanel extends JPanel {
         }
     }
 
+    private void repaintSquareBackgrounds() {
+        if (lastGame == null) {
+            for (int row = 0; row < 8; row++) {
+                for (int col = 0; col < 8; col++) {
+                    square[row][col].setBackground(backgroundColor(row, col, new Position(row, col), null));
+                }
+            }
+            return;
+        }
+        Position kingInCheck = lastGame.isInCheck()
+                ? lastGame.getKingPosition(lastGame.getSideToMove())
+                : null;
+        for (int row = 0; row < 8; row++) {
+            for (int col = 0; col < 8; col++) {
+                square[row][col].setBackground(
+                        backgroundColor(row, col, new Position(row, col), kingInCheck));
+            }
+        }
+    }
+
+    private Color backgroundColor(int row, int col, Position pos, Position kingInCheck) {
+        if (kingInCheck != null && pos.equals(kingInCheck)) {
+            return CHECK_HIGHLIGHT;
+        }
+        if (row == selectedRow && col == selectedCol) {
+            return SELECTED_HIGHLIGHT;
+        }
+        if (legalHighlight[row][col]) {
+            return LEGAL_HIGHLIGHT;
+        }
+        return squareColor(row, col);
+    }
+
     private void handlePress(Object source) {
         if (!inputEnabled) {
             return;
@@ -176,13 +255,20 @@ public class BoardPanel extends JPanel {
             for (int col = 0; col < 8; col++) {
                 if (source == square[row][col]) {
                     if (!awaitingDestination) {
-                        fromRow = row;
-                        fromCol = col;
-                        awaitingDestination = true;
+                        if (selectListener != null && selectListener.onSelect(row, col)) {
+                            fromRow = row;
+                            fromCol = col;
+                            awaitingDestination = true;
+                        } else {
+                            resetClickState();
+                        }
+                    } else if (row == fromRow && col == fromCol) {
+                        resetClickState();
                     } else {
-                        awaitingDestination = false;
-                        if (moveListener != null) {
-                            moveListener.onMove(fromRow, fromCol, row, col);
+                        boolean played = moveListener != null
+                                && moveListener.onMove(fromRow, fromCol, row, col);
+                        if (played) {
+                            resetClickState();
                         }
                     }
                     return;

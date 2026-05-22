@@ -1,6 +1,12 @@
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class ChessController {
     private final Game game = new Game();
     private final PieceRegistry pieceRegistry = new PieceRegistry();
+    private CapturedPanel capturedByWhite;
+    private CapturedPanel capturedByBlack;
 
     private final Knight k1 = new Knight(7, 1, PieceColor.WHITE);
     private final Knight k2 = new Knight(7, 6, PieceColor.WHITE);
@@ -40,6 +46,11 @@ public class ChessController {
         return game;
     }
 
+    public void setCapturedPanels(CapturedPanel capturedByWhite, CapturedPanel capturedByBlack) {
+        this.capturedByWhite = capturedByWhite;
+        this.capturedByBlack = capturedByBlack;
+    }
+
     public void startGame(BoardPanel boardPanel) {
         newGame(boardPanel);
     }
@@ -53,16 +64,34 @@ public class ChessController {
         refreshBoard(boardPanel);
     }
 
-    public void handleMove(int fromRow, int fromCol, int toRow, int toCol, BoardPanel boardPanel) {
+    public boolean handleSelect(int row, int col, BoardPanel boardPanel) {
         if (game.isGameOver()) {
-            return;
+            boardPanel.clearSelection();
+            return false;
+        }
+        Position from = new Position(row, col);
+        List<Move> legal = game.getLegalMovesFrom(from);
+        if (legal.isEmpty()) {
+            boardPanel.clearSelection();
+            return false;
+        }
+        boardPanel.setSelection(row, col, destinations(legal));
+        return true;
+    }
+
+    public boolean handleMove(int fromRow, int fromCol, int toRow, int toCol, BoardPanel boardPanel) {
+        if (game.isGameOver()) {
+            return false;
         }
         Move move = new Move(new Position(fromRow, fromCol), new Position(toRow, toCol));
         PromotionHandler promotionHandler = (pawn, to) ->
                 pieceRegistry.promote(pawn, to, game.getBoard());
         if (game.tryPlayMove(move, promotionHandler)) {
             refreshBoard(boardPanel);
+            return true;
         }
+        handleSelect(fromRow, fromCol, boardPanel);
+        return false;
     }
 
     public String getStatusMessage() {
@@ -73,9 +102,28 @@ public class ChessController {
         return game.isGameOver();
     }
 
+    private static Set<Position> destinations(List<Move> moves) {
+        Set<Position> dests = new HashSet<>();
+        for (Move move : moves) {
+            dests.add(move.to());
+        }
+        return dests;
+    }
+
     private void refreshBoard(BoardPanel boardPanel) {
+        boardPanel.clearSelection();
         boardPanel.syncFromBoard(game.getBoard(), pieceRegistry, game);
         boardPanel.setInputEnabled(!game.isGameOver());
+        syncCapturedPanels();
+    }
+
+    private void syncCapturedPanels() {
+        if (capturedByWhite != null) {
+            capturedByWhite.sync(game.getCaptured(), pieceRegistry, PieceColor.WHITE);
+        }
+        if (capturedByBlack != null) {
+            capturedByBlack.sync(game.getCaptured(), pieceRegistry, PieceColor.BLACK);
+        }
     }
 
     private void setupBoard() {
