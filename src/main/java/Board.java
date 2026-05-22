@@ -30,6 +30,14 @@ public class Board {
         return grid[pos.row()][pos.col()] != null;
     }
 
+    public void clearAll() {
+        for (int r = 0; r < 8; r++) {
+            for (int c = 0; c < 8; c++) {
+                clear(new Position(r, c));
+            }
+        }
+    }
+
     public Position findPosition(Piece piece) {
         for (int r = 0; r < 8; r++) {
             for (int c = 0; c < 8; c++) {

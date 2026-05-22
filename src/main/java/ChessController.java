@@ -41,8 +41,15 @@ public class ChessController {
     }
 
     public void startGame(BoardPanel boardPanel) {
+        newGame(boardPanel);
+    }
+
+    public void newGame(BoardPanel boardPanel) {
+        game.reset();
+        pieceRegistry.clear();
         setupBoard();
         registerPieces();
+        boardPanel.resetClickState();
         refreshBoard(boardPanel);
     }
 

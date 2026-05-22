@@ -139,6 +139,12 @@ public class BoardPanel extends JPanel {
         }
     }
 
+    public void resetClickState() {
+        awaitingDestination = false;
+        fromRow = -1;
+        fromCol = -1;
+    }
+
     public void syncFromBoard(Board board, PieceRegistry registry, Game game) {
         Position kingInCheck = game.isInCheck() ? game.getKingPosition(game.getSideToMove()) : null;
         for (int row = 0; row < 8; row++) {

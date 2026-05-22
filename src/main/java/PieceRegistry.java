@@ -13,6 +13,10 @@ public class PieceRegistry {
         return displays.get(piece);
     }
 
+    public void clear() {
+        displays.clear();
+    }
+
     public Queen promote(Pawn pawn, Position to, Board board) {
         PieceColor color = pawn.getColor();
         ImageIcon icon = PieceIconFactory.get(PieceType.QUEEN, color);

@@ -45,4 +45,13 @@ public class CastlingRights {
     void revokeBlackQueensideRook() {
         blackQueensideRook = false;
     }
+
+    public void reset() {
+        whiteKing = true;
+        whiteKingsideRook = true;
+        whiteQueensideRook = true;
+        blackKing = true;
+        blackKingsideRook = true;
+        blackQueensideRook = true;
+    }
 }

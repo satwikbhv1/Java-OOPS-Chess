@@ -37,6 +37,13 @@ public class Game {
         return Collections.unmodifiableList(captured);
     }
 
+    public void reset() {
+        board.clearAll();
+        captured.clear();
+        sideToMove = PieceColor.WHITE;
+        castling.reset();
+    }
+
     public boolean isInCheck(PieceColor side) {
         return moveValidator.isInCheck(board, side);
     }
