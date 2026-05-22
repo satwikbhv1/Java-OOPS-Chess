@@ -1,10 +1,8 @@
 public class King extends AbstractPiece
 {
-	Boolean b;
 	public King(int x, int y, PieceColor s)
 	{
 		super(x, y, s, PieceType.KING);
-		b = true;
 	}
 	public boolean isValidMove(int desx, int desy)
 	{
@@ -20,12 +18,6 @@ public class King extends AbstractPiece
 	@Override
 	public boolean canMoveTo(Board board, Position to) {
 		return isValidMove(to.row(), to.col()) && isEnemyOrEmpty(board, to);
-	}
-	@Override
-	public void setPosition(Position p)
-	{
-		super.setPosition(p);
-		b = false;
 	}
 	public boolean check()
 	{

@@ -1,10 +1,8 @@
 public class Rook extends AbstractPiece
 {
-	Boolean b;
 	public Rook(int x, int y, PieceColor s)
 	{
 		super(x, y, s, PieceType.ROOK);
-		b = true;
 	}
 	public boolean isValidMove(int desx, int desy)
 	{
@@ -22,11 +20,5 @@ public class Rook extends AbstractPiece
 		return isValidMove(to.row(), to.col())
 				&& board.isPathClear(getPosition(), to)
 				&& isEnemyOrEmpty(board, to);
-	}
-	@Override
-	public void setPosition(Position p)
-	{
-		super.setPosition(p);
-		b = false;
 	}
 }
