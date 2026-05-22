@@ -30,6 +30,17 @@ public class Board {
         return grid[pos.row()][pos.col()] != null;
     }
 
+    public Position findPosition(Piece piece) {
+        for (int r = 0; r < 8; r++) {
+            for (int c = 0; c < 8; c++) {
+                if (grid[r][c] == piece) {
+                    return new Position(r, c);
+                }
+            }
+        }
+        return null;
+    }
+
     public void move(Move move) {
         move(move.from(), move.to());
     }

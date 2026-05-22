@@ -59,6 +59,56 @@ public class Game {
         return legal;
     }
 
+    public boolean isCheckmate() {
+        return isInCheck(sideToMove) && !hasLegalMove();
+    }
+
+    public boolean isStalemate() {
+        return !isInCheck(sideToMove) && !hasLegalMove();
+    }
+
+    public boolean isGameOver() {
+        return !hasLegalMove();
+    }
+
+    public boolean hasLegalMove() {
+        return moveValidator.hasLegalMove(board, sideToMove, castling);
+    }
+
+    public PieceColor getWinner() {
+        if (!isCheckmate()) {
+            return null;
+        }
+        return sideToMove == PieceColor.WHITE ? PieceColor.BLACK : PieceColor.WHITE;
+    }
+
+    public Position getKingPosition(PieceColor side) {
+        for (int r = 0; r < 8; r++) {
+            for (int c = 0; c < 8; c++) {
+                Piece piece = board.get(new Position(r, c));
+                if (piece instanceof King && piece.getColor() == side) {
+                    return new Position(r, c);
+                }
+            }
+        }
+        return null;
+    }
+
+    public String getStatusMessage() {
+        if (isGameOver()) {
+            if (isInCheck()) {
+                String winner = sideToMove == PieceColor.WHITE ? "Black" : "White";
+                return winner + " wins by checkmate!";
+            }
+            return "Stalemate — draw.";
+        }
+        String side = sideToMove == PieceColor.WHITE ? "White" : "Black";
+        if (isInCheck()) {
+            return side + " to move — Check!";
+        }
+        return side + " to move";
+    }
+
     public void applyMove(Move move) {
         Piece target = board.get(move.to());
         if (target != null) {

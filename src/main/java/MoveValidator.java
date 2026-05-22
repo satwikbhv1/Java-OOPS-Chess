@@ -11,6 +11,34 @@ public class MoveValidator {
         return isSquareAttacked(board, kingSquare, opposite(side));
     }
 
+    public boolean hasLegalMove(Board board, PieceColor side, CastlingRights castling) {
+        for (int r = 0; r < 8; r++) {
+            for (int c = 0; c < 8; c++) {
+                Position from = new Position(r, c);
+                Piece piece = board.get(from);
+                if (piece == null || piece.getColor() != side) {
+                    continue;
+                }
+                for (int tr = 0; tr < 8; tr++) {
+                    for (int tc = 0; tc < 8; tc++) {
+                        Position to = new Position(tr, tc);
+                        if (!piece.canMoveTo(board, to)) {
+                            continue;
+                        }
+                        if (isLegal(board, new Move(from, to), side, castling)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean isSquareAttacked(Board board, Position square, PieceColor attackerColor) {
+        return isSquareAttackedBy(board, square, attackerColor);
+    }
+
     public boolean isLegal(Board board, Move move, PieceColor side, CastlingRights castling) {
         Piece piece = board.get(move.from());
         if (piece == null || piece.getColor() != side) {
@@ -173,18 +201,31 @@ public class MoveValidator {
         return null;
     }
 
-    private boolean isSquareAttacked(Board board, Position square, PieceColor attackerColor) {
+    private boolean isSquareAttackedBy(Board board, Position square, PieceColor attackerColor) {
         for (int r = 0; r < 8; r++) {
             for (int c = 0; c < 8; c++) {
                 Piece piece = board.get(new Position(r, c));
-                if (piece != null
-                        && piece.getColor() == attackerColor
-                        && piece.canMoveTo(board, square)) {
+                if (piece == null || piece.getColor() != attackerColor) {
+                    continue;
+                }
+                if (piece instanceof King) {
+                    if (isKingAttackingSquare(piece.getPosition(), square)) {
+                        return true;
+                    }
+                    continue;
+                }
+                if (piece.canMoveTo(board, square)) {
                     return true;
                 }
             }
         }
         return false;
+    }
+
+    private static boolean isKingAttackingSquare(Position from, Position to) {
+        return Math.abs(from.row() - to.row()) <= 1
+                && Math.abs(from.col() - to.col()) <= 1
+                && !from.equals(to);
     }
 
     private Position findKing(Board board, PieceColor side) {

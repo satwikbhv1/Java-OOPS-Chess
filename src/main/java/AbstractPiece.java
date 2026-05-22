@@ -24,8 +24,8 @@ public abstract class AbstractPiece implements Piece {
     @Override
     public List<Move> getMoves(Board board) {
         List<Move> moves = new ArrayList<>();
-        Position from = getPosition();
-        if (from.equals(Position.OFF_BOARD)) {
+        Position from = board.findPosition(this);
+        if (from == null) {
             return moves;
         }
         for (int r = 0; r < 8; r++) {

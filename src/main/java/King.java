@@ -17,6 +17,33 @@ public class King extends AbstractPiece
 
 	@Override
 	public boolean canMoveTo(Board board, Position to) {
-		return isValidMove(to.row(), to.col()) && isEnemyOrEmpty(board, to);
+		if (!isValidMove(to.row(), to.col()) || !isEnemyOrEmpty(board, to)) {
+			return false;
+		}
+		if (isAdjacentToEnemyKing(board, to)) {
+			return false;
+		}
+		PieceColor opponent = getColor() == PieceColor.WHITE ? PieceColor.BLACK : PieceColor.WHITE;
+		return !new MoveValidator().isSquareAttacked(board, to, opponent);
+	}
+
+	private boolean isAdjacentToEnemyKing(Board board, Position to) {
+		for (int dr = -1; dr <= 1; dr++) {
+			for (int dc = -1; dc <= 1; dc++) {
+				if (dr == 0 && dc == 0) {
+					continue;
+				}
+				int r = to.row() + dr;
+				int c = to.col() + dc;
+				if (r < 0 || r >= 8 || c < 0 || c >= 8) {
+					continue;
+				}
+				Piece piece = board.get(new Position(r, c));
+				if (piece instanceof King && piece.getColor() != getColor()) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }

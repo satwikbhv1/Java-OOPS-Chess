@@ -14,9 +14,11 @@ import javax.swing.SwingConstants;
 public class BoardPanel extends JPanel {
     private static final long serialVersionUID = 1L;
     private static final Color LABEL_COLOR = new Color(0x5c5c5c);
+    private static final Color CHECK_HIGHLIGHT = new Color(0xf4a6a6);
 
     private final JButton[][] square = new JButton[8][8];
     private MoveListener moveListener;
+    private boolean inputEnabled = true;
     private int fromRow = -1;
     private int fromCol = -1;
     private boolean awaitingDestination;
@@ -130,10 +132,22 @@ public class BoardPanel extends JPanel {
         this.moveListener = listener;
     }
 
-    public void syncFromBoard(Board board, PieceRegistry registry) {
+    public void setInputEnabled(boolean enabled) {
+        this.inputEnabled = enabled;
+        if (!enabled) {
+            awaitingDestination = false;
+        }
+    }
+
+    public void syncFromBoard(Board board, PieceRegistry registry, Game game) {
+        Position kingInCheck = game.isInCheck() ? game.getKingPosition(game.getSideToMove()) : null;
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
-                Piece piece = board.get(new Position(row, col));
+                Position pos = new Position(row, col);
+                square[row][col].setBackground(
+                        pos.equals(kingInCheck) ? CHECK_HIGHLIGHT : squareColor(row, col));
+
+                Piece piece = board.get(pos);
                 if (piece == null) {
                     square[row][col].setIcon(null);
                     square[row][col].setToolTipText(null);
@@ -149,6 +163,9 @@ public class BoardPanel extends JPanel {
     }
 
     private void handlePress(Object source) {
+        if (!inputEnabled) {
+            return;
+        }
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
                 if (source == square[row][col]) {

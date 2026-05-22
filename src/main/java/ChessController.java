@@ -43,16 +43,32 @@ public class ChessController {
     public void startGame(BoardPanel boardPanel) {
         setupBoard();
         registerPieces();
-        boardPanel.syncFromBoard(game.getBoard(), pieceRegistry);
+        refreshBoard(boardPanel);
     }
 
     public void handleMove(int fromRow, int fromCol, int toRow, int toCol, BoardPanel boardPanel) {
+        if (game.isGameOver()) {
+            return;
+        }
         Move move = new Move(new Position(fromRow, fromCol), new Position(toRow, toCol));
         PromotionHandler promotionHandler = (pawn, to) ->
                 pieceRegistry.promote(pawn, to, game.getBoard());
         if (game.tryPlayMove(move, promotionHandler)) {
-            boardPanel.syncFromBoard(game.getBoard(), pieceRegistry);
+            refreshBoard(boardPanel);
         }
+    }
+
+    public String getStatusMessage() {
+        return game.getStatusMessage();
+    }
+
+    public boolean isGameOver() {
+        return game.isGameOver();
+    }
+
+    private void refreshBoard(BoardPanel boardPanel) {
+        boardPanel.syncFromBoard(game.getBoard(), pieceRegistry, game);
+        boardPanel.setInputEnabled(!game.isGameOver());
     }
 
     private void setupBoard() {

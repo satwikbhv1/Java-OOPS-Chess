@@ -1,5 +1,10 @@
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class ChessFrame extends JFrame {
     private static final long serialVersionUID = 1L;
@@ -20,13 +25,23 @@ public class ChessFrame extends JFrame {
 
         ChessController controller = new ChessController();
         BoardPanel boardPanel = new BoardPanel();
-        boardPanel.setMoveListener((fromRow, fromCol, toRow, toCol) ->
-                controller.handleMove(fromRow, fromCol, toRow, toCol, boardPanel));
+        JLabel statusLabel = new JLabel("", SwingConstants.CENTER);
+        statusLabel.setFont(statusLabel.getFont().deriveFont(Font.BOLD, 14f));
+
+        boardPanel.setMoveListener((fromRow, fromCol, toRow, toCol) -> {
+            controller.handleMove(fromRow, fromCol, toRow, toCol, boardPanel);
+            statusLabel.setText(controller.getStatusMessage());
+        });
 
         controller.startGame(boardPanel);
+        statusLabel.setText(controller.getStatusMessage());
 
-        setContentPane(boardPanel);
-        setSize(650, 650);
+        JPanel root = new JPanel(new BorderLayout());
+        root.add(boardPanel, BorderLayout.CENTER);
+        root.add(statusLabel, BorderLayout.SOUTH);
+
+        setContentPane(root);
+        setSize(650, 680);
         setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

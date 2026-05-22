@@ -6,52 +6,28 @@ public class Pawn extends AbstractPiece
 	}
 	public boolean isValidMove1(int desx, PieceColor s)
 	{
-		int X = desx - getRow();
-		if(s == PieceColor.WHITE)
-		{
-			if(getRow() == 6 && X == -2)
-			{
+		int dr = desx - getRow();
+		if (s == PieceColor.WHITE) {
+			if (getRow() == 6 && dr == -2) {
 				return true;
 			}
+			return dr == -1;
 		}
-		if(s == PieceColor.BLACK)
-		{
-			X = X * -1;
-			if(getRow() == 1 && X == -2)
-			{
-				return true;
-			}
-		}
-		if(X == -1)
-		{
+		if (getRow() == 1 && dr == 2) {
 			return true;
 		}
-		return false;
+		return dr == 1;
 	}
+
 	public boolean isValidMove2(int desx, int desy, PieceColor s)
 	{
-		int X = desx - getRow();
-		int Y = desy - getCol();
-		if(s == PieceColor.WHITE)
-		{
-			if(getRow() == 6 && X == -2 && (Y == 1 || Y == -1))
-			{
-				return true;
-			}
+		int dr = desx - getRow();
+		int dc = Math.abs(desy - getCol());
+		if (dc != 1) {
+			return false;
 		}
-		if(s == PieceColor.BLACK && (Y == 1 || Y == -1))
-		{
-			X = X * -1;
-			if(getRow() == 1 && X == -2)
-			{
-				return true;
-			}
-		}
-		if(X == -1)
-		{
-			return true;
-		}
-		return false;
+		// both colors capture one rank toward the opponent (decreasing row index)
+		return dr == -1;
 	}
 	public boolean isqueen()
 	{
