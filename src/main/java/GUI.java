@@ -50,24 +50,6 @@ public class GUI extends JFrame
 	
 	private ImageIcon Pawn8 = new ImageIcon(GUI.class.getResource("/images/pawn8.png"));
 	
-	private ImageIcon Queenx1 = new ImageIcon(GUI.class.getResource("/images/queenx1.png"));
-	
-	private ImageIcon Queenx2 = new ImageIcon(GUI.class.getResource("/images/queenx2.png"));
-	
-	private ImageIcon Queenx3 = new ImageIcon(GUI.class.getResource("/images/queenx3.png"));
-	
-	private ImageIcon Queenx4 = new ImageIcon(GUI.class.getResource("/images/queenx4.png"));
-	
-	private ImageIcon Queenx5 = new ImageIcon(GUI.class.getResource("/images/queenx5.png"));
-	
-	private ImageIcon Queenx6 = new ImageIcon(GUI.class.getResource("/images/queenx6.png"));
-	
-	private ImageIcon Queenx7 = new ImageIcon(GUI.class.getResource("/images/queenx7.png"));
-	
-	private ImageIcon Queenx8 = new ImageIcon(GUI.class.getResource("/images/queenx8.png"));
-	
-	
-	
 	private ImageIcon B_King = new ImageIcon(GUI.class.getResource("/images/blackking.png"));
 	
 	private ImageIcon B_Queen = new ImageIcon(GUI.class.getResource("/images/blackqueen.png"));
@@ -100,23 +82,6 @@ public class GUI extends JFrame
 
 	private ImageIcon B_Pawn8 = new ImageIcon(GUI.class.getResource("/images/blackpawn8.jpg"));
 
-    private ImageIcon B_Queenx1 = new ImageIcon(GUI.class.getResource("/images/blackqueenx1.png"));
-	
-	private ImageIcon B_Queenx2 = new ImageIcon(GUI.class.getResource("/images/blackqueenx2.png"));
-	
-	private ImageIcon B_Queenx3 = new ImageIcon(GUI.class.getResource("/images/blackqueenx3.png"));
-	
-	private ImageIcon B_Queenx4 = new ImageIcon(GUI.class.getResource("/images/blackqueenx4.png"));
-	
-	private ImageIcon B_Queenx5 = new ImageIcon(GUI.class.getResource("/images/blackqueenx5.png"));
-	
-	private ImageIcon B_Queenx6 = new ImageIcon(GUI.class.getResource("/images/blackqueenx6.png"));
-	
-	private ImageIcon B_Queenx7 = new ImageIcon(GUI.class.getResource("/images/blackqueenx7.png"));
-	
-	private ImageIcon B_Queenx8 = new ImageIcon(GUI.class.getResource("/images/blackqueenx8.png"));
-	
-	
 	
 	
 	
@@ -260,76 +225,8 @@ public class GUI extends JFrame
 				square[i][j].addMouseListener(b);
 			}                                                                  
 		}
-		
-		square[7][4].setToolTipText("King");
-		square[7][3].setToolTipText("Queen");
-		square[7][1].setToolTipText("Knight1");
-		square[7][6].setToolTipText("Knight2");
-		square[7][2].setToolTipText("Bishop1");
-		square[7][5].setToolTipText("Bishop2");
-		square[7][0].setToolTipText("Rook1");
-		square[7][7].setToolTipText("Rook2");
-		square[6][0].setToolTipText("Pawn1");
-		square[6][1].setToolTipText("Pawn2");
-		square[6][2].setToolTipText("Pawn3");
-		square[6][3].setToolTipText("Pawn4");
-		square[6][4].setToolTipText("Pawn5");
-		square[6][5].setToolTipText("Pawn6");
-		square[6][6].setToolTipText("Pawn7");
-		square[6][7].setToolTipText("Pawn8");
-		
-		square[7][4].setIcon(King);
-		square[7][3].setIcon(Queen);
-		square[7][1].setIcon(Knight1);
-		square[7][6].setIcon(Knight2);
-		square[7][2].setIcon(Bishop1);
-		square[7][5].setIcon(Bishop2);
-		square[7][0].setIcon(Rook1);
-		square[7][7].setIcon(Rook2);
-		square[6][0].setIcon(Pawn1);
-		square[6][1].setIcon(Pawn2);
-		square[6][2].setIcon(Pawn3);
-		square[6][3].setIcon(Pawn4);
-		square[6][4].setIcon(Pawn5);
-		square[6][5].setIcon(Pawn6);
-		square[6][6].setIcon(Pawn7);
-		square[6][7].setIcon(Pawn8);
 
-		square[0][4].setToolTipText("B.King");
-		square[0][3].setToolTipText("B.Queen");
-		square[0][1].setToolTipText("B.Knight1");
-		square[0][6].setToolTipText("B.Knight2");
-		square[0][2].setToolTipText("B.Bishop1");
-		square[0][5].setToolTipText("B.Bishop2");
-		square[0][0].setToolTipText("B.Rook1");
-		square[0][7].setToolTipText("B.Rook2");
-		square[1][0].setToolTipText("B.Pawn1");
-		square[1][1].setToolTipText("B.Pawn2");
-		square[1][2].setToolTipText("B.Pawn3");
-		square[1][3].setToolTipText("B.Pawn4");
-		square[1][4].setToolTipText("B.Pawn5");
-		square[1][5].setToolTipText("B.Pawn6");
-		square[1][6].setToolTipText("B.Pawn7");
-		square[1][7].setToolTipText("B.Pawn8");
-		
-		square[0][4].setIcon(B_King);
-		square[0][3].setIcon(B_Queen);
-		square[0][1].setIcon(B_Knight1);
-		square[0][6].setIcon(B_Knight2);
-		square[0][2].setIcon(B_Bishop1);
-		square[0][5].setIcon(B_Bishop2);
-		square[0][0].setIcon(B_Rook1);
-		square[0][7].setIcon(B_Rook2);
-		square[1][0].setIcon(B_Pawn1);
-		square[1][1].setIcon(B_Pawn2);
-		square[1][2].setIcon(B_Pawn3);
-		square[1][3].setIcon(B_Pawn4);
-		square[1][4].setIcon(B_Pawn5);
-		square[1][5].setIcon(B_Pawn6);
-		square[1][6].setIcon(B_Pawn7);
-		square[1][7].setIcon(B_Pawn8);
-
-		// populate Board — authoritative position source (tooltips stay for piece identity until T10)
+		// populate Board — authoritative position source
 		game.getBoard().set(new Position(7, 4), k);
 		game.getBoard().set(new Position(7, 3), q);
 		game.getBoard().set(new Position(7, 1), k1);
@@ -405,22 +302,18 @@ public class GUI extends JFrame
 		pieceRegistry.register(bp6, B_Pawn6, "B.Pawn6");
 		pieceRegistry.register(bp7, B_Pawn7, "B.Pawn7");
 		pieceRegistry.register(bp8, B_Pawn8, "B.Pawn8");
-		pieceRegistry.registerPromotion(p1, Queenx1, "Queenx1");
-		pieceRegistry.registerPromotion(p2, Queenx2, "Queenx2");
-		pieceRegistry.registerPromotion(p3, Queenx3, "Queenx3");
-		pieceRegistry.registerPromotion(p4, Queenx4, "Queenx4");
-		pieceRegistry.registerPromotion(p5, Queenx5, "Queenx5");
-		pieceRegistry.registerPromotion(p6, Queenx6, "Queenx6");
-		pieceRegistry.registerPromotion(p7, Queenx7, "Queenx7");
-		pieceRegistry.registerPromotion(p8, Queenx8, "Queenx8");
-		pieceRegistry.registerPromotion(bp1, B_Queenx1, "B.Queenx1");
-		pieceRegistry.registerPromotion(bp2, B_Queenx2, "B.Queenx2");
-		pieceRegistry.registerPromotion(bp3, B_Queenx3, "B.Queenx3");
-		pieceRegistry.registerPromotion(bp4, B_Queenx4, "B.Queenx4");
-		pieceRegistry.registerPromotion(bp5, B_Queenx5, "B.Queenx5");
-		pieceRegistry.registerPromotion(bp6, B_Queenx6, "B.Queenx6");
-		pieceRegistry.registerPromotion(bp7, B_Queenx7, "B.Queenx7");
-		pieceRegistry.registerPromotion(bp8, B_Queenx8, "B.Queenx8");
+		pieceRegistry.registerPromotionQueens(
+				loadPromotionQueenIcons("queenx", ".png"),
+				loadPromotionQueenIcons("blackqueenx", ".png"));
+	}
+
+	private static ImageIcon[] loadPromotionQueenIcons(String basename, String extension) {
+		ImageIcon[] icons = new ImageIcon[8];
+		for (int file = 1; file <= 8; file++) {
+			icons[file - 1] = new ImageIcon(
+					GUI.class.getResource("/images/" + basename + file + extension));
+		}
+		return icons;
 	}
 
 	private void syncUiFromBoard() {

@@ -1,8 +1,15 @@
 public class Pawn extends AbstractPiece
 {
+	private final int homeFile;
+
 	public Pawn(int x, int y, PieceColor s)
 	{
 		super(x, y, s, PieceType.PAWN);
+		homeFile = y;
+	}
+
+	public int getHomeFile() {
+		return homeFile;
 	}
 	public boolean isValidMove1(int desx, PieceColor s)
 	{
