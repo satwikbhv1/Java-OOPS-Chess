@@ -26,7 +26,7 @@ public class ChessFrame extends JFrame {
         controller.startGame(boardPanel);
 
         setContentPane(boardPanel);
-        setSize(600, 600);
+        setSize(650, 650);
         setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
