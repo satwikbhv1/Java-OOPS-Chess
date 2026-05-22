@@ -1,3 +1,4 @@
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Image;
 import java.util.List;
@@ -8,9 +9,14 @@ import javax.swing.JPanel;
 public class CapturedPanel extends JPanel {
     private static final long serialVersionUID = 1L;
     private static final int ICON_SIZE = 28;
+    private static final int STRIP_HEIGHT = ICON_SIZE + 12;
 
     public CapturedPanel() {
         super(new FlowLayout(FlowLayout.LEFT, 4, 4));
+        Dimension fixed = new Dimension(0, STRIP_HEIGHT);
+        setPreferredSize(fixed);
+        setMinimumSize(fixed);
+        setMaximumSize(new Dimension(Integer.MAX_VALUE, STRIP_HEIGHT));
     }
 
     public void sync(List<Piece> captured, PieceRegistry registry, PieceColor takenBy) {
@@ -24,13 +30,11 @@ public class CapturedPanel extends JPanel {
                 add(new JLabel(scale(icon)));
             }
         }
-        revalidate();
         repaint();
     }
 
     public void clear() {
         removeAll();
-        revalidate();
         repaint();
     }
 
